@@ -1,16 +1,23 @@
 image:
-  file: .gitpod.dockerfile
+  file: .gitpod.Dockerfile
 tasks:
-  - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
-    command: /home/gitpod/.pg_ctl/bin/pg_start > /dev/null
-  - command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &
+  - name: Setup Environment
+    init: |
+      clear
+      . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
+    command: |
+      python ${GITPOD_REPO_ROOT}/.vscode/display_repo_info.py
 vscode:
   extensions:
+    - ms-python.debugpy
+    - PKief.material-icon-theme
+    - charliermarsh.ruff
     - ms-python.python
-    - formulahendry.auto-close-tag
-    - eventyret.bootstrap-4-cdn-snippet
-    - hookyqr.beautify
-    - matt-rudge.auto-open-preview-panel
     - ms-toolsai.jupyter
     - ms-toolsai.jupyter-keymap
-    - ms-toolsai.jupyter-renderers
+    - batisteo.vscode-django
+    - esbenp.prettier-vscode
+    - christian-kohler.path-intellisense
+    - yzhang.markdown-all-in-one
+    - matt-rudge.auto-open-preview-panel
+    - GitHub.github-vscode-theme
