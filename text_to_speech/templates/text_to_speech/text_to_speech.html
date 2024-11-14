@@ -10,6 +10,9 @@
   <!-- Section that includes the space for all app relevant features -->
   <section id="app-section">
     <div id="app-instructions">
+      <p>
+        Instructions Content
+      </p>
     </div>
     <div id="app-voice-options">
       <div id="app-voice-title">
@@ -44,7 +47,9 @@
               method="post">
           {% csrf_token %}
           {{ form }}
-          <input class="input-arounder" type="submit" value=Submit>
+          <input class="input-arounder"
+                 type="submit"
+                 value="Submit" />
         </form>
       </div>
     </div>

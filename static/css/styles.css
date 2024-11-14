@@ -55,6 +55,23 @@ body {
 }
 
 /*--------------------------------------- Text to Speech ----------*/
+#app-instructions {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem 1rem 5rem;
+}
+
+#app-voice-options {
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 5px;
+  /*box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);*/
+  padding: 1rem 2rem 1rem 5rem;
+}
+
 #app-text-input {
   max-width: 500px;
   margin: 50px auto;
@@ -69,7 +86,8 @@ body {
 
 .input-arounder {
   background-color: #b2ebf2;
-  padding: 10px;
+  padding: 5px 10px;
+  margin-left: 20px;
   border: none;
   box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, 0.2);
   transfrom: translateY(0);
