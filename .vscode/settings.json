@@ -39,7 +39,7 @@
   "terminal.integrated.fontSize": 16,
 
   // Formatters for Specific Languages
-  "[django-html]": { "editor.defaultFormatter": "monosans.djlint" },
+  "[django-html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[handlebars]": { "editor.defaultFormatter": "monosans.djlint" },
   "[hbs]": { "editor.defaultFormatter": "monosans.djlint" },
   "[html]": { "editor.defaultFormatter": "monosans.djlint" },
