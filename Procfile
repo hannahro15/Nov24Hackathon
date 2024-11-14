@@ -1,0 +1,1 @@
+web: gunicorn script-and-sound.wsgi:application
