@@ -18,7 +18,7 @@ RUN sudo apt-get update && sudo apt-get upgrade -y && \
 RUN sudo apt-get update && sudo apt-get install -y build-essential libpq-dev libssl-dev libffi-dev zlib1g-dev graphviz && \
     sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/*
 
-# Node.js setup
+# Install Node.js and related tools
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
     export NVM_DIR="$HOME/.nvm" && \
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
