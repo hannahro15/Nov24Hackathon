@@ -1,1 +1,1 @@
-web: gunicorn script-to-sound.wsgi:application
+web: gunicorn project_root.wsgi:application
