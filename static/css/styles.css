@@ -1,9 +1,10 @@
+/*--------------------------------------- General Styles -----------*/
 body {
   background-color: #b2ebf2;
 }
 
 /*--------------------------------------- Navbar -----------*/
-.navbar-nav > li {
+.navbar-nav>li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -64,8 +65,7 @@ body {
   padding: 1rem 2rem 1rem 5rem;
 }
 
-#app-text-input-form {
-}
+#app-text-input-form {}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -100,12 +100,53 @@ body {
   border-bottom-right-radius: var(--radius);
 }
 
+/*--------------------------------------- Home Page ----------*/
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome-section {
+  height: 400px;
+  width: 100%;
+  /*background: url() no-repeat center center/cover;*/
+  position: relative;
+}
+
+#welcome-box {
+  /* Final rgba value sets the opacity so it is semi-transparent */
+  background-color: rgba(241, 109, 107, .7);
+  font-size: 110%;
+  position: absolute;
+  width: 40%;
+  min-height: 150px;
+  margin-top: 50px;
+  margin-left: 30px;
+  padding-top: 40px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#welcome-button {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#steps-tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 /*--------------------------------------- Contact ----------*/
 .contact-title {
   margin-top: 20px;
 }
 
-form > div {
+form>div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
@@ -116,6 +157,7 @@ form > div {
   position: absolute;
   bottom: 0;
 }
+
 .footer-container {
   background-color: #36454f;
   max-width: 100%;
