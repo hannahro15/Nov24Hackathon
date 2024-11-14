@@ -8,7 +8,7 @@
           content="width=device-width, initial-scale=1.0" />
     <title>
       {% block title %}
-        My Site
+        Script to Speak
       {% endblock title %}
 
     </title>
@@ -31,39 +31,60 @@
           referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="preload"
-          href="{% static 'css/style.css' %}"
+          href="{% static 'css/styles.css' %}"
           as="style" />
     <link rel="stylesheet"
-          href="{% static 'css/style.css' %}" />
+          href="{% static 'css/styles.css' %}" />
   </head>
   <body>
     <header>
-      <h1>
-        Welcome to My Site
-      </h1>
+      <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
+        <div class="container">
+          <a class="navbar-brand h1 button-arounder"
+             href="#">Script to Speak</a>
+          <button class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                  aria-controls="navbarsExample07"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse"
+               id="navbar-base">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link button-arounder"
+                   href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link button-arounder"
+                   href="{% url 'text_to_speech' %}">Text to Speech</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link button-arounder"
+                   href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link button-arounder"
+                   href="{% url 'team_app' %}">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li>
-          <a href="{% url 'home' %}">Home</a>
-        </li>
-        <li>
-          <a href="{% url 'text_to_speech' %}">Text to Speech</a>
-        </li>
-        <li>
-          <a href="{% url 'contact' %}">Contact</a>
-        </li>
-        <li>
-          <a href="{% url 'team_app' %}">Team</a>
-        </li>
-      </ul>
-    </nav>
     <main>
       {% block content %}
         <!-- Content goes here -->
-      {% endblock %}
+      {% endblock content %}
 
+    </main>
+    <footer>
       <p>
+        NOV24 HACKATHON
       </p>
     </footer>
     <script src="{% static 'js/scripts.js' %}"></script>
