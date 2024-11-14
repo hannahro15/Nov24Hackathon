@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'core',
+    'home',
+    'text_to_speech',
+    'team_app',
+    'contact',
 ]
 
 SITE_ID = 1
@@ -70,7 +73,7 @@ ROOT_URLCONF = 'project_root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
