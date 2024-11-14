@@ -18,3 +18,4 @@ python-dotenv==1.0.1
 requests-oauthlib==2.0.0
 webencodings==0.5.1
 whitenoise==6.8.2
+assemblyai==0.35.1

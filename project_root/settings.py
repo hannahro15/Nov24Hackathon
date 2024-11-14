@@ -7,11 +7,15 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
 
+
 # Load environment variables from .env file
 load_dotenv()
 
 # Get the secret key from environment variables
 SECRET_KEY = os.getenv('SECRET_KEY')
+
+# Get the API key for assembaly AI text-to-speech
+ASSEMBLYAI_API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,6 +48,7 @@ INSTALLED_APPS = [
     'text_to_speech',
     'team_app',
     'contact',
+    'assemblyai',
 ]
 
 SITE_ID = 1
