@@ -7,10 +7,42 @@
 {% endblock title %}
 
 {% block content %}
-  <h2>
-    Welcome to the contact Page
+  <h2 class="text-center contact-title">
+    Contact Us!
   </h2>
-  <p>
-    This is the contact page of the site.
+  <p class="text-center">
+    Please contact us if you have any queries regarding our text-speech app.
   </p>
+  <form>
+    <div class="form-row fw-bold">
+      <div class="col">
+        <label for="exampleFormControlTextarea1"
+               class="form-label">
+          First Name:
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="First name" />
+      </div>
+      <div class="col fw-bold">
+        <label for="exampleFormControlTextarea1"
+               class="form-label">
+          Last Name:
+        </label>
+        <input type="text"
+               class="form-control"
+               placeholder="Last name" />
+      </div>
+    </div>
+    <div class="mb-3 fw-bold">
+      <label for="exampleFormControlTextarea1"
+             class="form-label">
+        Please post your comment/s below:
+      </label>
+      <textarea class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Please fill in any comments here..."
+                rows="3"></textarea>
+    </div>
+  </form>
 {% endblock content %}
