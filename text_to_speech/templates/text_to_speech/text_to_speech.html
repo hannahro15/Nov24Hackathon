@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-  Texh to Speech
+  Text to Speech
 {% endblock title %}
 
 {% block content %}
@@ -17,17 +17,24 @@
           Step 1
         </p>
       </div>
-      <div id="app-voice-one">
+      <!-- Voice options with data attributes -->
+      <div id="app-voice-one"
+           class="voice-option"
+           data-voice="en">
         <p>
           Voice 1
         </p>
       </div>
-      <div id="app-voice-two">
+      <div id="app-voice-two"
+           class="voice-option"
+           data-voice="en-au">
         <p>
           Voice 2
         </p>
       </div>
-      <div id="app-voice-three">
+      <div id="app-voice-three"
+           class="voice-option"
+           data-voice="en-uk">
         <p>
           Voice 3
         </p>
@@ -44,7 +51,6 @@
               method="post">
           {% csrf_token %}
           {{ form }}
-          <input class="input-arounder" type="submit" value=Submit>
         </form>
       </div>
     </div>
@@ -55,14 +61,14 @@
         </p>
       </div>
       <div id="app-buttons-clear">
-        <p>
+        <button class="btn btn-dark px-4">
           Clear
-        </p>
+        </button>
       </div>
       <div id="app-buttons-send">
-        <p>
+        <button class="btn btn-primary px-4">
           Send
-        </p>
+        </button>
       </div>
     </div>
   </section>
