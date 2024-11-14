@@ -13,6 +13,9 @@ load_dotenv()
 # Get the secret key from environment variables
 SECRET_KEY = os.getenv('SECRET_KEY')
 
+# Get the API key for Google text-to-speech
+GTTS_API_KEY = os.getenv('GTTS_API_KEY')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     'text_to_speech',
     'team_app',
     'contact',
+    'gTTS',
 ]
 
 SITE_ID = 1
