@@ -4,40 +4,49 @@
 
 {% block content %}
 
-  <!-- Section that focuses on welcoming the user to the page -->
-  <section id="welcome-section">
-    <div id="welcome-header">
-      <div id="landing-image">
+  <section id="main-section">
+    <!-- Section that focuses on welcoming the user to the page -->
+    <section id="welcome-section">
+      <div id="welcome-box">
+        <div id="welcome-text">
+          <h2 id="welcome-title">
+            Welcome to Script to Speak!
+          </h2>
+          <p id="welcome-message">
+            Here goes the welcome message!
+          </p>
+        </div>
+        <div id="welcome-button">
+          <form>
+            <button formaction="{% url 'text_to_speech' %}">
+              Get started!
+            </button>
+          </form>
+        </div>
       </div>
-      <h2 id="welcome-title">
-        Welcome to our Page!
-      </h2>
-      <div id="welcome-message">
-        <p>
-          Here goes the welcome message!
-        </p>
+    </section>
+
+    <!-- Section that gives additional information about the page -->
+    <section id="steps-section">
+      <div id="steps-tiles">
+        <div class="steps-tiles"
+             id="steps-feature">
+          <p>
+            Feature
+          </p>
+        </div>
+        <div id="steps-benefit">
+          <p>
+            Benefit
+          </p>
+        </div>
+        <div id="steps-target-user">
+          <p>
+            Target user
+          </p>
+        </div>
       </div>
-      <div id="welcome-button">
-        Get started button goes here!
-      </div>
-    </div>
-    <div id="steps-tiles">
-      <div id="steps-feature">
-        <p>
-          Feature
-        </p>
-      </div>
-      <div id="steps-benefit">
-        <p>
-          Benefit
-        </p>
-      </div>
-      <div id="steps-target-user">
-        <p>
-          Target user
-        </p>
-      </div>
-    </div>
+    </section>
   </section>
 
 {% endblock content %}
