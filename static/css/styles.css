@@ -86,3 +86,11 @@ form > div {
 .icon {
   padding-right: 5px;
 }
+
+/*--------------Media Queries------------*/
+@media only screen and (max-width: 600px) {
+  .contact-paragraph {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
