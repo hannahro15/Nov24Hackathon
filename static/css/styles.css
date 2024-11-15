@@ -4,7 +4,7 @@ body {
 }
 
 /*--------------------------------------- Navbar -----------*/
-.navbar-nav>li {
+.navbar-nav > li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -65,7 +65,8 @@ body {
   padding: 1rem 2rem 1rem 5rem;
 }
 
-#app-text-input-form {}
+#app-text-input-form {
+}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -116,7 +117,7 @@ body {
 
 #welcome-box {
   /* Final rgba value sets the opacity so it is semi-transparent */
-  background-color: rgba(241, 109, 107, .7);
+  background-color: rgba(241, 109, 107, 0.7);
   font-size: 110%;
   position: absolute;
   width: 40%;
@@ -142,14 +143,24 @@ body {
 }
 
 /*--------------------------------------- Contact ----------*/
+
+.form-container {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
 .contact-title {
   margin-top: 20px;
 }
 
-form>div {
+form > div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
+}
+
+div > .submit {
+  margin-right: 40px;
 }
 
 /*--------------------------------------- Footer -----------*/
