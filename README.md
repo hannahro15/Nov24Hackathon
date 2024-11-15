@@ -49,15 +49,19 @@ The chosen color palette, featuring Deep Teal (#004C6D), Mustard Yellow (#FFB700
 
     #### Home page desktop
 
-    ![Wireframe of the home screen on desktop device](docs/wireframe-desktop-01.png)
+    ![Wireframe of the home screen on desktop device](docs/wireframe-desktop-home.png)
 
-    #### Features page desktop
+    #### Home page mobile
+    ![Wireframe of the home screen on mobile device](docs/wireframe-mobile-home.png)
 
-    ![Wireframe of the features/benefit screen on desktop device](docs/wireframe-desktop-02.png)
+    #### Text-to-Speech page desktop
 
-    #### Home and Features page mobile
+    ![Wireframe of the text to speech screen on desktop device](docs/wireframe-desktop-text-to-speech.png)
 
-    ![Wireframe of the home and features screen on mobile device](docs/wireframe-mobile-01.png)
+    #### Text-to-Speech page mobile
+
+    ![Wireframe of the text to speech screen on mobile device](docs/wireframe-mobile-text-to-speech.png)
+
     #### Team page mobile
 
     ![Wireframe of the team screen on mobile device](docs/wireframe-mobile-team-members-page.png)
@@ -65,6 +69,14 @@ The chosen color palette, featuring Deep Teal (#004C6D), Mustard Yellow (#FFB700
     #### Team page desktop
 
     ![Wireframe of the team screen on desktop device](docs/wireframe-desktop-team-members-page.png)
+
+    #### Contact page desktop
+
+     ![Wireframe of the contact screen on desktop device](docs/wireframe-desktop-contact.png)
+
+    #### Contact page mobile
+
+    ![Wireframe of the contact screen on mobile device](docs/wireframe-mobile-contact.png)
 
 ## Features
 
