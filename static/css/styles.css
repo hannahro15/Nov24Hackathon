@@ -137,6 +137,38 @@ body {
   border-bottom-right-radius: var(--radius);
 }
 
+/* Swatch styles */
+.palette-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: 1px solid #000000;
+  flex-shrink: 0;
+}
+
+/*--------------------------Navbar Dropdown Menu Swatches --------*/
+.swatch-palette1 {
+  background: linear-gradient(to right, #000000, #FFD700, #FF4500, #00FF00);
+}
+
+.swatch-palette2 {
+  background: linear-gradient(to right, #F5F5F5, #005AB5, #DC3220, #F0E442);
+}
+
+.swatch-palette3 {
+  background: linear-gradient(to right, #FFFFFF, #0072B2, #D55E00, #CC79A7);
+}
+
+.swatch-palette4 {
+  background: linear-gradient(to right, #F7F7F7, #AAAAAA, #666666, #444444);
+}
+
+.swatch-palette5 {
+  background: linear-gradient(to right, #EAEAEA, #87CEFA, #FFDAB9, #90EE90);
+}
+
 /*--------------------------------------- Main body -----------*/
 #main-body {
   margin-top: 25%;
