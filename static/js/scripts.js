@@ -67,3 +67,26 @@ document.addEventListener("DOMContentLoaded", () => {
     textInputElement.value = "";
   });
 });
+
+
+// Change CSS variables on dropdown menu
+document.addEventListener("DOMContentLoaded", () => {
+  const paletteLinks = document.querySelectorAll(".dropdown-item");
+
+  // Function to apply the palette
+  const applyPalette = (paletteClass) => {
+    document.body.className = paletteClass;
+  };
+
+  // Add event listeners to dropdown links
+  paletteLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const palette = link.dataset.palette;
+      applyPalette(palette);
+    });
+  });
+
+  // Apply default palette (Palette 1)
+  applyPalette("palette1");
+});
