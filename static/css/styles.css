@@ -7,7 +7,18 @@ body {
 }
 
 /*--------------------------------------- Navbar -----------*/
+<<<<<<< Updated upstream
 .navbar-nav > li {
+=======
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+
+
+.navbar-nav>li {
+>>>>>>> Stashed changes
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -64,6 +75,11 @@ body {
   border-top-right-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
+}
+
+/*--------------------------------------- Main body -----------*/
+#main-body {
+  margin-top: 25%;
 }
 
 /*--------------------------------------- Text to Speech ----------*/
@@ -146,12 +162,16 @@ body {
   border-bottom-right-radius: var(--radius);
 }
 
-/*--------------------------------------- Home Page ----------*/
+
+/*----- Push down all main section to account for fixed header ----------*/
 
 #main-section {
   display: flex;
   flex-direction: column;
 }
+
+
+/*--------------------------------------- Home Page ----------*/
 
 #welcome-section {
   height: 400px;
@@ -309,4 +329,16 @@ form > div {
     max-width: 40%;
     max-height: auto;
   }
+<<<<<<< Updated upstream
 }
+=======
+
+}
+
+@media screen and (min-width: 998px) {
+  /*-- Reduce top margin on large screens ----*/
+  #main-body {
+    margin-top: 5%;
+  }
+}
+>>>>>>> Stashed changes
