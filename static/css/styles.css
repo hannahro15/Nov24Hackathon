@@ -7,7 +7,7 @@ body {
 }
 
 /*--------------------------------------- Navbar -----------*/
-.navbar-nav > li {
+.navbar-nav>li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -21,7 +21,8 @@ body {
 }
 
 .navbar-brand img {
-  width: 30px; /* or any desired size */
+  width: 30px;
+  /* or any desired size */
   height: auto;
   margin-right: 10px;
 }
@@ -94,6 +95,7 @@ body {
 .card-voice:hover {
   border-color: #007bff;
 }
+
 .card-voice.selected {
   border-color: #007bff;
   background-color: #f0f8ff;
@@ -109,8 +111,7 @@ body {
   padding: 1rem 2rem 1rem 5rem;
 } */
 
-#app-text-input-form {
-}
+#app-text-input-form {}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -164,7 +165,7 @@ body {
   background-color: rgba(241, 109, 107, 0.7);
   font-size: 110%;
   position: absolute;
-  width: 40%;
+  width: 70%;
   min-height: 150px;
   margin-top: 50px;
   margin-left: 30px;
@@ -175,15 +176,43 @@ body {
   justify-content: center;
 }
 
-#welcome-button {
+#welcome-button-container {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-right: 20px;
 }
 
-#steps-tiles {
+#welcome-button {
+  max-width: 85px;
+  max-height: 60px;
+  padding: 5px 5px;
+  font-size: 100%;
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#steps-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  row-gap: 30px;
+  align-items: center;
+}
+
+.steps-tiles {
+  background-color: #f0f8ff;
+  min-width: 60%;
+  max-width: 80%;
+  max-height: auto;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.steps-titles {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 400;
 }
 
 /*--------------------------------------- Contact ----------*/
@@ -196,7 +225,7 @@ body {
   padding-bottom: 20px;
 }
 
-form > div {
+form>div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
@@ -231,4 +260,50 @@ form > div {
     margin-left: 10px;
     margin-right: 10px;
   }
+}
+
+@media screen and (min-width: 768px) {
+
+  #welcome-section {
+    height: 400px;
+    width: 100%;
+    /*background: url() no-repeat center center/cover;*/
+    position: relative;
+  }
+
+  #welcome-box {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, 0.7);
+    font-size: 110%;
+    position: absolute;
+    width: 40%;
+    min-height: 150px;
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-top: 40px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #welcome-button-container {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  #steps-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+
+  .steps-tiles {
+    min-width: 30%;
+    max-width: 40%;
+    max-height: auto;
+  }
+
 }
