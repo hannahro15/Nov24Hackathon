@@ -20,10 +20,17 @@ body {
   color: #b2ebf2;
 }
 
+.navbar-brand img {
+  width: 30px; /* or any desired size */
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  margin-bottom: 0;
+}
+
 .button-arounder {
-  /* font-size: 2rem; */
-  /* background: hsl(190deg, 30%, 15%); */
-  /* color: hsl(190deg, 10%, 95%); */
   padding: 10px;
 
   box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, 0.2);
