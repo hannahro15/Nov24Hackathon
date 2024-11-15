@@ -7,9 +7,6 @@ body {
 }
 
 /*--------------------------------------- Navbar -----------*/
-<<<<<<< Updated upstream
-.navbar-nav > li {
-=======
 .navbar {
   position: absolute;
   width: 100%;
@@ -18,7 +15,6 @@ body {
 
 
 .navbar-nav>li {
->>>>>>> Stashed changes
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -329,9 +325,6 @@ form > div {
     max-width: 40%;
     max-height: auto;
   }
-<<<<<<< Updated upstream
-}
-=======
 
 }
 
@@ -341,4 +334,3 @@ form > div {
     margin-top: 5%;
   }
 }
->>>>>>> Stashed changes
