@@ -1,52 +1,37 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
-{% load static %}
-
-{% block content %}
-
-  <section id="main-section">
-    <!-- Section that focuses on welcoming the user to the page -->
-    <section id="welcome-section">
-      <div id="welcome-box">
-        <div id="welcome-text">
-          <h2 id="welcome-title">
-            Welcome to Script to Speak!
-          </h2>
-          <p id="welcome-message">
-            Here goes the welcome message!
-          </p>
-        </div>
-        <div id="welcome-button">
-          <form>
-            <button formaction="{% url 'text_to_speech' %}">
-              Get started!
-            </button>
-          </form>
-        </div>
+<section id="main-section">
+  <!-- Section that focuses on welcoming the user to the page -->
+  <section id="welcome-section">
+    <div id="welcome-box">
+      <div id="welcome-text">
+        <h2 id="welcome-title">Welcome to Script to Speak!</h2>
+        <p id="welcome-message">Here goes the welcome message!</p>
       </div>
-    </section>
-
-    <!-- Section that gives additional information about the page -->
-    <section id="steps-section">
-      <div id="steps-tiles">
-        <div class="steps-tiles"
-             id="steps-feature">
-          <p>
-            Feature
-          </p>
-        </div>
-        <div id="steps-benefit">
-          <p>
-            Benefit
-          </p>
-        </div>
-        <div id="steps-target-user">
-          <p>
-            Target user
-          </p>
-        </div>
+      <div id="welcome-button-container">
+        <form>
+          <button formaction="{% url 'text_to_speech' %}" id="welcome-button">
+            Get started!
+          </button>
+        </form>
       </div>
-    </section>
+    </div>
   </section>
+
+  <!-- Section that gives additional information about the page -->
+  <section id="steps-section">
+    <div id="steps-container">
+      <div class="steps-tiles" id="steps-feature">
+        <p class="steps-titles">Feature</p>
+      </div>
+      <div class="steps-tiles" id="steps-benefit">
+        <p class="steps-titles">Benefit</p>
+      </div>
+      <div class="steps-tiles" id="steps-target-user">
+        <p class="steps-titles">Target user</p>
+      </div>
+    </div>
+  </section>
+</section>
 
 {% endblock content %}
