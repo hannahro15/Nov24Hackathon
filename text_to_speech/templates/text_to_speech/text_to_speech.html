@@ -8,68 +8,93 @@
 
 {% block content %}
   <!-- Section that includes the space for all app relevant features -->
-  <section id="app-section">
-    <div id="app-instructions">
-    </div>
-    <div id="app-voice-options">
-      <div id="app-voice-title">
-        <p>
-          Step 1
-        </p>
+  <section id="app-section"
+           class="container mt-5">
+    <div class="row d-flex align-items-center justify-content-center">
+      <!-- Voice options on the left side -->
+      <div id="app-voice-options"
+           class="col-sm-auto">
+        <div id="app-voice-title">
+          <p>
+            Step 1
+          </p>
+        </div>
+        <!-- Voice options with data attributes -->
+        <div id="app-voice-one"
+             class="card card-voice voice-option mb-2"
+             data-voice="en-uk">
+          <div class="mb-3">
+            <div class="card-header">
+              <small class="mb-0">English (UK)</small>
+            </div>
+            <div class="card-body">
+              <small class="mb-0">en-uk</small>
+            </div>
+          </div>
+        </div>
+        <div id="app-voice-two"
+             class="card card-voice voice-option mb-2"
+             data-voice="en-au">
+          <div class="mb-3">
+            <div class="card-header">
+              <small class="mb-0">English (AU)</small>
+            </div>
+            <div class="card-body">
+              <small class="mb-0">en-au</small>
+            </div>
+          </div>
+        </div>
+        <div id="app-voice-three"
+             class="card card-voice voice-option mb-2"
+             data-voice="en-in">
+          <div class="mb-3">
+            <div class="card-header">
+              <small class="mb-0">English (IN)</small>
+            </div>
+            <div class="card-body">
+              <small class="mb-0">en-in</small>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Voice options with data attributes -->
-      <div id="app-voice-one"
-           class="voice-option"
-           data-voice="en">
-        <p>
-          Voice 1
-        </p>
-      </div>
-      <div id="app-voice-two"
-           class="voice-option"
-           data-voice="en-au">
-        <p>
-          Voice 2
-        </p>
-      </div>
-      <div id="app-voice-three"
-           class="voice-option"
-           data-voice="en-uk">
-        <p>
-          Voice 3
-        </p>
-      </div>
-    </div>
-    <div id="app-text-input">
-      <div id="app-text-input-title">
-        <p>
-          Step 2
-        </p>
-      </div>
-      <div id="app-text-input-form">
-        <form action=""
-              method="post">
-          {% csrf_token %}
-          {{ form }}
-        </form>
-      </div>
-    </div>
-    <div id="app-buttons">
-      <div id="app-buttons-title">
-        <p>
-          Step 3
-        </p>
-      </div>
-      <div id="app-buttons-clear">
-        <button class="btn btn-dark px-4">
-          Clear
-        </button>
-      </div>
-      <div id="app-buttons-send">
-        <button class="btn btn-primary px-4">
-          Send
-        </button>
+      <!-- Text input and buttons on the right side -->
+      <div class="col-12 col-md-9 col-lg-8">
+        <div id="app-text-input">
+          <div id="app-text-input-title">
+            <p>
+              Step 2
+            </p>
+          </div>
+          <div id="app-text-input-form"
+               class="text-dark">
+            <form id="text-input-form"
+                  action=""
+                  method="post">
+              {% csrf_token %}
+              {{ form }}
+            </form>
+            <div id="app-buttons"
+                 class="d-flex justify-content-end mt-3">
+              <div id="app-buttons-clear"
+                   class="me-2">
+                <button id="clear-button"
+                        type="button"
+                        class="btn btn-dark px-4">
+                  Clear
+                </button>
+              </div>
+              <div id="app-buttons-send">
+                <button id="send-button"
+                        type="button"
+                        class="btn btn-primary px-4">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <script src="{% static 'scripts.js' %}"></script>
 {% endblock content %}
