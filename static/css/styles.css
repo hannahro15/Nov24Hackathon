@@ -209,6 +209,25 @@ body {
   background-color: #f0f8ff;
 }
 
+.btn-custom {
+  width: 7rem;
+  color: white;
+  font-weight: 600;
+  transition: box-shadow 0.2s, outline 0.2s;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: 3px solid #36454f;
+  outline-offset: 2px;
+}
+
+.btn-custom:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 /* #app-text-input {
   max-width: 500px;
   margin: 50px auto;
