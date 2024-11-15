@@ -7,11 +7,10 @@
 {% endblock title %}
 
 {% block content %}
-  <!-- Section that includes the space for all app relevant features -->
   <section id="app-section"
            class="container mt-5">
-    <div class="row d-flex align-items-center justify-content-center">
-      <!-- Voice options on the left side -->
+    <div class="row d-flex justify-content-center">
+      <!-- Voice options -->
       <div id="app-voice-options"
            class="col-sm-auto">
         <div id="app-voice-title">
@@ -19,42 +18,38 @@
             Step 1
           </p>
         </div>
-        <!-- Voice options with data attributes -->
-        <div id="app-voice-one"
-             class="card card-voice voice-option mb-2"
-             data-voice="en-uk">
-          <div class="mb-3">
-            <div class="card-header">
-              <small class="mb-0">English (UK)</small>
-            </div>
-            <div class="card-body">
-              <small class="mb-0">en-uk</small>
-            </div>
-          </div>
+        <!-- Dropdown menu for all languages -->
+        <div class="mt-3">
+          <label for="language-select">
+            <strong>Select a Language:</strong>
+          </label>
+          <select id="language-select"
+                  class="form-select">
+            <option value="">
+              Select a language
+            </option>
+            {% for lang_code, lang_name in languages.items %}
+              <option value="{{ lang_code }}"
+                      {% if lang_code == 'en' %}
+                        selected
+                      {% endif %}>
+                {{ lang_name }} ({{ lang_code }})
+              </option>
+            {% endfor %}
+          </select>
         </div>
-        <div id="app-voice-two"
-             class="card card-voice voice-option mb-2"
-             data-voice="en-au">
-          <div class="mb-3">
-            <div class="card-header">
-              <small class="mb-0">English (AU)</small>
-            </div>
-            <div class="card-body">
-              <small class="mb-0">en-au</small>
-            </div>
-          </div>
-        </div>
-        <div id="app-voice-three"
-             class="card card-voice voice-option mb-2"
-             data-voice="en-in">
-          <div class="mb-3">
-            <div class="card-header">
-              <small class="mb-0">English (IN)</small>
-            </div>
-            <div class="card-body">
-              <small class="mb-0">en-in</small>
-            </div>
-          </div>
+        <!-- Speed control slider -->
+        <div class="mt-3">
+          <label for="speed-range">
+            <strong>Adjust Speed:</strong>
+          </label>
+          <input type="range"
+                 id="speed-range"
+                 min="0.5"
+                 max="2"
+                 step="0.1"
+                 value="1" />
+          <span id="speed-value">1.0x</span>
         </div>
       </div>
       <!-- Text input and buttons on the right side -->
@@ -74,20 +69,24 @@
               {{ form }}
             </form>
             <div id="app-buttons"
-                 class="d-flex justify-content-end mt-3">
+                 class="d-flex justify-content-between mt-3">
               <div id="app-buttons-clear"
                    class="me-2">
                 <button id="clear-button"
                         type="button"
-                        class="btn btn-dark px-4">
+                        class="btn btn-dark btn-custom me-4">
                   Clear
                 </button>
               </div>
               <div id="app-buttons-send">
                 <button id="send-button"
                         type="button"
-                        class="btn btn-primary px-4">
-                  Send
+                        class="btn btn-primary btn-custom">
+                  <span class="spinner-border spinner-border-sm me-2 d-none"
+                        id="send-spinner"
+                        role="status"
+                        aria-hidden="true"></span>
+                  <span id="send-button-text">Send</span>
                 </button>
               </div>
             </div>

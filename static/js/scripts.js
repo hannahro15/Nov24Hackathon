@@ -1,31 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let selectedVoice = "en-uk"; // Default voice
+  let selectedVoice = "en"; // Default voice is English
+  let playbackSpeed = 1.0; // Default playback speed
 
-  // Get the voice options, text input element, and buttons
-  const voiceOptions = document.querySelectorAll(".card-voice");
+  // Get the language select element, text input element, buttons, and speed elements
+  const languageSelect = document.getElementById("language-select");
   const textInputElement = document.querySelector('[name="text_input"]');
   const sendButton = document.getElementById("send-button");
   const clearButton = document.getElementById("clear-button");
+  const speedRange = document.getElementById("speed-range");
+  const speedValue = document.getElementById("speed-value");
+  const sendSpinner = document.getElementById("send-spinner");
+  const sendButtonText = document.getElementById("send-button-text");
 
-  // Function to update selected voice option styling
-  function updateSelectedVoice(option) {
-    voiceOptions.forEach((opt) => opt.classList.remove("selected"));
-    option.classList.add("selected");
-    selectedVoice = option.getAttribute("data-voice");
-  }
+  // Set the default selected option in the select element
+  languageSelect.value = selectedVoice;
 
-  // Initialize the default selected voice
-  const defaultVoiceOption = document.querySelector(
-    `.card-voice[data-voice="${selectedVoice}"]`
-  );
-  if (defaultVoiceOption) {
-    updateSelectedVoice(defaultVoiceOption);
-  }
-
-  // Add click event listeners to each voice option
-  voiceOptions.forEach((option) => {
-    option.addEventListener("click", () => updateSelectedVoice(option));
+  // Handle dropdown selection
+  languageSelect.addEventListener("change", () => {
+    selectedVoice = languageSelect.value;
   });
+
+  // Update playback speed display
+  speedRange.addEventListener("input", () => {
+    playbackSpeed = parseFloat(speedRange.value);
+    speedValue.textContent = playbackSpeed.toFixed(1) + "x";
+  });
+
+  // Initialize the speed display
+  speedValue.textContent = playbackSpeed.toFixed(1) + "x";
 
   // Handle 'Send' button click
   sendButton.addEventListener("click", async () => {
@@ -35,7 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    if (!selectedVoice) {
+      alert("Please select a language.");
+      return;
+    }
+
+    // Disable the button and show spinner
     sendButton.disabled = true;
+    sendSpinner.classList.remove("d-none");
+    sendButtonText.textContent = ""; // Only the spinner will be shown
 
     try {
       // Fetch the text-to-speech API
@@ -49,15 +59,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // Play the audio response
       const blob = await response.blob();
-      // Create a URL for the blob
       const url = URL.createObjectURL(blob);
-      // Create an audio element and play the audio
       const audio = new Audio(url);
+      audio.playbackRate = playbackSpeed; // Set the playback speed
       audio.play();
     } catch (error) {
       console.error("Error:", error);
       alert("Error generating speech.");
     } finally {
+      // Restore the button state
+      sendSpinner.classList.add("d-none");
+      sendButtonText.textContent = "Send";
       sendButton.disabled = false;
     }
   });
@@ -67,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     textInputElement.value = "";
   });
 });
-
 
 // Change CSS variables on dropdown menu
 document.addEventListener("DOMContentLoaded", () => {

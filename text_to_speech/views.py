@@ -3,42 +3,31 @@ import io
 from django.http import HttpResponse
 from django.shortcuts import render
 from gtts import gTTS
+from gtts.lang import tts_langs
 
 from .forms import InputForm
 
 
 def text_to_speech(request):
-    # Renders the main page with the form
-    context = {'form': InputForm()}
+    # Get the list of available languages
+    languages = tts_langs()
+    context = {'form': InputForm(), 'languages': languages}
     return render(request, 'text_to_speech/text_to_speech.html', context)
 
 
 def text_to_speech_api(request):
     text = request.GET.get('text', '')
-    voice = request.GET.get('voice', 'en-uk')
+    voice = request.GET.get('voice', '')
     if not text.strip():
         return HttpResponse('No text provided.', status=400)
 
-    # Define voice mappings for gTTS using standard voices
-    voice_mappings = {
-        'en-uk': 'en',
-        'en-au': 'en',
-        'en-in': 'en',
-    }
-
-    # Define TLD mappings for accents
-    tld_mappings = {
-        'en-uk': 'co.uk',
-        'en-au': 'com.au',
-        'en-in': 'co.in',
-    }
-
-    # Get the mapped voice and tld or default to 'en' and 'com'
-    gtts_voice = voice_mappings.get(voice, 'en')
-    gtts_tld = tld_mappings.get(voice, 'com')
+    # Get the list of available languages
+    languages = tts_langs()
+    if voice not in languages:
+        return HttpResponse('Invalid language selected.', status=400)
 
     try:
-        tts = gTTS(text=text, lang=gtts_voice, tld=gtts_tld)
+        tts = gTTS(text=text, lang=voice)
         audio_data = io.BytesIO()
         tts.write_to_fp(audio_data)
         audio_data.seek(0)
