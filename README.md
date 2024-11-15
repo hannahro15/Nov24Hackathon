@@ -2,8 +2,6 @@
 
 ![Screenshot of the website in different screensizes](docs/view-different-devices.png)
 
-
-
 ## Table of contents
 1. <a href="#ux-design">UX Design</a> 
 2. <a href="#features">Features</a>
@@ -225,52 +223,37 @@ These features reflect our aspirations to further refine and improve the website
 ![Screenshot of Lighthouse score results for desktop](docs/lighthouse-desktop.png)
 
 
-# Deployment
+# Deployment to Heroku
 
-The website's codebase and all associated files were hosted on GitHub, with the main repository serving as the central hub for collaboration. Each team member forked the repository to work on their assigned tasks independently. These forks were regularly synchronized to ensure the main repository remained up to date. The final live deployment was hosted on Heroku, which was continuously updated to reflect changes pushed to the GitHub repository.
+ Go to Heroku.com and implement the following steps in this order:
+ 1. On the home page, click 'New' and in the dropdown, click on 'Create a new app'.
+ 2. Add app name (This name must be unique, and have all lower case letters. Also use minus/dash signs instead of spaces.)
+ 3. Select Region (Most likely to be Europe)
+ 4. Click the button that says 'Create App' and name the app. Follow instructions on the screen.
+ 5. Click on the Deploy tab near the top of the screen.
+ 6. Where is says Deployment Method click on Github.
+ 7. Below that, search for your repo name and add that.
+ 8. Click connect to the app.
 
-    > ~~live link~
-## Deployment on Heroku
+ Before clicking below on enable automatic deployment do the following:
+ 1. Click on the settings tab
+ 2. Click on reveal config vars.
+ 3. Add in your variables from your env. files as the key-value pairs.
+ 4. Go back and click on the Deploy tab. 
+ 
+ Before the app can be connected, push the following new files below to the repository. Go back in the terminal in your coding environment and add the following:
+ 1. git status
+ 2. git add requirements.txt
+ 3. git commit -m "Add requirements.txt file"
+ 4. git add a Procfile(web: gunicorn project_root.wsgi:application)
+ 1. git commit -m "Add Procfile"
+ 2. git push
 
-### 1. Create a New App on Heroku
-1. Navigate to [Heroku](https://www.heroku.com/) and log in to your account.
-2. Click on the `New` button and select `Create New App`.
-3. Provide a unique name for your application and choose your preferred region.
-4. Click on the `Create app` button.
-
-### 2. Configure App Settings
-1. After creating the app, go to the `Settings` tab.
-2. Under `Config Vars`, click the `Reveal Config Vars` button.
-3. Add a new variable:
-   - KEY: `PORT`
-   - VALUE: `8000`
-4. Click the `Add` button to save the configuration.
-
-### 3. Set Up Buildpacks
-1. In the `Settings` tab, scroll down to the `Buildpacks` section.
-2. Click on `Add buildpack` and select _**ADD-USED-BUILDPACKS**_.
-3. Add another buildpack and select _**ADD-USED-BUILDPACKS**_.
-4. Ensure that the buildpacks are in this particular order: ... first, followed by ... .
-5. Click the `Save changes` button.
-
-### 4. Deploy Your Application
-1. Navigate to the `Deploy` tab.
-2. Under `Deployment method`, select _**GitHub**_.
-3. Connect your GitHub account if it's not already connected.
-4. Search for your repository and select it.
-5. Click `Connect` to link the repository to Heroku.
-
-### 5. Choose Deployment Method
-- **Automatic Deploys**:
-  - Enable automatic deploys to allow Heroku to rebuild and deploy your app every time you push changes to the selected branch.
-  - Choose the branch you want to deploy and click `Enable Automatic Deploys`.
-  
-- **Manual Deploys**:
-  - To deploy manually, scroll down to the `Manual Deploy` section.
-  - Select the branch you want to deploy and click `Deploy Branch`.
-
-### 6. Launch Your Application
-- Once the deployment is complete, click on the `Open App` button at the top of the page to view your live application.
+ Head back over to Heroku where the Deploy tab is.
+ 2. Click Deploy Branch. (Should be a main or master branch)
+ 3. Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
+ 4. Once you know deployment is successful then click 'Enable Automatic Deploys'
+ 5. Click 'View' to launch the new app. 
 
 # Credits
 
