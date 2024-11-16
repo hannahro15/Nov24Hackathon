@@ -75,6 +75,16 @@ body {
   --logo-color: #FFB700; /* Mustard Yellow for the logo */
 }
 
+/* Palette 6: Default */
+.palette6 {
+  --background-color: #004C6D; /* Deep Teal */
+  --primary-text-color: #FFB700; /* Mustard Yellow */
+  --accent-color-1: #B2EBF2; /* Soft Cyan */
+  --accent-color-2: #36454F; /* Charcoal */
+  --accent-color-3: #FFB700; /* Repeat Mustard Yellow for consistency */
+  --logo-color: #FFB700; /* Mustard Yellow for the logo */
+}
+
 
 /*--------------------------------------- Navbar -----------*/
 .navbar {
