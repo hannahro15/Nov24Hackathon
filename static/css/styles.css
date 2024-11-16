@@ -1,6 +1,6 @@
 /*--------------------------------------- General Styles -----------*/
 body {
-  font-family: 'Lexend', sans-serif !important;
+  font-family: "Lexend", sans-serif !important;
   line-height: 1.6 !important;
   letter-spacing: 0.5px !important;
   background-color: var(--accent-color-1);
@@ -29,8 +29,6 @@ body {
   --accent-color-1: #ffd700;
   --accent-color-2: #ff4500;
   --accent-color-3: #00ff00;
-
-
 }
 
 /* Palette 2: Red-Green Color Blindness */
@@ -74,36 +72,35 @@ body {
 
 /* Palette 6: Default */
 .palette6 {
-  --background-color: #36454F;
+  --background-color: #36454f;
   /* Charcoal */
-  --primary-text-color: #FFB700;
+  --primary-text-color: #ffb700;
   /* Mustard Yellow */
-  --accent-color-1: #B2EBF2;
+  --accent-color-1: #b2ebf2;
   /* Soft Cyan */
-  --accent-color-2: #004C6D;
+  --accent-color-2: #004c6d;
   /* Deep Teal */
-  --accent-color-3: #FFB700;
+  --accent-color-3: #ffb700;
   /* Repeat Mustard Yellow for consistency */
-  --logo-color: #FFB700;
+  --logo-color: #ffb700;
   /* Mustard Yellow for the logo */
 }
 
 /* Palette 6: Default */
 .palette6 {
-  --background-color: #36454F;
+  --background-color: #36454f;
   /* Charcoal */
-  --primary-text-color: #FFB700;
+  --primary-text-color: #ffb700;
   /* Mustard Yellow */
-  --accent-color-1: #B2EBF2;
+  --accent-color-1: #b2ebf2;
   /* Soft Cyan */
-  --accent-color-2: #004C6D;
+  --accent-color-2: #004c6d;
   /* Deep Teal */
-  --accent-color-3: #FFB700;
+  --accent-color-3: #ffb700;
   /* Repeat Mustard Yellow for consistency */
-  --logo-color: #FFB700;
+  --logo-color: #ffb700;
   /* Mustard Yellow for the logo */
 }
-
 
 /*--------------------------------------- Navbar -----------*/
 .navbar {
@@ -112,7 +109,7 @@ body {
   z-index: 99;
 }
 
-.navbar-nav>li {
+.navbar-nav > li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -196,27 +193,27 @@ body {
 
 /*--------------------------Navbar Dropdown Menu Swatches --------*/
 .swatch-palette1 {
-  background: linear-gradient(to right, #000000, #FFD700, #FF4500, #00FF00);
+  background: linear-gradient(to right, #000000, #ffd700, #ff4500, #00ff00);
 }
 
 .swatch-palette2 {
-  background: linear-gradient(to right, #F5F5F5, #005AB5, #DC3220, #F0E442);
+  background: linear-gradient(to right, #f5f5f5, #005ab5, #dc3220, #f0e442);
 }
 
 .swatch-palette3 {
-  background: linear-gradient(to right, #FFFFFF, #0072B2, #D55E00, #CC79A7);
+  background: linear-gradient(to right, #ffffff, #0072b2, #d55e00, #cc79a7);
 }
 
 .swatch-palette4 {
-  background: linear-gradient(to right, #F7F7F7, #AAAAAA, #666666, #444444);
+  background: linear-gradient(to right, #f7f7f7, #aaaaaa, #666666, #444444);
 }
 
 .swatch-palette5 {
-  background: linear-gradient(to right, #EAEAEA, #87CEFA, #FFDAB9, #90EE90);
+  background: linear-gradient(to right, #eaeaea, #87cefa, #ffdab9, #90ee90);
 }
 
 .swatch-palette6 {
-  background: linear-gradient(to right, #004C6D, #FFB700, #B2EBF2, #36454F);
+  background: linear-gradient(to right, #004c6d, #ffb700, #b2ebf2, #36454f);
 }
 
 /*--------------------------------------- Main body -----------*/
@@ -287,7 +284,8 @@ body {
   padding: 1rem 2rem 1rem 5rem;
 } */
 
-#app-text-input-form {}
+#app-text-input-form {
+}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -364,7 +362,7 @@ body {
   text-align: left;
   margin-right: 50px;
   margin-left: 10px;
-  color: #FFB700;
+  color: #ffb700;
   /*border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);*/
   display: flex;
@@ -475,10 +473,17 @@ body {
   padding-bottom: 20px;
 }
 
-form>div {
+form > div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
+}
+
+.faq-questions-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /*--------------------------------------- Team Page -------- */
@@ -568,7 +573,6 @@ form>div {
 }*/
 
 @media screen and (min-width: 998px) {
-
   /*-- Reduce top margin on large screens ----*/
   #main-body {
     margin-top: 5%;
