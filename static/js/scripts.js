@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Default settings
-  let selectedVoice = "en";
-  let playbackSpeed = 1.0;
-  let isPlaying = false;
-  let audio = null;
-
   // DOM elements
   const elements = {
     languageSelect: document.getElementById("language-select"),
@@ -17,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     sendButtonText: document.getElementById("send-button-text"),
     pauseButton: document.getElementById("pause-button"),
   };
+
+  // Default settings
+  let selectedVoice = elements.languageSelect.dataset.preferredLanguage || "en";
+  let playbackSpeed = 1.0;
+  let isPlaying = false;
+  let audio = null;
 
   // Initialize application
   function init() {
