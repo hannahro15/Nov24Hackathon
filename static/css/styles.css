@@ -109,7 +109,7 @@ body {
   z-index: 99;
 }
 
-.navbar-nav > li {
+.navbar-nav>li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -284,8 +284,7 @@ body {
   padding: 1rem 2rem 1rem 5rem;
 } */
 
-#app-text-input-form {
-}
+#app-text-input-form {}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -473,7 +472,7 @@ body {
   padding-bottom: 20px;
 }
 
-form > div {
+form>div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
@@ -573,6 +572,7 @@ form > div {
 }*/
 
 @media screen and (min-width: 998px) {
+
   /*-- Reduce top margin on large screens ----*/
   #main-body {
     margin-top: 5%;
@@ -581,8 +581,14 @@ form > div {
 
 /* Tablets and smaller devices */
 @media (max-width: 768px) {
+  #welcome-section {
+    height: auto;
+    padding: 20px 0;
+    max-width: 100%;
+  }
+
   #welcome-box {
-    max-width: 70%;
+    max-width: 50%;
     margin-right: 20px;
     padding: 15px;
   }
@@ -611,10 +617,11 @@ form > div {
   #welcome-section {
     height: auto;
     padding: 20px 0;
+    max-width: 100%;
   }
 
   #welcome-box {
-    max-width: 90%;
+    max-width: 50%;
     margin-right: 10px;
   }
 
