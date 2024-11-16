@@ -1,55 +1,63 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<h2 class="text-center contact-title">Contact Us!</h2>
-<p class="text-center fst-italic">
-  Please contact us if you have any queries regarding our text-speech app.
-</p>
-<form>
-  <div class="col fw-bold">
-    <label for="exampleFormControlTextarea1" class="form-label">
-      First Name:
-    </label>
-    <input type="text" class="form-control" placeholder="First name" />
-  </div>
-  <div class="col fw-bold">
-    <label for="exampleFormControlTextarea1" class="form-label">
-      Last Name:
-    </label>
-    <input type="text" class="form-control" placeholder="Last name" />
-  </div>
-  <div class="col fw-bold">
-    <label for="exampleFormControlInput1" class="form-label"
-      >Email address:</label
-    >
-    <input
-      type="email"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="name@example.com"
-    />
-  </div>
-  <div class="mb-3 fw-bold">
-    <label for="exampleFormControlTextarea1" class="form-label">
-      Please post your comment/s below:
-    </label>
-    <textarea
-      class="form-control"
-      id="exampleFormControlTextarea1"
-      placeholder="Please fill in any comments here..."
-      rows="5"
-    ></textarea>
-  </div>
-  <div>
-    <input
-      class="submit_button btn btn-primary"
-      id="myForm"
-      type="button"
-      onclick="myFunction()"
-      value="Submit form"
-    />
-  </div>
-</form>
-<p class="contact-paragraph text-center fst-italic">
-  Thank you very much for contacting us and I hope you made good use of the
-  text-speech app!
-</p>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <h2 class="text-center contact-title">
+    Contact Us!
+  </h2>
+  <p class="text-center fst-italic">
+    Please contact us if you have any queries regarding our text-speech app.
+  </p>
+  <form>
+    <div class="col fw-bold">
+      <label for="exampleFormControlTextarea1"
+             class="form-label">
+        First Name:
+      </label>
+      <input type="text"
+             class="form-control"
+             placeholder="First name" />
+    </div>
+    <div class="col fw-bold">
+      <label for="exampleFormControlTextarea1"
+             class="form-label">
+        Last Name:
+      </label>
+      <input type="text"
+             class="form-control"
+             placeholder="Last name" />
+    </div>
+    <div class="col fw-bold">
+      <label for="exampleFormControlInput1"
+             class="form-label">
+        Email address:
+      </label>
+      <input type="email"
+             class="form-control"
+             id="exampleFormControlInput1"
+             placeholder="name@example.com" />
+    </div>
+    <div class="mb-3 fw-bold">
+      <label for="exampleFormControlTextarea1"
+             class="form-label">
+        Please post your comment/s below:
+      </label>
+      <textarea class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Please fill in any comments here..."
+                rows="5"></textarea>
+    </div>
+    <div>
+      <input class="submit_button btn btn-primary"
+             id="myForm"
+             type="button"
+             onclick="myFunction()"
+             value="Submit form" />
+    </div>
+  </form>
+  <p class="contact-paragraph text-center fst-italic">
+    Thank you very much for contacting us and I hope you made good use of the
+    text-speech app!
+  </p>
 {% endblock content %}
