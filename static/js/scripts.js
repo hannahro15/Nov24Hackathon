@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (audio.paused) {
         // Resume playback if paused
         audio.play();
-        elements.pauseButton.textContent = "Pause"; // Optional: change button text to "Pause"
+        elements.pauseButton.textContent = "Pause";
       } else {
         // Pause playback if playing
         audio.pause();
-        elements.pauseButton.textContent = "Resume"; // Optional: change button text to "Resume"
+        elements.pauseButton.textContent = "Resume";
       }
     }
   }
@@ -232,4 +232,14 @@ document.addEventListener("DOMContentLoaded", () => {
   alertDiv.style.position = "absolute";
   alertDiv.style.left = "-9999px"; // Visually hidden
   document.body.appendChild(alertDiv);
+});
+
+// Contact Page
+// Form submission button
+document.addEventListener("DOMContentLoaded", () => {
+  const myFormButton = document.getElementById("myForm");
+
+  myFormButton.addEventListener("click", function () {
+    myFormButton.style.backgroundColor = "green";
+  });
 });
