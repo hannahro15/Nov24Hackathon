@@ -7,7 +7,6 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
 
-
 # Load environment variables from .env file
 load_dotenv()
 
@@ -24,7 +23,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '.herokuapp.com',
-    '.codeinstitute-ide.net'
+    '.codeinstitute-ide.net',
 ]
 
 # Application definition
@@ -40,7 +39,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
     'home',
     'text_to_speech',
     'team_app',
@@ -54,9 +52,21 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+# Disable email verification
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 # Django Crispy Forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+# Maps alert message to Bootstrap CSS classes.
+MESSAGE_TAGS = {
+    messages.DEBUG: 'debug',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
 
 # Middleware settings
 MIDDLEWARE = [
@@ -143,7 +153,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, images)
 STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
