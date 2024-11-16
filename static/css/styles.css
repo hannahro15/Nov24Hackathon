@@ -204,11 +204,6 @@ body {
   background: linear-gradient(to right, #004c6d, #ffb700, #b2ebf2, #36454f);
 }
 
-/*--------------------------------------- Main body -----------*/
-#main-body {
-  margin-top: 25%;
-}
-
 /*--------------------------------------- Text to Speech ----------*/
 .form-control {
   width: 100%;
@@ -715,6 +710,24 @@ form>div {
 }
 
 /*--------------Media Queries------------*/
+@media screen and (min-width: 1400px) {
+  #main-body {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #main-body {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #main-body {
+    margin-top: 100px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .contact-paragraph {
     margin-left: 10px;
@@ -765,14 +778,6 @@ form>div {
     max-height: auto;
   }
 }*/
-
-@media screen and (min-width: 998px) {
-
-  /*-- Reduce top margin on large screens ----*/
-  #main-body {
-    margin-top: 5%;
-  }
-}
 
 /* Tablets and smaller devices */
 @media (max-width: 768px) {
