@@ -603,19 +603,25 @@ input[type="range"]:disabled::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*background-color: #f0f8ff;*/
+  background-color: #f0f8ff;
   padding: 20px;
   border-radius: 8px;
   width: 25%;
+  height: 180px;
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .steps-titles {
   text-transform: uppercase;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-weight: 600;
   margin: 10px 0;
+}
+
+.step-icon {
+  font-size: 5em;
+  color: var(--accent-color-2);
 }
 
 /*.steps-tiles {
