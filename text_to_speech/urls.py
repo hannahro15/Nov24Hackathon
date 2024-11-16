@@ -9,4 +9,5 @@ urlpatterns = [
         views.text_to_speech_api,
         name='text_to_speech_api',
     ),
+    path('profile/', views.profile, name='profile'),
 ]

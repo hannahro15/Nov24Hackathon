@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+  <div class="container d-flex flex-column align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <div class="col-md-12">
+        <h2 class="text-center">
+          {% trans "Profile Settings" %}
+        </h2>
+        <form method="post"
+              class="d-flex flex-column">
+          {% csrf_token %}
+          <!-- Profile Form -->
+          <h5 class="pt-4">
+            {% trans "Update Preferred Language" %}
+          </h5>
+          {{ form.non_field_errors }}
+          {{ form.preferred_language.label_tag }}
+          {{ form.preferred_language }}
+          {{ form.preferred_language.errors }}
+
+          <!-- Password Change Form -->
+          <h5 class="pt-4">
+            {% trans "Change Password" %}
+          </h5>
+          {{ password_change_form.non_field_errors }}
+          {{ password_change_form.oldpassword.label_tag }}
+          {{ password_change_form.oldpassword }}
+          {{ password_change_form.oldpassword.errors }}
+
+          {{ password_change_form.password1.label_tag }}
+          {{ password_change_form.password1 }}
+          {{ password_change_form.password1.errors }}
+
+          {{ password_change_form.password2.label_tag }}
+          {{ password_change_form.password2 }}
+          {{ password_change_form.password2.errors }}
+
+          <button type="submit"
+                  class="btn btn-primary btn-block mt-4">
+            {% trans "Save" %}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,8 +1,9 @@
 from django import forms
 
+from .models import LANGUAGE_CHOICES, Profile
+
 
 class InputForm(forms.Form):
-    # Class to create a text field for a user to enter text.
     text_input = forms.CharField(
         label='Text Input',
         max_length=100,
@@ -14,3 +15,14 @@ class InputForm(forms.Form):
             },
         ),
     )
+
+
+class ProfileForm(forms.ModelForm):
+    preferred_language = forms.ChoiceField(
+        choices=LANGUAGE_CHOICES,
+        label='Preferred Language',
+    )
+
+    class Meta:
+        model = Profile
+        fields = ['preferred_language']
