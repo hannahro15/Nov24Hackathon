@@ -6,7 +6,7 @@ def contact(request):
     return render(request, 'contact/contact.html')
 
 
-def faq(request):
+def faq_page(request):
       # Fetch all the FAQs from the database
     faq_list = Faq.objects.all()
     
