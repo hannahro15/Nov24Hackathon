@@ -9,6 +9,15 @@ body {
   flex-direction: column;
 }
 
+.page-titles {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.page-subtitles {
+  font-style: italic;
+}
+
 /*-----------------------------Colour schemes variables -----------*/
 :root {
   --background-color: #000000;
