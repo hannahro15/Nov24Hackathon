@@ -1,28 +1,14 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
-{% load static %}
-
-{% block content %}
-
-  <div class="container">
-    <h1>
-      Frequently Asked Questions
-    </h1>
-    <div class="accordion"
-         id="faqAccordion">
-      <div class="accordion-item"
-           id="item{{ forloop.counter }}">
-        <div class="accordion-header"
-             onclick="toggleAccordion('{{ forloop.counter }}')">
-          {{ faq.question }}
-        </div>
-        <div class="accordion-content"
-             id="content{{ forloop.counter }}">
-          <p>
-            {{ faq.answer }}
-          </p>
-        </div>
-      </div>
-    </div>
+<div class="faq-page-container">
+  <h1>Frequently Asked Questions</h1>
+  <p>For all of your most frequently asked questions below.</p>
+  {% for faq in faq_list %}
+  <div class="faq-questions-container bg-white">
+    <div>Question: {{ faq.question }}</div>
+    <hr />
+    <div>Answer: {{ faq.answer }}</div>
   </div>
+  {% endfor %}
+</div>
 {% endblock content %}

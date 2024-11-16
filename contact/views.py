@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Faq
 
 
 def contact(request):
@@ -6,4 +7,8 @@ def contact(request):
 
 
 def faq(request):
-    return render(request, 'contact/faq.html')
+      # Fetch all the FAQs from the database
+    faq_list = Faq.objects.all()
+    
+    # Pass the FAQs to the template
+    return render(request, 'contact/faq.html', {'faq_list': faq_list})
