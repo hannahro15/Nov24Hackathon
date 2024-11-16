@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     speedValue: document.getElementById("speed-value"),
     sendSpinner: document.getElementById("send-spinner"),
     sendButtonText: document.getElementById("send-button-text"),
+    pauseButton: document.getElementById("pause-button"),
   };
 
   // Initialize application
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.speedRange.addEventListener("input", handleSpeedChange);
     elements.sendButton.addEventListener("click", handleSendButtonClick);
     elements.clearButton.addEventListener("click", handleClearButtonClick);
+    elements.pauseButton.addEventListener("click", handlePauseButtonClick);
   }
 
   // Handle language selection change
@@ -88,6 +90,21 @@ document.addEventListener("DOMContentLoaded", () => {
     isPlaying = false;
     resetSendButton();
   }
+
+// Pause/Resume audio playback
+function handlePauseButtonClick() {
+  if (audio) {
+    if (audio.paused) {
+      // Resume playback if paused
+      audio.play();
+      elements.pauseButton.textContent = "Pause";  // Optional: change button text to "Pause"
+    } else {
+      // Pause playback if playing
+      audio.pause();
+      elements.pauseButton.textContent = "Resume";  // Optional: change button text to "Resume"
+    }
+  }
+}
 
   // Validate user input
   function validateInput(text) {
