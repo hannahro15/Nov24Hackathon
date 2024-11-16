@@ -23,9 +23,12 @@ body {
 .palette1 {
   --background-color: #000;
   --primary-text-color: #fff;
+  --background-color: #000;
+  --primary-text-color: #fff;
   --accent-color-1: #ffd700;
   --accent-color-2: #ff4500;
   --accent-color-3: #00ff00;
+  
   
 }
 
@@ -49,6 +52,9 @@ body {
 
 /* Palette 4: Grayscale */
 .palette4 {
+  --background-color: #222222;
+  --primary-text-color: #f7f7f7;
+  --accent-color-1: #dbdbdb;
   --background-color: #222222;
   --primary-text-color: #f7f7f7;
   --accent-color-1: #dbdbdb;
@@ -77,10 +83,10 @@ body {
 
 /* Palette 6: Default */
 .palette6 {
-  --background-color: #004C6D; /* Deep Teal */
+  --background-color: #36454F; /* Charcoal */
   --primary-text-color: #FFB700; /* Mustard Yellow */
   --accent-color-1: #B2EBF2; /* Soft Cyan */
-  --accent-color-2: #36454F; /* Charcoal */
+  --accent-color-2: #004C6D; /* Deep Teal */
   --accent-color-3: #FFB700; /* Repeat Mustard Yellow for consistency */
   --logo-color: #FFB700; /* Mustard Yellow for the logo */
 }
@@ -154,6 +160,8 @@ body {
 .button-arounder:focus {
   box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, 0.2);
   transform: translateY(-4px);
+  background: var(--accent-color-1);
+  color: var(--background-color);
   background: var(--accent-color-1);
   color: var(--background-color);
   border-top-left-radius: var(--radius);
