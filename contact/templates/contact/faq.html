@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="container">
+  <h1>Frequently Asked Questions</h1>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item" id="item{{ forloop.counter }}">
+      <div
+        class="accordion-header"
+        onclick="toggleAccordion('{{ forloop.counter }}')"
+      >
+        {{ faq.question }}
+      </div>
+      <div class="accordion-content" id="content{{ forloop.counter }}">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
