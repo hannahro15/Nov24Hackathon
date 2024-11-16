@@ -726,9 +726,17 @@ form>div {
   }
 }
 
+@media screen and (max-width: 1400px) {
+  #main-body {
+    margin-top: 150px;
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #main-body {
     margin-top: 150px;
+    margin-bottom: 30px;
   }
 }
 
