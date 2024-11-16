@@ -1,17 +1,29 @@
 import io
 
+from allauth.account.forms import ChangePasswordForm
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from gtts import gTTS
 from gtts.lang import tts_langs
 
-from .forms import InputForm
+from .forms import InputForm, ProfileForm
 
 
 def text_to_speech(request):
     # Get the list of available languages
     languages = tts_langs()
-    context = {'form': InputForm(), 'languages': languages}
+    preferred_language = 'en'  # Default language
+
+    if request.user.is_authenticated:
+        preferred_language = request.user.profile.preferred_language
+
+    context = {
+        'form': InputForm(),
+        'languages': languages,
+        'preferred_language': preferred_language,
+    }
     return render(request, 'text_to_speech/text_to_speech.html', context)
 
 
@@ -38,3 +50,34 @@ def text_to_speech_api(request):
         return response
     except Exception as e:
         return HttpResponse(f'Error: {str(e)}', status=500)
+
+
+@login_required
+def profile(request):
+    profile = request.user.profile
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=profile)
+        password_change_form = ChangePasswordForm(
+            user=request.user, data=request.POST
+        )
+
+        if form.is_valid() and password_change_form.is_valid():
+            form.save()
+            password_change_form.save()
+            messages.success(
+                request,
+                'Your profile and password have been updated successfully.',
+            )
+            return redirect('profile')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = ProfileForm(instance=profile)
+        password_change_form = ChangePasswordForm(user=request.user)
+
+    context = {
+        'form': form,
+        'password_change_form': password_change_form,
+    }
+    return render(request, 'text_to_speech/profile.html', context)
