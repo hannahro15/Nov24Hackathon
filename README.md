@@ -262,10 +262,11 @@ These features reflect our aspirations to further refine and improve the website
  2. git push
 
  Head back over to Heroku where the Deploy tab is.
- 2. Click Deploy Branch. (Should be a main or master branch)
- 3. Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
- 4. Once you know deployment is successful then click 'Enable Automatic Deploys'
- 5. Click 'View' to launch the new app. 
+ 1. Click Deploy Branch. (Should be a main or master branch)
+ 2. Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
+ 3. Once you know deployment is successful then click 'Enable Automatic Deploys'
+ 4. Click 'View' to launch the new app. 
+ 5. Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
 # Credits
 
