@@ -16,7 +16,8 @@ body {
   --accent-color-1: #ffd700;
   --accent-color-2: #ff4500;
   --accent-color-3: #00ff00;
-  --logo-color: #ffffff; /* Default white */
+  --logo-color: #ffffff;
+  /* Default white */
 }
 
 /* Palette 1: High Contrast */
@@ -28,8 +29,8 @@ body {
   --accent-color-1: #ffd700;
   --accent-color-2: #ff4500;
   --accent-color-3: #00ff00;
-  
-  
+
+
 }
 
 /* Palette 2: Red-Green Color Blindness */
@@ -73,22 +74,34 @@ body {
 
 /* Palette 6: Default */
 .palette6 {
-  --background-color: #36454F; /* Charcoal */
-  --primary-text-color: #FFB700; /* Mustard Yellow */
-  --accent-color-1: #B2EBF2; /* Soft Cyan */
-  --accent-color-2: #004C6D; /* Deep Teal */
-  --accent-color-3: #FFB700; /* Repeat Mustard Yellow for consistency */
-  --logo-color: #FFB700; /* Mustard Yellow for the logo */
+  --background-color: #36454F;
+  /* Charcoal */
+  --primary-text-color: #FFB700;
+  /* Mustard Yellow */
+  --accent-color-1: #B2EBF2;
+  /* Soft Cyan */
+  --accent-color-2: #004C6D;
+  /* Deep Teal */
+  --accent-color-3: #FFB700;
+  /* Repeat Mustard Yellow for consistency */
+  --logo-color: #FFB700;
+  /* Mustard Yellow for the logo */
 }
 
 /* Palette 6: Default */
 .palette6 {
-  --background-color: #36454F; /* Charcoal */
-  --primary-text-color: #FFB700; /* Mustard Yellow */
-  --accent-color-1: #B2EBF2; /* Soft Cyan */
-  --accent-color-2: #004C6D; /* Deep Teal */
-  --accent-color-3: #FFB700; /* Repeat Mustard Yellow for consistency */
-  --logo-color: #FFB700; /* Mustard Yellow for the logo */
+  --background-color: #36454F;
+  /* Charcoal */
+  --primary-text-color: #FFB700;
+  /* Mustard Yellow */
+  --accent-color-1: #B2EBF2;
+  /* Soft Cyan */
+  --accent-color-2: #004C6D;
+  /* Deep Teal */
+  --accent-color-3: #FFB700;
+  /* Repeat Mustard Yellow for consistency */
+  --logo-color: #FFB700;
+  /* Mustard Yellow for the logo */
 }
 
 
@@ -99,7 +112,7 @@ body {
   z-index: 99;
 }
 
-.navbar-nav > li {
+.navbar-nav>li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -112,7 +125,7 @@ body {
   color: var(--primary-text-color);
 }
 
-#toggle-icon{
+#toggle-icon {
   font-size: 28px;
   color: var(--primary-text-color);
 }
@@ -274,8 +287,7 @@ body {
   padding: 1rem 2rem 1rem 5rem;
 } */
 
-#app-text-input-form {
-}
+#app-text-input-form {}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -422,7 +434,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f8ff;
+  /*background-color: #f0f8ff;*/
   padding: 20px;
   border-radius: 8px;
   width: 25%;
@@ -462,7 +474,7 @@ body {
   padding-bottom: 20px;
 }
 
-form > div {
+form>div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
@@ -555,6 +567,7 @@ form > div {
 }*/
 
 @media screen and (min-width: 998px) {
+
   /*-- Reduce top margin on large screens ----*/
   #main-body {
     margin-top: 5%;
