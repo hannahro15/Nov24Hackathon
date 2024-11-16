@@ -46,11 +46,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
         <div class="container">
           <a class="navbar-brand navbar-title button-arounder" href="#"
-            ><img
-              src="{% static 'images/logo-white.svg' %}"
-              alt="Minimalist logo depicting a document and a speaker"
-            />
-            Script to Sound</a
+            ><i class="fa-solid fa-file-audio"></i> Script to Sound</a
           >
           <button
             class="navbar-toggler"
@@ -82,7 +78,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle button-arounder"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -116,13 +112,24 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Select Color Palette
+                  Select Colour Palette
                 </a>
                 <ul
                   class="dropdown-menu"
                   aria-labelledby="paletteDropdown"
                   role="menu"
                 >
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="#"
+                      data-palette="palette6"
+                      role="menuitem"
+                    >
+                      <span class="palette-swatch swatch-palette6"></span>
+                      Default
+                    </a>
+                  </li>
                   <li>
                     <a
                       class="dropdown-item d-flex align-items-center"
