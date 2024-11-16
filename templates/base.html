@@ -56,12 +56,12 @@
                   aria-controls="navbar-base"
                   aria-expanded="false"
                   aria-label="Toggle navigation">
+
             <span class="navbar-toggler-icon">
               <i class="fas fa-bars"
                  id="toggle-icon"></i>
             </span>
           </button>
-
           <div class="collapse navbar-collapse"
                id="navbar-base">
             <ul class="navbar-nav mx-auto">
@@ -73,6 +73,7 @@
                 <a class="nav-link button-arounder"
                    href="{% url 'text_to_speech' %}">Text to Speech</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link button-arounder"
                    href="{% url 'contact' %}">Contact</a>
@@ -87,22 +88,37 @@
               </li>
               <!-- Dropdown for color palettes -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle button-arounder"
-                   href="#"
-                   id="paletteDropdown"
-                   role="button"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                  Select Color Palette
+                <a
+                  class="nav-link dropdown-toggle button-arounder"
+                  href="#"
+                  id="paletteDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select Colour Palette
                 </a>
                 <ul class="dropdown-menu"
                     aria-labelledby="paletteDropdown"
                     role="menu">
                   <li>
-                    <a class="dropdown-item d-flex align-items-center"
-                       href="#"
-                       data-palette="palette1"
-                       role="menuitem">
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="#"
+                      data-palette="palette6"
+                      role="menuitem"
+                    >
+                      <span class="palette-swatch swatch-palette6"></span>
+                      Default
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="#"
+                      data-palette="palette1"
+                      role="menuitem"
+                    >
                       <span class="palette-swatch swatch-palette1"></span>
                       High Contrast
                     </a>
