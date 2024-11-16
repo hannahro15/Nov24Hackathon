@@ -27,6 +27,12 @@ body {
   --accent-color-3: #00ff00;
   --logo-color: #ffffff;
   /* Default white */
+  --logo-color: #ffffff;
+  --bs-modal-padding: 0 !important;
+  --bs-modal-border-width: 0 !important;
+  --bs-modal-border-color: none !important;
+  --bs-modal-box-shadow: none !important;
+  --bs-modal-margin: 0 !important;
 }
 
 /* Palette 1: High Contrast */
@@ -186,6 +192,18 @@ body {
   border-radius: 3px;
   border: 1px solid #000000;
   flex-shrink: 0;
+}
+
+/*--------------------------------------- Modal -----------*/
+.modal-content {
+  background: linear-gradient(
+    180deg,
+    #1a1a1ae0 0%,
+    #252525ce 50%,
+    #1a1a1ad0 100%
+  ) !important;
+  border: none !important;
+  color: var(--primary-text-color) !important;
 }
 
 /*--------------------------Navbar Dropdown Menu Swatches --------*/
