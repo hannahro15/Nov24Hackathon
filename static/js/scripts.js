@@ -91,20 +91,20 @@ document.addEventListener("DOMContentLoaded", () => {
     resetSendButton();
   }
 
-// Pause/Resume audio playback
-function handlePauseButtonClick() {
-  if (audio) {
-    if (audio.paused) {
-      // Resume playback if paused
-      audio.play();
-      elements.pauseButton.textContent = "Pause";  // Optional: change button text to "Pause"
-    } else {
-      // Pause playback if playing
-      audio.pause();
-      elements.pauseButton.textContent = "Resume";  // Optional: change button text to "Resume"
+  // Pause/Resume audio playback
+  function handlePauseButtonClick() {
+    if (audio) {
+      if (audio.paused) {
+        // Resume playback if paused
+        audio.play();
+        elements.pauseButton.textContent = "Pause"; // Optional: change button text to "Pause"
+      } else {
+        // Pause playback if playing
+        audio.pause();
+        elements.pauseButton.textContent = "Resume"; // Optional: change button text to "Resume"
+      }
     }
   }
-}
 
   // Validate user input
   function validateInput(text) {
@@ -191,17 +191,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to apply the palette
   const applyPalette = (paletteClass) => {
     document.body.className = paletteClass;
+
+    // Handle grayscale-specific adjustments
+    if (paletteClass === "palette4") {
+      document.body.classList.add("grayscale-mode");
+    } else {
+      document.body.classList.remove("grayscale-mode");
+    }
   };
 
-  // Add event listeners to dropdown links
+  // Add event listeners for dropdown links
   paletteLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const palette = link.dataset.palette;
       applyPalette(palette);
+
+      // Announce change for screen readers
+      const alertDiv = document.getElementById("palette-alert");
+      alertDiv.textContent = `Palette changed to ${link.textContent}`;
+    });
+
+    // Add keyboard support for "Enter" key
+    link.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        link.click();
+      }
     });
   });
 
-  // Apply default palette (Palette 1)
-  applyPalette("palette1");
+  // Apply the Default palette (Palette 6) on page load
+  applyPalette("palette6");
+
+  // Add alert div for screen readers
+  const alertDiv = document.createElement("div");
+  alertDiv.id = "palette-alert";
+  alertDiv.setAttribute("role", "alert");
+  alertDiv.setAttribute("aria-live", "assertive");
+  alertDiv.style.position = "absolute";
+  alertDiv.style.left = "-9999px"; // Visually hidden
+  document.body.appendChild(alertDiv);
 });
