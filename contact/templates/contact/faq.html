@@ -1,8 +1,10 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="faq-page-container">
-  <h1>Frequently Asked Questions</h1>
-  <p>For all of your most frequently asked questions below.</p>
+  <h1 class="text-center">Frequently Asked Questions</h1>
+  <p class="text-center">
+    For all of your most frequently asked questions below.
+  </p>
   {% for faq in faq_list %}
   <div class="faq-questions-container bg-white">
     <div>Question: {{ faq.question }}</div>
