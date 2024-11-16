@@ -63,10 +63,10 @@ body {
 
 /* Palette 5: Soft Tones */
 .palette5 {
-  --background-color: #eaeaea;
-  --primary-text-color: #333333;
-  --accent-color-1: #87cefa;
-  --accent-color-2: #ffdab9;
+  --background-color: #333333;
+  --primary-text-color: #eaeaea;
+  --accent-color-1: #ffdab9;
+  --accent-color-2: #528eb3;
   --accent-color-3: #90ee90;
 }
 
@@ -607,7 +607,7 @@ input[type="range"]:disabled::-moz-range-thumb {
   padding: 20px;
   border-radius: 8px;
   width: 25%;
-  height: 180px;
+  height: 285px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -617,6 +617,7 @@ input[type="range"]:disabled::-moz-range-thumb {
   /* text-decoration: underline; */
   font-weight: 600;
   margin: 10px 0;
+  color: var(--accent-color-2);
 }
 
 .step-icon {
