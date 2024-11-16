@@ -1,5 +1,8 @@
 /*--------------------------------------- General Styles -----------*/
 body {
+  font-family: 'Lexend', sans-serif !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.5px !important;
   background-color: var(--accent-color-1);
   min-height: 100vh;
   display: flex;
