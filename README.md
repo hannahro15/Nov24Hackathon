@@ -171,8 +171,24 @@ As part of the project's evolution, the following features are being considered 
   
 These features reflect our aspirations to further refine and improve the website's usability in the future.
 
-## Usability
+## Agile in the Project
 
+Agile methodology played a vital role in the development of this project, fostering collaboration, adaptability, and iterative progress. The team embraced Agile principles to break down tasks, prioritize work, and deliver increments of value throughout the hackathon.
+
+Using GitHub for Agile Workflow
+The team utilized GitHub Issues as the core tool for task management and collaboration. Tasks were categorized and prioritized using must-have and should-have labels, ensuring the most critical features and fixes were addressed first. Each issue included clear descriptions, labels, and milestones to maintain focus and organization, and tasks were assigned to individual team members or multiple contributors when collaboration was necessary.
+
+Below are examples of GitHub Issues used during the project:
+
+Open Issues: Placeholder for a screenshot of open issues, demonstrating tasks currently in progress or waiting to be addressed.
+Solved Issues: Placeholder for a screenshot of resolved issues, showing the features and fixes completed during the hackathon.
+Challenges and Solutions
+While Agile practices enabled efficient task tracking and prioritization, the team faced challenges with merging changes across different forks. These conflicts required constant communication and careful coordination to resolve. The team approached this by setting aside dedicated time for merge conflict resolution and regularly syncing branches to minimize future issues.
+
+Sprint Workflow
+The team worked in focused sprints to deliver features and tackle bugs iteratively. Regular stand-ups ensured everyone remained aligned, and sprint reviews allowed for quick assessment of completed tasks and adjustments to upcoming priorities. This sprint-based workflow provided structure while accommodating the fast-paced nature of the hackathon.
+
+By adhering to Agile practices, the team successfully navigated challenges, stayed organized, and delivered a robust project within the hackathon's constraints.
 ---
 
 ## Technologies used
