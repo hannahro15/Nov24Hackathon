@@ -709,6 +709,15 @@ form > div {
   margin-top: 10px;
 }
 
+.card-title {
+  font-size: 25px;
+}
+
+#faq-card {
+  color: #ffb700;
+  background-color: black;
+}
+
 /*--------------------------------------- Team Page -------- */
 .card-img-top {
   width: 100%;
@@ -719,10 +728,6 @@ form > div {
 
 .card {
   margin-bottom: 40px;
-}
-
-.card-title {
-  font-size: 25px;
 }
 
 /*--------------------------------------- Profile page ----- */
