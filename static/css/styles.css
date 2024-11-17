@@ -101,8 +101,8 @@ body {
   /* Soft Cyan */
   --accent-color-2: #004c6d;
   /* Deep Teal */
-  --accent-color-3: #ffb700;
-  /* Repeat Mustard Yellow for consistency */
+  --accent-color-3: #004c6d;
+  /* Deep Teal */
   --logo-color: #ffb700;
   /* Mustard Yellow for the logo */
 }
@@ -277,9 +277,11 @@ body {
 }
 
 .btn-custom-text {
-  width: 6rem;
+  min-width: 6rem;
   font-weight: 600;
   transition: box-shadow 0.2s, outline 0.2s;
+  background-color: var(--accent-color-2);
+  color: var(--primary-text-color);
 }
 
 .btn-custom-icon:hover,
@@ -310,15 +312,6 @@ body {
 #text-steps-two {
   margin-top: 40px;
 }
-
-/* #app-text-input {
-  max-width: 500px;
-  margin: 50px auto;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem 1rem 5rem;
-} */
 
 #app-text-input-form {}
 
@@ -390,7 +383,7 @@ input[type="range"].win10-thumb {
   }
 
   input[type="range"] {
-    color: var(--accent-color-3);
+    color: var(--accent-color-2);
     --track-color: rgba(255, 255, 255, 0.1);
   }
 
@@ -677,8 +670,20 @@ form>div {
   margin-bottom: 40px;
 }
 
+/*--------------------------------------- Profile page ----- */
+#change-password-form {
+  height: 300px;
+}
 
-/*--------------------------------------- Footer -----------*/
+#preferred-language-form{
+  height: 175px;
+}
+
+label {
+  display: none !important;
+}
+
+/*--------------------------------------- Footer ------------*/
 .footer {
   bottom: 0;
   margin-top: auto;
