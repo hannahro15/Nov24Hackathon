@@ -1,3 +1,30 @@
+/*--------------------------------------- General Styles -----------*/
+body {
+  font-family: "Lexend", sans-serif !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.5px !important;
+  background-color: var(--accent-color-1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-titles {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+.page-subtitles {
+  font-style: italic;
+}
+
+/* Base style for all images */
+img {
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
 /*-----------------------------Colour schemes variables -----------*/
 :root {
   --background-color: #000000;
@@ -105,6 +132,42 @@ body {
 
 .page-subtitles {
   font-style: italic;
+}
+
+/*----------------- Palette-specific filters for images --------*/
+/* Base transition for all images */
+img {
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+/* Palette 1: High Contrast */
+.palette1 img {
+  filter: brightness(1.5) contrast(2);
+}
+
+/* Palette 2: Red-Green Color Blindness */
+.palette2 img {
+  filter: hue-rotate(-50deg) saturate(0.5);
+}
+
+/* Palette 3: Blue-Yellow Color Blindness */
+.palette3 img {
+  filter: hue-rotate(180deg) saturate(0.7);
+}
+
+/* Palette 4: Grayscale */
+.palette4 img {
+  filter: grayscale(1);
+}
+
+/* Palette 5: Soft Tones for Light Sensitivity */
+.palette5 img {
+  filter: sepia(0.4) brightness(0.8);
+}
+
+/* Palette 6: Default */
+.palette6 img {
+  filter: brightness(1.2);
 }
 
 /*--------------------------------------- Navbar -----------*/
