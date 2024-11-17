@@ -16,9 +16,12 @@
           <h5 class="pt-4">
             {% trans "Update Preferred Language" %}
           </h5>
+          <div class="select-position">
           {{ form.non_field_errors }}
           {{ form.preferred_language }}
           {{ form.preferred_language.errors }}
+          <i class="fa-solid fa-arrow-down select-arrow"></i>
+          </div>
           <button type="submit" name="preferred_language_submit" class="btn btn-custom-text btn-block mt-4">
             {% trans "Save Language" %}
           </button>
