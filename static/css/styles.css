@@ -798,6 +798,8 @@ form > div {
 
 .card {
   margin-bottom: 40px;
+  background-color: var(--background-color) !important;
+  color: var(--primary-text-color) !important;
 }
 
 /*--------------------------------------- Profile page ----- */
