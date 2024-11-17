@@ -354,7 +354,7 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 
 ### CSS W3C Validator
 
-![Screenshot of W3C CSS validator showing no errors](docs/css-validator.png)
+![Screenshot of W3C CSS validator showing no errors](docs/validator-css.png)
 - No errors found.
 
 ### JSHint

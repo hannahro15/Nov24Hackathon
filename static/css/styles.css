@@ -114,7 +114,7 @@ body {
   z-index: 99;
 }
 
-.navbar-nav>li {
+.navbar-nav > li {
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -125,18 +125,14 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background: var(--primary-text-color);
-  box-shadow:
-    inset 0 0 5px rgba(0, 0, 0, 0.3),
-    0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
   border-radius: 0.25rem;
 }
 
 *::-webkit-scrollbar-thumb:hover {
   background: var(--accent-color-1);
-  box-shadow:
-    inset 0 0 5px rgba(0, 0, 0, 0.4),
-    0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 *::-webkit-scrollbar-track {
@@ -226,10 +222,12 @@ body {
 
 /*--------------------------------------- Modal -----------*/
 .modal-content {
-  background: linear-gradient(180deg,
-      #1a1a1ae0 0%,
-      #252525ce 50%,
-      #1a1a1ad0 100%) !important;
+  background: linear-gradient(
+    180deg,
+    #1a1a1ae0 0%,
+    #252525ce 50%,
+    #1a1a1ad0 100%
+  ) !important;
   border: none !important;
   color: var(--primary-text-color) !important;
 }
@@ -331,10 +329,11 @@ body {
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2)
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-#app-text-input-form {}
+#app-text-input-form {
+}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -353,7 +352,7 @@ body {
     border-bottom-left-radius var(--dur) calc(var(--delay) * 3) ease-out,
     box-shadow calc(var(--dur) * 3) ease-out,
     transform calc(var(--dur) * 3) ease-out,
-    background calc(var(--dur) * 3) steps(4, jump-end);
+    background calc(var(--dur) * 3) ease-in-out;
 }
 
 .input-arounder:hover,
@@ -449,23 +448,27 @@ input[type="range"]::-webkit-slider-thumb {
   --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
   --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
   --clip-further: calc(100% + 1px);
-  --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0 100vmax currentColor;
+  --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+    100vmax currentColor;
 
   width: var(--thumb-width, var(--thumb-height));
-  background: linear-gradient(currentColor 0 0) scroll no-repeat left center / 50% calc(var(--track-height) + 1px);
+  background: linear-gradient(to bottom, currentColor, currentColor) no-repeat
+    left center / 50% calc(var(--track-height) + 1px);
   background-color: currentColor;
   box-shadow: var(--box-fill);
   border-radius: var(--thumb-width, var(--thumb-height));
 
   filter: brightness(100%);
-  clip-path: polygon(100% -1px,
-      var(--clip-edges) -1px,
-      0 var(--clip-top),
-      -100vmax var(--clip-top),
-      -100vmax var(--clip-bottom),
-      0 var(--clip-bottom),
-      var(--clip-edges) 100%,
-      var(--clip-further) var(--clip-further));
+  clip-path: polygon(
+    100% -1px,
+    var(--clip-edges) -1px,
+    0 var(--clip-top),
+    -100vmax var(--clip-top),
+    -100vmax var(--clip-bottom),
+    0 var(--clip-bottom),
+    var(--clip-edges) 100%,
+    var(--clip-further) var(--clip-further)
+  );
 }
 
 input[type="range"]:hover::-webkit-slider-thumb {
@@ -479,7 +482,8 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center / 100% calc(var(--track-height) + 1px);
+  background: linear-gradient(to bottom, var(--track-color), var(--track-color))
+    no-repeat center / 100% calc(var(--track-height) + 1px);
 }
 
 input[type="range"]:disabled::-webkit-slider-thumb {
@@ -605,14 +609,14 @@ input[type="range"]:disabled::-moz-range-thumb {
   border: none;
   border-radius: 5px;
   background-color: #ffffff;
-  color: #B11310;
+  color: #b11310;
   cursor: pointer;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 #welcome-button:hover {
-  background-color: #B11310;
+  background-color: #b11310;
   color: #ffffff;
 }
 
@@ -655,7 +659,6 @@ input[type="range"]:disabled::-moz-range-thumb {
 .step-icon {
   font-size: 5em;
   color: var(--accent-color-2);
-
 }
 
 .step-icon {
@@ -673,7 +676,7 @@ input[type="range"]:disabled::-moz-range-thumb {
   padding-bottom: 20px;
 }
 
-form>div {
+form > div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
@@ -700,7 +703,7 @@ form>div {
   height: 300px;
 }
 
-#preferred-language-form{
+#preferred-language-form {
   height: 175px;
 }
 
@@ -743,115 +746,116 @@ label {
   #main-body {
     margin-bottom: 30px;
   }
+}
 
-  @media only screen and (max-width: 600px) {
-    .contact-paragraph {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
+@media only screen and (max-width: 600px) {
+  .contact-paragraph {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+  #welcome-section {
+    height: auto;
+    padding: 20px 0;
+    max-width: 100%;
   }
 
-  /* Tablets and smaller devices */
-  @media (max-width: 768px) {
-    #welcome-section {
-      height: auto;
-      padding: 20px 0;
-      max-width: 100%;
-    }
-
-    #welcome-box {
-      max-width: 50%;
-      margin-right: 20px;
-      padding: 15px;
-    }
-
-    #welcome-text h2 {
-      font-size: 2rem;
-    }
-
-    #welcome-button {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
-
-    #steps-container {
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .steps-tiles {
-      width: 80%;
-    }
+  #welcome-box {
+    max-width: 50%;
+    margin-right: 20px;
+    padding: 15px;
   }
 
-  @media (min-width: 769px) and (max-width: 1079px) {
-    #steps-container {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .steps-tiles {
-      width: 30%;
-      padding: 15px;
-      height: auto;
-      text-align: center;
-    }
-
-    .steps-titles {
-      font-size: 1rem;
-      margin: 8px 0;
-    }
-
-    .steps-texts {
-      font-size: 0.85rem;
-      line-height: 1.4;
-    }
-
-    .step-icon {
-      font-size: 3.5em;
-    }
-
-    .steps-tiles:first-child {
-      margin-left: 10px;
-    }
-
-    .steps-tiles:last-child {
-      margin-right: 10px;
-    }
+  #welcome-text h2 {
+    font-size: 2rem;
   }
 
-  /* Mobile phones and very small screens */
-  @media (max-width: 480px) {
-    #welcome-section {
-      height: auto;
-      padding: 20px 0;
-      max-width: 100%;
-    }
-
-    #welcome-box {
-      max-width: 50%;
-      margin-right: 10px;
-    }
-
-    #welcome-text h2 {
-      font-size: 1.5rem;
-    }
-
-    #welcome-text h1 {
-      font-size: 2rem;
-    }
-
-    #welcome-button {
-      padding: 6px 12px;
-      font-size: 0.8rem;
-    }
-
-    #steps-container {
-      gap: 10px;
-    }
-
-    .steps-tiles {
-      width: 90%;
-    }
+  #welcome-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
+
+  #steps-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .steps-tiles {
+    width: 80%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1079px) {
+  #steps-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .steps-tiles {
+    width: 30%;
+    padding: 15px;
+    height: auto;
+    text-align: center;
+  }
+
+  .steps-titles {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+
+  .steps-texts {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .step-icon {
+    font-size: 3.5em;
+  }
+
+  .steps-tiles:first-child {
+    margin-left: 10px;
+  }
+
+  .steps-tiles:last-child {
+    margin-right: 10px;
+  }
+}
+
+/* Mobile phones and very small screens */
+@media (max-width: 480px) {
+  #welcome-section {
+    height: auto;
+    padding: 20px 0;
+    max-width: 100%;
+  }
+
+  #welcome-box {
+    max-width: 50%;
+    margin-right: 10px;
+  }
+
+  #welcome-text h2 {
+    font-size: 1.5rem;
+  }
+
+  #welcome-text h1 {
+    font-size: 2rem;
+  }
+
+  #welcome-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  #steps-container {
+    gap: 10px;
+  }
+
+  .steps-tiles {
+    width: 90%;
+  }
+}
