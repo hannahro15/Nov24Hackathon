@@ -84,13 +84,13 @@
           <div class="collapse navbar-collapse" id="navbar-base">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item active">
-                <a class="nav-link button-arounder" href="{% url 'home' %}"
+                <a class="nav-link button-arounder me-5" href="{% url 'home' %}"
                   >Home <span class="sr-only">(current)</span></a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link button-arounder"
+                  class="nav-link button-arounder me-5"
                   href="{% url 'text_to_speech' %}"
                   >Text to Speech</a
                 >
@@ -98,13 +98,13 @@
               {% if user.is_authenticated %}
               <li class="nav-item">
                 <a
-                  class="nav-link button-arounder"
+                  class="nav-link button-arounder me-5"
                   href="{% url 'account_logout' %}"
                   >Logout</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link button-arounder" href="{% url 'profile' %}"
+                <a class="nav-link button-arounder me-5" href="{% url 'profile' %}"
                   >Profile</a
                 >
               </li>
@@ -137,7 +137,7 @@
                   Select Colour Palette
                 </a>
                 <ul
-                  class="dropdown-menu"
+                  class="dropdown-menu dropdown-menu-end"
                   aria-labelledby="paletteDropdown"
                   role="menu"
                 >
