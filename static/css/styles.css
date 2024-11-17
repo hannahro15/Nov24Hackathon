@@ -12,6 +12,8 @@ body {
 .page-titles {
   text-transform: uppercase;
   font-weight: 600;
+  margin-top: 50px;
+  font-size: 2em;
 }
 
 .page-subtitles {
