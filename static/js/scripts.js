@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
   init();
 });
 
-// Change CSS variables on dropdown menu
+// Change CSS variables on dropdown menu and persist palette during the session
 document.addEventListener("DOMContentLoaded", () => {
   const paletteLinks = document.querySelectorAll(".dropdown-item");
 
@@ -198,6 +198,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       document.body.classList.remove("grayscale-mode");
     }
+
+    // Save the selected palette to sessionStorage
+    console.log("Saving palette:", paletteClass);
+    sessionStorage.setItem("selectedPalette", paletteClass);
   };
 
   // Add event listeners for dropdown links
@@ -221,8 +225,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Apply the Default palette (Palette 6) on page load
-  applyPalette("palette6");
+  // Retrieve and apply the stored palette on page load
+  const savedPalette = sessionStorage.getItem("selectedPalette");
+  console.log("Retrieved palette:", savedPalette);
+  if (savedPalette) {
+    applyPalette(savedPalette);
+  } else {
+    applyPalette("palette6"); // Default palette
+  }
 
   // Add alert div for screen readers
   const alertDiv = document.createElement("div");

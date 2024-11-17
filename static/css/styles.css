@@ -1,3 +1,30 @@
+/*--------------------------------------- General Styles -----------*/
+body {
+  font-family: "Lexend", sans-serif !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.5px !important;
+  background-color: var(--accent-color-1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-titles {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+.page-subtitles {
+  font-style: italic;
+}
+
+/* Base style for all images */
+img {
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
 /*-----------------------------Colour schemes variables -----------*/
 :root {
   --background-color: #000000;
@@ -105,6 +132,56 @@ body {
 
 .page-subtitles {
   font-style: italic;
+}
+
+/*----------------- Palette-specific filters for images --------*/
+.palette6 img {
+  filter: brightness(1.2) hue-rotate(180deg);
+}
+
+.palette1 img {
+  filter: invert(1) brightness(2) contrast(2);
+}
+
+.palette2 img {
+  filter: hue-rotate(210deg) brightness(1.5);
+}
+
+.palette3 img {
+  filter: hue-rotate(180deg) saturate(3);
+}
+
+.palette4 img {
+  filter: grayscale(1);
+}
+
+.palette5 img {
+  filter: sepia(0.8) saturate(2) brightness(1.1);
+}
+
+/*----------------- Palette-specific filters for images --------*/
+.palette6 img {
+  filter: brightness(1.2) hue-rotate(180deg);
+}
+
+.palette1 img {
+  filter: invert(1) brightness(2) contrast(2);
+}
+
+.palette2 img {
+  filter: hue-rotate(210deg) brightness(1.5);
+}
+
+.palette3 img {
+  filter: hue-rotate(180deg) saturate(3);
+}
+
+.palette4 img {
+  filter: grayscale(1);
+}
+
+.palette5 img {
+  filter: sepia(0.8) saturate(2) brightness(1.1);
 }
 
 /*--------------------------------------- Navbar -----------*/
