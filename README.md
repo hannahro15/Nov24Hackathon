@@ -225,7 +225,7 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 | Django                                   | A Python-based web framework used to develop the backend, manage server-side logic, and handle routing. |  
 | [Heroku](https://www.heroku.com/)        | Cloud platform used for deploying, managing, and hosting the live version of the website.   |  
 | [GitHub](https://github.com/)            | Version control platform used to store the project’s repository, collaborate on code, and manage deployments. |  
-| [Assembly API](https://www.assemblyai.com/) | Provides the text-to-speech functionality, converting user-input text into spoken audio seamlessly. |
+| [gTTS](https://pypi.org/project/gTTS/) | Provides the text-to-speech functionality, converting user-input text into spoken audio seamlessly. |
 | [Balsamiq](https://balsamiq.com/)        | Used to create wireframes and design the structure of the website.                          |  
 | [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                   |
 | [The Noun Project](https://thenounproject.com/) | Used to create image for favicon | 
@@ -234,6 +234,7 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 | [WEBP Converter](https://cloudconvert.com/webp-converter) | Convert jpg/png images to webp format.                                                     |  
 | [Favicon.io](https://favicon.io/favicon-converter/) | Create favicon files.                                                                      |  
 | [Am I Responsive](https://ui.dev/amiresponsive) | View and screenshot the page on different devices.                                          |  
+| [Canva](https://www.canva.com/) | Creating landing, header and icon images.                                          |  
 
 
 ## Testing
