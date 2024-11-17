@@ -704,6 +704,7 @@ form>div {
 .footer-text {
   color: var(--primary-text-color);
   text-decoration: none;
+  text-align: center;
 }
 
 .icon {
