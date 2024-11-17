@@ -157,17 +157,9 @@ As part of the project's evolution, the following features are being considered 
 
    - Add options to pause, stop, and replay the generated audio, providing users with greater flexibility in interacting with the speech output.
 
-2. Adjustable Speech Settings
-
-   - Introduce controls for adjusting speech speed and volume, allowing users to personalize their listening experience.
-
-3. Accessibility Enhancements
+2. Accessibility Enhancements
 
     - Explore the addition of screen reader compatibility and keyboard navigation to improve accessibility for users with disabilities.
-
-4. Multi-Language Support
-
-    - Investigate expanding text-to-speech capabilities to include multiple languages, making the website more inclusive for a global audience.
   
 These features reflect our aspirations to further refine and improve the website's usability in the future.
 
@@ -175,20 +167,32 @@ These features reflect our aspirations to further refine and improve the website
 
 Agile methodology played a vital role in the development of this project, fostering collaboration, adaptability, and iterative progress. The team embraced Agile principles to break down tasks, prioritize work, and deliver increments of value throughout the hackathon.
 
-Using GitHub for Agile Workflow
+### Using GitHub for Agile Workflow
+  
 The team utilized GitHub Issues as the core tool for task management and collaboration. Tasks were categorized and prioritized using must-have and should-have labels, ensuring the most critical features and fixes were addressed first. Each issue included clear descriptions, labels, and milestones to maintain focus and organization, and tasks were assigned to individual team members or multiple contributors when collaboration was necessary.
 
 Below are examples of GitHub Issues used during the project:
 
-Open Issues: Placeholder for a screenshot of open issues, demonstrating tasks currently in progress or waiting to be addressed.
-Solved Issues: Placeholder for a screenshot of resolved issues, showing the features and fixes completed during the hackathon.
-Challenges and Solutions
+<figure>
+  <img src="docs/screenshot-open-issues.png" alt="Screenshot of Issues page on GitHub displaying open issues">
+  <figcaption>Open Issues: screenshot of open issues, demonstrating tasks currently in progress or waiting to be addressed.</figcaption>
+</figure>
+
+<figure>
+  <img src="docs/screenshot-closed-issues.png
+" alt="Screenshot of Issues page on GitHub displaying closed issues">
+  <figcaption>Solved Issues: Placeholder for a screenshot of resolved issues, showing the features and fixes completed during the hackathon.</figcaption>
+</figure>
+
+### Challenges and Solutions
+
 While Agile practices enabled efficient task tracking and prioritization, the team faced challenges with merging changes across different forks. These conflicts required constant communication and careful coordination to resolve. The team approached this by setting aside dedicated time for merge conflict resolution and regularly syncing branches to minimize future issues.
 
-Sprint Workflow
+### Sprint Workflow
 The team worked in focused sprints to deliver features and tackle bugs iteratively. Regular stand-ups ensured everyone remained aligned, and sprint reviews allowed for quick assessment of completed tasks and adjustments to upcoming priorities. This sprint-based workflow provided structure while accommodating the fast-paced nature of the hackathon.
 
 By adhering to Agile practices, the team successfully navigated challenges, stayed organized, and delivered a robust project within the hackathon's constraints.
+
 ---
 
 ## Technologies used
