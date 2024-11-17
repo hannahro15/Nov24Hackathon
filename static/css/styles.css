@@ -194,6 +194,11 @@ body {
   flex-shrink: 0;
 }
 
+/*----------------------------------- Main body -----------*/
+#main-body {
+  margin-top: 68px;
+}
+
 /*--------------------------------------- Modal -----------*/
 .modal-content {
   background: linear-gradient(
@@ -706,31 +711,16 @@ form>div {
 }
 
 /*--------------Media Queries------------*/
-@media screen and (min-width: 1400px) {
-  #main-body {
-    margin-top: 100px;
-  }
-}
-
 @media screen and (max-width: 1400px) {
   #main-body {
-    margin-top: 150px;
     margin-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   #main-body {
-    margin-top: 150px;
     margin-bottom: 30px;
   }
-}
-
-@media screen and (max-width: 991px) {
-  #main-body {
-    margin-top: 100px;
-  }
-}
 
 @media only screen and (max-width: 600px) {
   .contact-paragraph {
