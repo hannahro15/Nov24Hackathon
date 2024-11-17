@@ -29,17 +29,45 @@
 
 The website maintains a consistent design language throughout all screens, using a cohesive color scheme, typography, and layout. This consistency helps users focus on the content and functions without being distracted by changing interfaces.
 
-#### Color scheme
+#### Default Color scheme
 
 ![Four squares, one of a different colour](docs/colour-scheme.png)
 
 The chosen color palette, featuring Deep Teal (#004C6D), Mustard Yellow (#FFB700), Soft Cyan (#B2EBF2), and Charcoal (#36454F), is specifically designed to prioritize accessibility and inclusivity. The combination provides high contrast and visual clarity, making it suitable for users with color vision deficiencies, including deuteranopia, protanopia, and tritanopia. Deep Teal and Charcoal serve as strong base colors, while Mustard Yellow and Soft Cyan add brightness and distinguishable accents. This palette ensures that interactive elements, text, and backgrounds remain easily recognizable, even for users with limited color perception, supporting a user-friendly and inclusive interface.
 
+#### Accessible Color Palette Choices
+
+The color palettes chosen for this project were carefully crafted to ensure inclusivity and usability for individuals with diverse visual impairments. These palettes address common challenges faced by users with color blindness, low vision, and light sensitivity. Each palette emphasizes high contrast and distinguishable hues to meet Web Content Accessibility Guidelines (WCAG) standards and provide a positive experience for all users.
+
+For users with red-green color blindness (Protanopia and Deuteranopia), Palette 2 substitutes colors prone to confusion (reds and greens) with blue and yellow tones, which are easier to differentiate. Palette 3 is optimized for blue-yellow color blindness (Tritanopia), emphasizing clear distinctions between red and blue hues. Palette 4, a grayscale option, caters to those with severe color blindness or monochromacy, ensuring clarity solely through luminance contrasts. Lastly, Palette 5 features soft, non-intrusive tones ideal for users with light sensitivity, reducing eye strain while maintaining readability and visual appeal.
+
+These palettes were tested for accessibility using tools like the WebAIM Contrast Checker and Color Oracle, ensuring compliance with WCAG standards. By incorporating these accessible color schemes, this project aims to create an inclusive digital environment that prioritizes user experience for all audiences.
+
+##### High Contrast
+
+![Five squares, one of a different colour](docs/palette-1-high-contrast.png)
+
+##### Red Green Colour Blindness
+
+![Five squares, one of a different colour](docs/palette-2-red-green-colour-blindness.png)
+
+##### Blue Yellow Colour Blindness
+
+![Five squares, one of a different colour](docs/palette-3-blue-yellow-colour-blindness.png)
+
+##### Grayscale
+
+![Five squares, one of a different colour](docs/palette-4-grayscale.png)
+
+##### Soft Tones
+
+![Five squares, one of a different colour](docs/palette-5-soft-tones.png)
+
 #### Favicon
 
+The favicon was created with a minimalist look and high contrast to stay consistent with the accessibility purposes of the project. It depicts visually the project's main funcionality of "Text to Speech" with a document and a speaker in dark countour lines.
 
-
-![Icon ](assets/favicon/android-chrome-192x192.png)
+![Icon ](static/favicon/android-chrome-192x192.png)
 
 
 
@@ -149,21 +177,41 @@ As part of the project's evolution, the following features are being considered 
 
    - Add options to pause, stop, and replay the generated audio, providing users with greater flexibility in interacting with the speech output.
 
-2. Adjustable Speech Settings
-
-   - Introduce controls for adjusting speech speed and volume, allowing users to personalize their listening experience.
-
-3. Accessibility Enhancements
+2. Accessibility Enhancements
 
     - Explore the addition of screen reader compatibility and keyboard navigation to improve accessibility for users with disabilities.
-
-4. Multi-Language Support
-
-    - Investigate expanding text-to-speech capabilities to include multiple languages, making the website more inclusive for a global audience.
   
 These features reflect our aspirations to further refine and improve the website's usability in the future.
 
-## Usability
+## Agile in the Project
+
+Agile methodology played a vital role in the development of this project, fostering collaboration, adaptability, and iterative progress. The team embraced Agile principles to break down tasks, prioritize work, and deliver increments of value throughout the hackathon.
+
+### Using GitHub for Agile Workflow
+  
+The team utilized GitHub Issues as the core tool for task management and collaboration. Tasks were categorized and prioritized using must-have and should-have labels, ensuring the most critical features and fixes were addressed first. Each issue included clear descriptions, labels, and milestones to maintain focus and organization, and tasks were assigned to individual team members or multiple contributors when collaboration was necessary.
+
+Below are examples of GitHub Issues used during the project:
+
+<figure>
+  <img src="docs/screenshot-open-issues.png" alt="Screenshot of Issues page on GitHub displaying open issues">
+  <figcaption>Open Issues: screenshot of open issues, demonstrating tasks currently in progress or waiting to be addressed.</figcaption>
+</figure>
+
+<figure>
+  <img src="docs/screenshot-closed-issues.png
+" alt="Screenshot of Issues page on GitHub displaying closed issues">
+  <figcaption>Solved Issues: Placeholder for a screenshot of resolved issues, showing the features and fixes completed during the hackathon.</figcaption>
+</figure>
+
+### Challenges and Solutions
+
+While Agile practices enabled efficient task tracking and prioritization, the team faced challenges with merging changes across different forks. These conflicts required constant communication and careful coordination to resolve. The team approached this by setting aside dedicated time for merge conflict resolution and regularly syncing branches to minimize future issues.
+
+### Sprint Workflow
+The team worked in focused sprints to deliver features and tackle bugs iteratively. Regular stand-ups ensured everyone remained aligned, and sprint reviews allowed for quick assessment of completed tasks and adjustments to upcoming priorities. This sprint-based workflow provided structure while accommodating the fast-paced nature of the hackathon.
+
+By adhering to Agile practices, the team successfully navigated challenges, stayed organized, and delivered a robust project within the hackathon's constraints.
 
 ---
 
@@ -179,7 +227,8 @@ These features reflect our aspirations to further refine and improve the website
 | [GitHub](https://github.com/)            | Version control platform used to store the project’s repository, collaborate on code, and manage deployments. |  
 | [Assembly API](https://www.assemblyai.com/) | Provides the text-to-speech functionality, converting user-input text into spoken audio seamlessly. |
 | [Balsamiq](https://balsamiq.com/)        | Used to create wireframes and design the structure of the website.                          |  
-| [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                   |  
+| [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                   |
+| [The Noun Project](https://thenounproject.com/) | Used to create image for favicon | 
 | [Google Fonts](https://fonts.google.com/) | Research, pair, and add fonts to the project.                                               |  
 | [Optimizilla](https://imagecompressor.com/) | Compress images.                                                                            |  
 | [WEBP Converter](https://cloudconvert.com/webp-converter) | Convert jpg/png images to webp format.                                                     |  
@@ -189,12 +238,55 @@ These features reflect our aspirations to further refine and improve the website
 
 ## Testing
 
+### Core Functional Features
+
+| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
+| User can select a desired language            | Open the text-to-speech tool and select a language from the dropdown | The selected language is applied to the text-to-speech functionality | Pass    |
+| User can adjust speech speed                  | Change the speech speed slider                  | Speech plays at the chosen speed                                   | Pass    |
+| Preferred language is saved after login       | Log in and set a preferred language             | Preferred language is saved and applied automatically on the next login | Pass    |
+| New user can sign up                          | Fill out the sign-up form and submit            | User account is successfully created                               | Pass    |
+| Registered user can log in                    | Enter valid credentials and log in              | User is redirected to their account with personalized settings     | Pass    |
+| Team Members page loads correctly             | Navigate to the Team Members page               | Page displays information about all team members                   | Pass    |
+| Contact page form sends a message             | Fill out the contact form and click "Submit"    | Message is sent, and a confirmation notification is displayed      | Pass    |
+| Incorrect login details display error message | Attempt to log in with invalid credentials      | An error message appears prompting the user to check their details | Pass    |
+| Password validation in sign-up form           | Enter a password that does not meet criteria    | Form displays a password validation error                         | Pass    |
+
+---
+
+### Responsiveness and Compatibility
+
+| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
+| Responsiveness on different resolutions       | Use DevTools to check pages on various screen sizes | All pages maintain a consistent, readable layout                  | Pass    |
+| Mobile responsiveness                         | Test layout and functionality on mobile devices | Content adjusts to fit smaller screens without losing usability    | Pass    |
+| Browser compatibility                         | Open the site in Chrome, Firefox, and Edge      | The site functions and displays consistently in all browsers       | Pass    |
+| Touch navigation on mobile devices            | Use touch gestures on mobile                   | Buttons and dropdowns respond correctly to touch input             | Pass    |
+
+---
+
+### Accessibility and Usability
+
+| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
+| Text-to-speech tool works on all pages        | Use the tool on multiple pages                  | Text is read aloud correctly regardless of the page                | Pass    |
+| Language dropdown options are accessible      | Use a keyboard to navigate the dropdown         | Dropdown is fully navigable and selectable via keyboard            | Pass    |
+| Contact form validates required fields        | Submit the form with empty required fields      | Validation errors display for all missing required fields          | Pass    |
+| Keyboard navigation across elements           | Use keyboard to navigate through all interactive elements | Tabbing navigates logically and interactively across all elements  | Pass    |
+| Dropdown accessibility                        | Open and select options from dropdown menus using keyboard | Dropdown can be fully navigated and options selected via keyboard  | Pass    |
+| High contrast mode usability                  | Enable high contrast mode on the operating system | All text and buttons remain visible and accessible                 | Pass    |
+| Screen reader functionality                   | Use a screen reader to navigate the app         | Screen reader reads all interactive elements and text correctly    | Pass    |
+| Error message clarity                         | Trigger error messages (e.g., invalid login or form submission) | Error messages clearly explain the issue and how to fix it         | Pass    |
+| Large text mode usability                     | Enable large text mode in browser settings      | Content scales appropriately without breaking the layout           | Pass    |
 
 
+### WebAIM
 
-|Test                           |Action                     | Expected result                |Outcome|
-|-------------------------------|---------------------------|--------------------------------|-------|
+To ensure the accessibility of the chosen color palettes, testing was conducted using tools like [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/bookmarklet). The WebAIM Contrast Checker is an essential resource for verifying color contrast ratios against the Web Content Accessibility Guidelines (WCAG). By inputting text and background colors into the tool, we confirmed that all palettes meet or exceed the minimum required contrast ratios for normal and large text. This process ensures that users with low vision or other visual impairments can read content comfortably without straining their eyes.
 
+### Color Oracle
+
+Additionally, [Color Oracle](https://colororacle.org/) was used to simulate different types of color blindness, including Protanopia, Deuteranopia, and Tritanopia. This helped identify potential issues in color differentiation and adjust hues for optimal visibility. The tool’s real-time simulation ensures that the palettes are accessible and usable across all forms of color blindness. Combining these testing tools ensures that the color palettes chosen for the project not only comply with accessibility standards but also provide a practical and inclusive user experience.
 
 ### User testing
 
@@ -269,5 +361,18 @@ These features reflect our aspirations to further refine and improve the website
  5. Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
 # Credits
+- Favicon created by Argentinian designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
 
 # Acknowledgements
+
+We would like to recognize the contributions of our team members, whose efforts made this hackathon project possible. Each person brought unique skills and played a vital role in completing the project within the time constraints.
+
+- Tafadzwa Mangena: Contributed to Agile processes and developed the Team Member’s page.
+- Hannah Olbrich: Served as Scrum Master, coordinated Agile practices, and created the Contact Page.
+- Arthur Vilela: Worked on front-end development, testing, and documentation to ensure the project was user-friendly and well-supported.
+- Ed Radcliffe: Played a dual role in front-end and back-end development, contributing to the technical functionality of the project.
+- Erin Doyle: Focused on front-end development, improving the design and user interface.
+- Linus J: Provided support in both front-end and back-end development, particularly using Django for the back-end framework.
+- Anne Voretzsch: Contributed to front-end development, refining the interface and design.
+
+This project was a collaborative effort, and each member’s contributions were integral to its completion. Thank you to everyone on the team!
