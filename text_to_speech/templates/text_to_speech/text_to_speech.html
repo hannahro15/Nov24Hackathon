@@ -25,6 +25,7 @@
           <label for="language-select">
             <strong>Select a Language:</strong>
           </label>
+          <p class="text-uppercase fs-5">Language</p>
           <select id="language-select"
                   class="form-select"
                   data-preferred-language="{{ preferred_language }}">
@@ -46,6 +47,7 @@
           <label for="speed-range">
             <strong>Adjust Speed:</strong>
           </label>
+          <p class="text-uppercase fs-5">Speed</p>
           <input type="range"
                  id="speed-range"
                  min="0.5"
@@ -86,7 +88,7 @@
                    class="me-3">
                 <button id="send-button"
                         type="button"
-                        class="btn btn-primary btn-custom-text">
+                        class="btn btn-custom-text">
                   <span class="spinner-border spinner-border-sm me-2 d-none"
                         id="send-spinner"
                         role="status"
@@ -97,7 +99,7 @@
               <div id="app-buttons-pause">
                 <button id="pause-button"
                         type="button"
-                        class="btn btn-warning btn-custom-text">
+                        class="btn btn-custom-text">
                   Pause
                 </button>
               </div>

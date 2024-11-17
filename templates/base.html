@@ -61,7 +61,9 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-xxl navbar-dark nav-bg">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark nav-bg align-items-baseline"
+      >
         <div class="container-fluid">
           <a class="navbar-brand navbar-title button-arounder" href="#"
             ><i class="fa-solid fa-file-audio"></i> Script to Sound</a
@@ -91,21 +93,6 @@
                   class="nav-link button-arounder"
                   href="{% url 'text_to_speech' %}"
                   >Text to Speech</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link button-arounder" href="{% url 'contact' %}"
-                  >Contact</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link button-arounder" href="{% url 'faq_page' %}"
-                  >FAQ's</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link button-arounder" href="{% url 'team_app' %}"
-                  >Team</a
                 >
               </li>
               {% if user.is_authenticated %}
@@ -234,30 +221,29 @@
     </main>
     <div class="container footer-container footer">
       <footer
-        class="d-flex flex-wrap justify-content-center py-3 mt-4 border-top footer-text"
+        class="d-flex flex-wrap justify-content-evenly py-3 mt-4 border-top footer-text"
       >
-        <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="{% url 'home' %}"
-            class="mb-3 me-2 mb-md-0 footer-text text-decoration-none lh-1"
-            aria-label="Link to the home page."
-          >
-            <p class="mb-md-0 footer-text justify-content-center">
-              <i class="fa-solid fa-road-barrier"></i> Team Barrier Breakers |
-              Hackathon | NOV24
-            </p>
-          </a>
-        </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3">
-            <a
-              class="footer-text button-arounder"
-              href="https://github.com/hannahro15/Nov24Hackathon"
-            >
-              <i class="fa-brands fa-github icon"></i><span>GitHub Page</span>
-            </a>
-          </li>
-        </ul>
+        <a
+          href="{% url 'home' %}"
+          class="nav-link button-arounder"
+          aria-label="Link to the home page."
+        >
+          <i class="fa-solid fa-road-barrier"></i> Team Barrier Breakers |
+          Hackathon | NOV24
+        </a>
+        <a class="nav-link button-arounder" href="{% url 'contact' %}"
+          >Contact</a
+        >
+        <a class="nav-link button-arounder" href="{% url 'faq_page' %}"
+          >FAQ's</a
+        >
+        <a class="nav-link button-arounder" href="{% url 'team_app' %}">Team</a>
+        <a
+          class="footer-text button-arounder"
+          href="https://github.com/hannahro15/Nov24Hackathon"
+        >
+          <i class="fa-brands fa-github icon"></i>GitHub Page
+        </a>
       </footer>
     </div>
     <!-- Javascript -->
