@@ -29,11 +29,19 @@
 
 The website maintains a consistent design language throughout all screens, using a cohesive color scheme, typography, and layout. This consistency helps users focus on the content and functions without being distracted by changing interfaces.
 
-#### Color scheme
+#### Default Color scheme
 
 ![Four squares, one of a different colour](docs/colour-scheme.png)
 
 The chosen color palette, featuring Deep Teal (#004C6D), Mustard Yellow (#FFB700), Soft Cyan (#B2EBF2), and Charcoal (#36454F), is specifically designed to prioritize accessibility and inclusivity. The combination provides high contrast and visual clarity, making it suitable for users with color vision deficiencies, including deuteranopia, protanopia, and tritanopia. Deep Teal and Charcoal serve as strong base colors, while Mustard Yellow and Soft Cyan add brightness and distinguishable accents. This palette ensures that interactive elements, text, and backgrounds remain easily recognizable, even for users with limited color perception, supporting a user-friendly and inclusive interface.
+
+#### Accessible Color Palette Choices
+
+The color palettes chosen for this project were carefully crafted to ensure inclusivity and usability for individuals with diverse visual impairments. These palettes address common challenges faced by users with color blindness, low vision, and light sensitivity. Each palette emphasizes high contrast and distinguishable hues to meet Web Content Accessibility Guidelines (WCAG) standards and provide a positive experience for all users.
+
+For users with red-green color blindness (Protanopia and Deuteranopia), Palette 2 substitutes colors prone to confusion (reds and greens) with blue and yellow tones, which are easier to differentiate. Palette 3 is optimized for blue-yellow color blindness (Tritanopia), emphasizing clear distinctions between red and blue hues. Palette 4, a grayscale option, caters to those with severe color blindness or monochromacy, ensuring clarity solely through luminance contrasts. Lastly, Palette 5 features soft, non-intrusive tones ideal for users with light sensitivity, reducing eye strain while maintaining readability and visual appeal.
+
+These palettes were tested for accessibility using tools like the WebAIM Contrast Checker and Color Oracle, ensuring compliance with WCAG standards. By incorporating these accessible color schemes, this project aims to create an inclusive digital environment that prioritizes user experience for all audiences.
 
 #### Favicon
 
@@ -269,5 +277,6 @@ These features reflect our aspirations to further refine and improve the website
  5. Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
 # Credits
+- Favicon created be designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
 
 # Acknowledgements
