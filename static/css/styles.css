@@ -762,40 +762,40 @@ form>div {
     }
   }
 
-  @media (min-width: 769px) and (max-width: 899px) {
+  @media (min-width: 769px) and (max-width: 1079px) {
     #steps-container {
-      flex-wrap: wrap; 
-      justify-content: space-between; 
-      gap: 10px; 
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
     }
-  
+
     .steps-tiles {
-      width: 30%; 
-      padding: 15px; 
-      height: auto; 
-      text-align: center; 
+      width: 30%;
+      padding: 15px;
+      height: auto;
+      text-align: center;
     }
-  
+
     .steps-titles {
-      font-size: 1rem; 
+      font-size: 1rem;
       margin: 8px 0;
     }
-  
+
     .steps-texts {
-      font-size: 0.85rem; 
-      line-height: 1.4; 
+      font-size: 0.85rem;
+      line-height: 1.4;
     }
-  
+
     .step-icon {
-      font-size: 3.5em; 
+      font-size: 3.5em;
     }
-  
+
     .steps-tiles:first-child {
-      margin-left: 10px; 
+      margin-left: 10px;
     }
-  
+
     .steps-tiles:last-child {
-      margin-right: 10px; 
+      margin-right: 10px;
     }
   }
 
