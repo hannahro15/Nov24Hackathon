@@ -762,6 +762,44 @@ form>div {
     }
   }
 
+  @media (min-width: 769px) and (max-width: 899px) {
+    #steps-container {
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+      gap: 10px; 
+    }
+  
+    .steps-tiles {
+      width: 30%; 
+      padding: 15px; 
+      height: auto; 
+      text-align: center; 
+    }
+  
+    .steps-titles {
+      font-size: 1rem; 
+      margin: 8px 0;
+    }
+  
+    .steps-texts {
+      font-size: 0.85rem; 
+      line-height: 1.4; 
+    }
+  
+    .step-icon {
+      font-size: 3.5em; 
+    }
+  
+    .steps-tiles:first-child {
+      margin-left: 10px; 
+    }
+  
+    .steps-tiles:last-child {
+      margin-right: 10px; 
+    }
+  }
+  
+
   /* Mobile phones and very small screens */
   @media (max-width: 480px) {
     #welcome-section {

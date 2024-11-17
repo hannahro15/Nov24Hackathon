@@ -1,23 +1,16 @@
 """Django settings"""
-
 import os
 from pathlib import Path
-
 import dj_database_url
 from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
-
 # Load environment variables from .env file
 load_dotenv()
-
 # Get the secret key from environment variables
 SECRET_KEY = os.getenv('SECRET_KEY')
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 DEBUG = 'DEV' in os.environ
-
 ALLOWED_HOSTS = [
     '.gitpod.io',
     '127.0.0.1',
@@ -25,7 +18,6 @@ ALLOWED_HOSTS = [
     '.herokuapp.com',
     '.codeinstitute-ide.net',
 ]
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -45,20 +37,15 @@ INSTALLED_APPS = [
     'contact',
     'assemblyai',
 ]
-
 SITE_ID = 1
-
 # Redirects after login/logout to the homepage "/"
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
 # Disable email verification
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
 # Django Crispy Forms settings
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
-
 # Maps alert message to Bootstrap CSS classes.
 MESSAGE_TAGS = {
     messages.DEBUG: 'debug',
@@ -67,7 +54,6 @@ MESSAGE_TAGS = {
     messages.WARNING: 'warning',
     messages.ERROR: 'danger',
 }
-
 # Middleware settings
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,9 +66,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
-
 ROOT_URLCONF = 'project_root.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -99,9 +83,7 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'project_root.wsgi.application'
-
 # Database settings
 if 'DEV' in os.environ:
     DATABASES = {
@@ -114,20 +96,17 @@ if 'DEV' in os.environ:
 else:
     DATABASES = {'default': dj_database_url.parse(os.getenv('DATABASE_URL'))}
     print('Production environment')
-
 # CSRF trusted origins
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
     'https://*.codeinstitute-ide.net',
     'https://*.herokuapp.com',
 ]
-
 # Authentication backend settings
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -143,13 +122,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
-
 # Static files (CSS, JavaScript, images)
 STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -157,11 +134,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-
 # Cloudinary settings
 CLOUDINARY_STORAGE = {'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL')}
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
