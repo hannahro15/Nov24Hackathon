@@ -460,7 +460,8 @@ input::placeholder {
 
 .btn-custom-icon {
   width: 3rem;
-  color: white;
+  background-color: var(--accent-color-2);
+  color: var(--primary-text-color);
   font-weight: 600;
   transition: box-shadow 0.2s, outline 0.2s;
 }
