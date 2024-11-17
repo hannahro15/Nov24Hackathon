@@ -10,7 +10,7 @@
     Let us bring your text to life.
   </p>
   <div id="app-section"
-           class="container mt-5">
+       class="container mt-5">
     <div class="row d-flex justify-content-center">
       <!-- Voice options -->
       <div id="app-voice-options"
@@ -25,29 +25,36 @@
           <label for="language-select">
             <strong>Select a Language:</strong>
           </label>
-          <p class="text-uppercase fs-5">Language</p>
-          <select id="language-select"
-                  class="form-select"
-                  data-preferred-language="{{ preferred_language }}">
-            <option value="">
-              Select a language
-            </option>
-            {% for lang_code, lang_name in languages.items %}
-              <option value="{{ lang_code }}"
-                      {% if lang_code == preferred_language %}
-                        selected
-                      {% endif %}>
-                {{ lang_name }} ({{ lang_code }})
+          <p class="text-uppercase fs-5">
+            Language
+          </p>
+          <div class="select-position">
+            <select id="language-select"
+                    class="form-select"
+                    data-preferred-language="{{ preferred_language }}">
+              <option value="">
+                Select a language
               </option>
-            {% endfor %}
-          </select>
+              {% for lang_code, lang_name in languages.items %}
+                <option value="{{ lang_code }}"
+                        {% if lang_code == preferred_language %}
+                          selected
+                        {% endif %}>
+                  {{ lang_name }} ({{ lang_code }})
+                </option>
+              {% endfor %}
+            </select>
+            <i class="fa-solid fa-arrow-down select-arrow"></i>
+          </div>
         </div>
         <!-- Speed control slider -->
         <div class="mt-3">
           <label for="speed-range">
             <strong>Adjust Speed:</strong>
           </label>
-          <p class="text-uppercase fs-5">Speed</p>
+          <p class="text-uppercase fs-5">
+            Speed
+          </p>
           <input type="range"
                  id="speed-range"
                  min="0.5"
@@ -63,7 +70,7 @@
           <div id="app-text-input-title">
             <p class="text-steps mt-lg-3 mt-xl-0"
                id="text-steps-two">
-               Add your text
+              Add your text
             </p>
           </div>
           <div id="app-text-input-form"
