@@ -43,6 +43,26 @@ For users with red-green color blindness (Protanopia and Deuteranopia), Palette 
 
 These palettes were tested for accessibility using tools like the WebAIM Contrast Checker and Color Oracle, ensuring compliance with WCAG standards. By incorporating these accessible color schemes, this project aims to create an inclusive digital environment that prioritizes user experience for all audiences.
 
+##### High Contrast
+
+![Five squares, one of a different colour](docs/palette-1-high-contrast.png)
+
+##### Red Green Colour Blindness
+
+![Five squares, one of a different colour](docs/palette-2-red-green-colour-blindness.png)
+
+##### Blue Yellow Colour Blindness
+
+![Five squares, one of a different colour](docs/palette-3-blue-yellow-colour-blindness.png)
+
+##### Grayscale
+
+![Five squares, one of a different colour](docs/palette-4-grayscale.png)
+
+##### Soft Tones
+
+![Five squares, one of a different colour](docs/palette-5-soft-tones.png)
+
 #### Favicon
 
 The favicon was created with a minimalist look and high contrast to stay consistent with the accessibility purposes of the project. It depicts visually the project's main funcionality of "Text to Speech" with a document and a speaker in dark countour lines.
@@ -207,7 +227,8 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 | [GitHub](https://github.com/)            | Version control platform used to store the project’s repository, collaborate on code, and manage deployments. |  
 | [Assembly API](https://www.assemblyai.com/) | Provides the text-to-speech functionality, converting user-input text into spoken audio seamlessly. |
 | [Balsamiq](https://balsamiq.com/)        | Used to create wireframes and design the structure of the website.                          |  
-| [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                   |  
+| [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                   |
+| [The Noun Project](https://thenounproject.com/) | Used to create image for favicon | 
 | [Google Fonts](https://fonts.google.com/) | Research, pair, and add fonts to the project.                                               |  
 | [Optimizilla](https://imagecompressor.com/) | Compress images.                                                                            |  
 | [WEBP Converter](https://cloudconvert.com/webp-converter) | Convert jpg/png images to webp format.                                                     |  
