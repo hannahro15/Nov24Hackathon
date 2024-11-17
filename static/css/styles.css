@@ -114,11 +114,6 @@ body {
   z-index: 99;
 }
 
-.navbar-nav > li {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 *::-webkit-scrollbar {
   width: 1rem !important;
 }
@@ -277,9 +272,11 @@ body {
 }
 
 .select-position {
-  position: relative;
+  position: relative !important;
+  width: 100% !important;
 }
 
+input,
 .form-select {
   width: 100% !important;
   border-radius: 5px !important;
@@ -289,6 +286,10 @@ body {
   font-size: 1rem !important;
   transition: background-color 0.3s, box-shadow 0.3s !important;
   appearance: none !important;
+}
+
+input::placeholder {
+  color: var(--primary-text-color) !important;
 }
 
 .select-arrow {
