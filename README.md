@@ -16,6 +16,55 @@
 
 ## UX Design
 
+### User Stories
+
+### User Stories  
+
+#### **General User Stories**  
+
+1. **As a first-time visitor**, I want to understand the website's purpose immediately, so I can decide whether it meets my needs.  
+2. **As a user**, I want to convert my text to speech in a simple and intuitive way, so I can use the tool efficiently.  
+3. **As a returning user**, I want to log in and save my preferred language, so I don’t have to set it every time.  
+4. **As a user**, I want to select the speech speed and language, so I can customize the audio output according to my needs.  
+5. **As a visually impaired user**, I want a high-contrast design and keyboard navigation, so I can use the website comfortably.  
+
+#### **Non-English Speaker User Stories**  
+
+6. **As a non-English speaker**, I want to select from numerous languages, so I can listen to text in my preferred language.  
+7. **As a non-English speaker**, I want language options clearly labeled, so I can easily find and select my desired language.  
+8. **As a non-English speaker**, I want clear playback controls, so I can pause, replay, or stop the audio when needed.  
+9. **As a multilingual user**, I want the ability to switch between languages seamlessly, so I can use the tool in various contexts.  
+
+#### **Team Interaction User Stories**  
+
+10. **As a curious visitor**, I want to see who created the website, so I can understand the team’s background and skills.  
+11. **As a potential employer or collaborator**, I want links to team members’ GitHub profiles, so I can explore their work and connect with them.  
+
+#### **Feedback User Stories**  
+
+12. **As a user with questions or feedback**, I want a contact page where I can send a message, so I can get in touch with the team easily.  
+13. **As a user**, I want confirmation messages when my input is submitted, so I know my actions were successful.  
+
+#### **Accessibility User Stories**  
+
+14. **As a user with color vision deficiencies**, I want the website to use an accessible color palette, so I can navigate it without confusion.  
+15. **As a user with sensitivity to bright screens**, I want a soft-tone palette, so I can interact with the site without eye strain.  
+
+#### **Mobile User Stories**  
+
+16. **As a mobile user**, I want thumb-friendly buttons, so I can interact with the site easily on my phone.  
+17. **As a user on a mobile device**, I want the design to be responsive, so it adjusts perfectly to my screen size.  
+
+#### **Playback Controls User Stories**  
+
+18. **As a user**, I want playback controls to replay the generated speech, so I can review the audio without re-entering text.  
+19. **As a user**, I want the ability to pause and resume speech, so I can control the audio playback according to my pace.  
+
+#### **Future Multilingual Features User Stories**  
+
+20. **As a multilingual user**, I want pronunciation guides or phonetic hints for certain languages, so I can better understand the speech output.  
+21. **As a user**, I want language settings to include regional accents or dialects, so the output sounds more natural for my context.  
+
 
 ### Accessibility:
 
