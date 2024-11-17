@@ -45,9 +45,9 @@ These palettes were tested for accessibility using tools like the WebAIM Contras
 
 #### Favicon
 
+The favicon was created with a minimalist look and high contrast to stay consistent with the accessibility purposes of the project. It depicts visually the project's main funcionality of "Text to Speech" with a document and a speaker in dark countour lines.
 
-
-![Icon ](assets/favicon/android-chrome-192x192.png)
+![Icon ](static/favicon/android-chrome-192x192.png)
 
 
 
@@ -197,12 +197,55 @@ These features reflect our aspirations to further refine and improve the website
 
 ## Testing
 
+### Core Functional Features
+
+| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
+| User can select a desired language            | Open the text-to-speech tool and select a language from the dropdown | The selected language is applied to the text-to-speech functionality | Pass    |
+| User can adjust speech speed                  | Change the speech speed slider                  | Speech plays at the chosen speed                                   | Pass    |
+| Preferred language is saved after login       | Log in and set a preferred language             | Preferred language is saved and applied automatically on the next login | Pass    |
+| New user can sign up                          | Fill out the sign-up form and submit            | User account is successfully created                               | Pass    |
+| Registered user can log in                    | Enter valid credentials and log in              | User is redirected to their account with personalized settings     | Pass    |
+| Team Members page loads correctly             | Navigate to the Team Members page               | Page displays information about all team members                   | Pass    |
+| Contact page form sends a message             | Fill out the contact form and click "Submit"    | Message is sent, and a confirmation notification is displayed      | Pass    |
+| Incorrect login details display error message | Attempt to log in with invalid credentials      | An error message appears prompting the user to check their details | Pass    |
+| Password validation in sign-up form           | Enter a password that does not meet criteria    | Form displays a password validation error                         | Pass    |
+
+---
+
+### Responsiveness and Compatibility
+
+| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
+| Responsiveness on different resolutions       | Use DevTools to check pages on various screen sizes | All pages maintain a consistent, readable layout                  | Pass    |
+| Mobile responsiveness                         | Test layout and functionality on mobile devices | Content adjusts to fit smaller screens without losing usability    | Pass    |
+| Browser compatibility                         | Open the site in Chrome, Firefox, and Edge      | The site functions and displays consistently in all browsers       | Pass    |
+| Touch navigation on mobile devices            | Use touch gestures on mobile                   | Buttons and dropdowns respond correctly to touch input             | Pass    |
+
+---
+
+### Accessibility and Usability
+
+| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
+| Text-to-speech tool works on all pages        | Use the tool on multiple pages                  | Text is read aloud correctly regardless of the page                | Pass    |
+| Language dropdown options are accessible      | Use a keyboard to navigate the dropdown         | Dropdown is fully navigable and selectable via keyboard            | Pass    |
+| Contact form validates required fields        | Submit the form with empty required fields      | Validation errors display for all missing required fields          | Pass    |
+| Keyboard navigation across elements           | Use keyboard to navigate through all interactive elements | Tabbing navigates logically and interactively across all elements  | Pass    |
+| Dropdown accessibility                        | Open and select options from dropdown menus using keyboard | Dropdown can be fully navigated and options selected via keyboard  | Pass    |
+| High contrast mode usability                  | Enable high contrast mode on the operating system | All text and buttons remain visible and accessible                 | Pass    |
+| Screen reader functionality                   | Use a screen reader to navigate the app         | Screen reader reads all interactive elements and text correctly    | Pass    |
+| Error message clarity                         | Trigger error messages (e.g., invalid login or form submission) | Error messages clearly explain the issue and how to fix it         | Pass    |
+| Large text mode usability                     | Enable large text mode in browser settings      | Content scales appropriately without breaking the layout           | Pass    |
 
 
+### WebAIM
 
-|Test                           |Action                     | Expected result                |Outcome|
-|-------------------------------|---------------------------|--------------------------------|-------|
+To ensure the accessibility of the chosen color palettes, testing was conducted using tools like [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/bookmarklet). The WebAIM Contrast Checker is an essential resource for verifying color contrast ratios against the Web Content Accessibility Guidelines (WCAG). By inputting text and background colors into the tool, we confirmed that all palettes meet or exceed the minimum required contrast ratios for normal and large text. This process ensures that users with low vision or other visual impairments can read content comfortably without straining their eyes.
 
+### Color Oracle
+
+Additionally, [Color Oracle](https://colororacle.org/) was used to simulate different types of color blindness, including Protanopia, Deuteranopia, and Tritanopia. This helped identify potential issues in color differentiation and adjust hues for optimal visibility. The tool’s real-time simulation ensures that the palettes are accessible and usable across all forms of color blindness. Combining these testing tools ensures that the color palettes chosen for the project not only comply with accessibility standards but also provide a practical and inclusive user experience.
 
 ### User testing
 
@@ -277,6 +320,18 @@ These features reflect our aspirations to further refine and improve the website
  5. Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
 # Credits
-- Favicon created be designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
+- Favicon created by Argentinian designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
 
 # Acknowledgements
+
+We would like to recognize the contributions of our team members, whose efforts made this hackathon project possible. Each person brought unique skills and played a vital role in completing the project within the time constraints.
+
+- Tafadzwa Mangena: Contributed to Agile processes and developed the Team Member’s page.
+- Hannah Olbrich: Served as Scrum Master, coordinated Agile practices, and created the Contact Page.
+- Arthur Vilela: Worked on front-end development, testing, and documentation to ensure the project was user-friendly and well-supported.
+- Ed Radcliffe: Played a dual role in front-end and back-end development, contributing to the technical functionality of the project.
+- Erin Doyle: Focused on front-end development, improving the design and user interface.
+- Linus J: Provided support in both front-end and back-end development, particularly using Django for the back-end framework.
+- Anne Voretzsch: Contributed to front-end development, refining the interface and design.
+
+This project was a collaborative effort, and each member’s contributions were integral to its completion. Thank you to everyone on the team!
