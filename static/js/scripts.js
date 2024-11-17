@@ -244,6 +244,26 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(alertDiv);
 });
 
+// Close dropdown menu when clicking outside of it
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownToggle = document.getElementById("paletteDropdown");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  document.addEventListener("click", (event) => {
+    const isClickInside =
+      dropdownMenu.contains(event.target) ||
+      dropdownToggle.contains(event.target);
+
+    // If the click is outside, hide the dropdown
+    if (!isClickInside) {
+      const dropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
+      if (dropdown && dropdownMenu.classList.contains("show")) {
+        dropdown.hide();
+      }
+    }
+  });
+});
+
 // Handle contact form submission
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contactForm");
