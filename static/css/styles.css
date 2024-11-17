@@ -148,9 +148,7 @@ body {
 
 .button-arounder {
   padding: 10px;
-
   box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, 0.2);
-  transfrom: translateY(0);
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -327,7 +325,6 @@ body {
   padding: 10px;
   border: none;
   box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, 0.2);
-  transfrom: translateY(0);
   border-radius: 5px;
 
   --dur: 0.15s;
