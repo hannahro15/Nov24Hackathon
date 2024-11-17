@@ -695,6 +695,10 @@ form>div {
   margin-bottom: 40px;
 }
 
+.card-title {
+  font-size: 12px;
+}
+
 /*--------------------------------------- Profile page ----- */
 #change-password-form {
   height: 300px;
