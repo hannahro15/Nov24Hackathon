@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% load static %}
 {% load i18n %}
 
@@ -10,10 +9,10 @@
         <h2 class="text-center">
           {% trans "Profile Settings" %}
         </h2>
-        <form method="post"
-              class="d-flex flex-column">
+
+        <!-- Update Preferred Language Form -->
+        <form method="post" class="d-flex flex-column" id="preferred-language-form">
           {% csrf_token %}
-          <!-- Profile Form -->
           <h5 class="pt-4">
             {% trans "Update Preferred Language" %}
           </h5>
@@ -21,8 +20,14 @@
           {{ form.preferred_language.label_tag }}
           {{ form.preferred_language }}
           {{ form.preferred_language.errors }}
+          <button type="submit" name="preferred_language_submit" class="btn btn-primary btn-block mt-4">
+            {% trans "Save Language" %}
+          </button>
+        </form>
 
-          <!-- Password Change Form -->
+        <!-- Change Password Form -->
+        <form method="post" class="d-flex flex-column" id="change-password-form">
+          {% csrf_token %}
           <h5 class="pt-4">
             {% trans "Change Password" %}
           </h5>
@@ -39,9 +44,8 @@
           {{ password_change_form.password2 }}
           {{ password_change_form.password2.errors }}
 
-          <button type="submit"
-                  class="btn btn-primary btn-block mt-4">
-            {% trans "Save" %}
+          <button type="submit" name="password_change_submit" class="btn btn-primary btn-block mt-4">
+            {% trans "Change Password" %}
           </button>
         </form>
       </div>

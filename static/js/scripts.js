@@ -234,12 +234,31 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(alertDiv);
 });
 
-// Contact Page
-// Form submission button
+// Handle contact form submission
 document.addEventListener("DOMContentLoaded", () => {
-  const myFormButton = document.getElementById("myForm");
+  const contactForm = document.getElementById("contactForm");
+  const submitButton = document.getElementById("submitButton");
+  const successModal = new bootstrap.Modal(
+    document.getElementById("successModal")
+  );
 
-  myFormButton.addEventListener("click", function () {
-    myFormButton.style.backgroundColor = "green";
+  // Handle form submission
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    // Validate form fields
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const textArea = document.getElementById("text-area").value.trim();
+    if (firstName && lastName && email && textArea) {
+      // Change button color on successful form validation
+      submitButton.style.backgroundColor = "green";
+      // Show success modal
+      successModal.show();
+      // Reset form fields after submission
+      contactForm.reset();
+    } else {
+      alert("Please fill in all the required fields.");
+    }
   });
 });
