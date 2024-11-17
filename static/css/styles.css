@@ -135,53 +135,39 @@ body {
 }
 
 /*----------------- Palette-specific filters for images --------*/
-.palette6 img {
-  filter: brightness(1.2) hue-rotate(180deg);
+/* Base transition for all images */
+img {
+  transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
+/* Palette 1: High Contrast */
 .palette1 img {
-  filter: invert(1) brightness(2) contrast(2);
+  filter: brightness(1.5) contrast(2);
 }
 
+/* Palette 2: Red-Green Color Blindness */
 .palette2 img {
-  filter: hue-rotate(210deg) brightness(1.5);
+  filter: hue-rotate(-50deg) saturate(0.5);
 }
 
+/* Palette 3: Blue-Yellow Color Blindness */
 .palette3 img {
-  filter: hue-rotate(180deg) saturate(3);
+  filter: hue-rotate(180deg) saturate(0.7);
 }
 
+/* Palette 4: Grayscale */
 .palette4 img {
   filter: grayscale(1);
 }
 
+/* Palette 5: Soft Tones for Light Sensitivity */
 .palette5 img {
-  filter: sepia(0.8) saturate(2) brightness(1.1);
+  filter: sepia(0.4) brightness(0.8);
 }
 
-/*----------------- Palette-specific filters for images --------*/
+/* Palette 6: Default */
 .palette6 img {
-  filter: brightness(1.2) hue-rotate(180deg);
-}
-
-.palette1 img {
-  filter: invert(1) brightness(2) contrast(2);
-}
-
-.palette2 img {
-  filter: hue-rotate(210deg) brightness(1.5);
-}
-
-.palette3 img {
-  filter: hue-rotate(180deg) saturate(3);
-}
-
-.palette4 img {
-  filter: grayscale(1);
-}
-
-.palette5 img {
-  filter: sepia(0.8) saturate(2) brightness(1.1);
+  filter: brightness(1.2);
 }
 
 /*--------------------------------------- Navbar -----------*/
