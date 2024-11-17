@@ -21,6 +21,11 @@ class ProfileForm(forms.ModelForm):
     preferred_language = forms.ChoiceField(
         choices=LANGUAGE_CHOICES,
         label='Preferred Language',
+        widget=forms.Select(
+            attrs={
+                'class': 'form-select',
+            },
+        ),
     )
 
     class Meta:
