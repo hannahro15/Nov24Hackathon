@@ -204,7 +204,7 @@ body {
 
 /* Animated glowing border using palette colors */
 .button-animation:before {
-  content: '';
+  content: "";
   background: linear-gradient(
     90deg,
     var(--accent-color-1),
@@ -241,7 +241,7 @@ body {
 
 /* Inner shadow effect */
 .button-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -293,10 +293,12 @@ body {
 
 /*--------------------------------------- Modal -----------*/
 .modal-content {
-  background: linear-gradient(180deg,
-      #1a1a1ae0 0%,
-      #252525ce 50%,
-      #1a1a1ad0 100%) !important;
+  background: linear-gradient(
+    180deg,
+    #1a1a1ae0 0%,
+    #252525ce 50%,
+    #1a1a1ad0 100%
+  ) !important;
   border: none !important;
   color: var(--primary-text-color) !important;
 }
@@ -433,7 +435,8 @@ input::placeholder {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-#app-text-input-form {}
+#app-text-input-form {
+}
 
 .input-arounder {
   background-color: #b2ebf2;
@@ -548,23 +551,27 @@ input[type="range"]::-webkit-slider-thumb {
   --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
   --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
   --clip-further: calc(100% + 1px);
-  --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0 100vmax currentColor;
+  --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+    100vmax currentColor;
 
   width: var(--thumb-width, var(--thumb-height));
-  background: linear-gradient(to bottom, currentColor, currentColor) no-repeat left center / 50% calc(var(--track-height) + 1px);
+  background: linear-gradient(to bottom, currentColor, currentColor) no-repeat
+    left center / 50% calc(var(--track-height) + 1px);
   background-color: currentColor;
   box-shadow: var(--box-fill);
   border-radius: var(--thumb-width, var(--thumb-height));
 
   filter: brightness(100%);
-  clip-path: polygon(100% -1px,
-      var(--clip-edges) -1px,
-      0 var(--clip-top),
-      -100vmax var(--clip-top),
-      -100vmax var(--clip-bottom),
-      0 var(--clip-bottom),
-      var(--clip-edges) 100%,
-      var(--clip-further) var(--clip-further));
+  clip-path: polygon(
+    100% -1px,
+    var(--clip-edges) -1px,
+    0 var(--clip-top),
+    -100vmax var(--clip-top),
+    -100vmax var(--clip-bottom),
+    0 var(--clip-bottom),
+    var(--clip-edges) 100%,
+    var(--clip-further) var(--clip-further)
+  );
 }
 
 input[type="range"]:hover::-webkit-slider-thumb {
@@ -578,7 +585,8 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: linear-gradient(to bottom, var(--track-color), var(--track-color)) no-repeat center / 100% calc(var(--track-height) + 1px);
+  background: linear-gradient(to bottom, var(--track-color), var(--track-color))
+    no-repeat center / 100% calc(var(--track-height) + 1px);
 }
 
 input[type="range"]:disabled::-webkit-slider-thumb {
@@ -765,7 +773,7 @@ input[type="range"]:disabled::-moz-range-thumb {
   padding-bottom: 20px;
 }
 
-form>div {
+form > div {
   width: 70%;
   margin: 0 auto;
   margin-top: 10px;
@@ -777,7 +785,7 @@ form>div {
 
 #faq-card {
   color: #ffb700;
-  background-color: black;
+  background-color: #fff0;
 }
 
 /*--------------------------------------- Team Page -------- */
