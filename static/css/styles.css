@@ -266,22 +266,29 @@ body {
   background-color: #f0f8ff;
 }
 
-.btn-custom {
-  width: 7rem;
+.btn-custom-icon {
+  width: 3rem;
   color: white;
   font-weight: 600;
   transition: box-shadow 0.2s, outline 0.2s;
 }
 
-.btn-custom:hover,
-.btn-custom:focus {
-  color: white;
+.btn-custom-text {
+  width: 6rem;
+  font-weight: 600;
+  transition: box-shadow 0.2s, outline 0.2s;
+}
+
+.btn-custom-icon:hover,
+.btn-custom-text:hover,
+.btn-custom-text:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   outline: 3px solid #36454f;
   outline-offset: 2px;
 }
 
-.btn-custom:active {
+.btn-custom-icon:active,
+.btn-custom-text:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
