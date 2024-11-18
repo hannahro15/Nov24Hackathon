@@ -25,6 +25,19 @@ img {
   transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
+/* Screen reader only for label */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /*-----------------------------Colour schemes variables -----------*/
 :root {
   --background-color: #000000;
@@ -916,9 +929,9 @@ form > div {
   height: 175px;
 }
 
-label {
+/* label {
   display: none !important;
-}
+} */
 
 /*--------------------------------------- Footer ------------*/
 .footer {
