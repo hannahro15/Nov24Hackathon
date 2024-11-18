@@ -491,6 +491,54 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
  4. Click 'View' to launch the new app. 
  5. Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
+---
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hannahro15/Nov24Hackathon)
+
+## 🚀 Project Setup
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/hannahro15/Nov24Hackathon.git
+cd Nov24Hackathon
+```
+
+### 2. Setup Environment Variables
+Create a `.env` file in the root directory with the following content:
+
+**.env**
+```bash
+SECRET_KEY=<your_secret_key>
+DEV=1  # Debug mode enabled, remove this line for production
+DATABASE_URL=<your_database_url>
+```
+
+- **SECRET_KEY**: Replace `<your_secret_key>` with a secure key (e.g., you can generate one using Django).
+- **DATABASE_URL**: Provide the URL for your database (e.g., PostgreSQL, SQLite).
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run Database Migrations
+```bash
+python manage.py migrate
+```
+
+### 5. Start the Development Server
+```bash
+python manage.py runserver
+```
+
+### 🌐 Access the Project
+Open your browser and navigate to: [http://localhost:8000](http://localhost:8000)
+
+### 🛠️ Additional Tips
+- To deactivate debug mode, remove `DEV=1` from your `.env` file.
+- For production, ensure your `.env` file is secure and never commit it to source control.
+
+
 # Credits
 - Favicon created by Argentinian designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
 
