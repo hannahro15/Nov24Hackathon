@@ -499,7 +499,7 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 We would like to recognize the contributions of our team members, whose efforts made this hackathon project possible. Each person brought unique skills and played a vital role in completing the project within the time constraints.
 
 - Tafadzwa Mangena: Contributed to Agile processes and developed the Team Member’s page.
-- Hannah Olbrich: Served as Scrum Master, coordinated Agile practices, and created the Contact and FAQ pages.
+- Hannah Olbrich: Served as Scrum Master, coordinated Agile practices, and created the Contact and FAQ and FAQ pagess.
 - Arthur Vilela: Worked on front-end development, testing, and documentation to ensure the project was user-friendly and well-supported.
 - Ed Radcliffe: Played a dual role in front-end and back-end development, contributing to the technical functionality of the project.
 - Erin Doyle: Focused on front-end development, improving the design and user interface.
