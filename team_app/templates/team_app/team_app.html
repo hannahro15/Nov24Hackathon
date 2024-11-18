@@ -1,288 +1,247 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<div class="container text-center">
-  <h1 class="text-center page-titles">Meet the talented team</h1>
-  <p class="page-subtitles">
-    “The strength of the team is each individual member. The strength of each
-    member is the team.” – Phil Jackson
-  </p>
-</div>
-<div class="container py-5">
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-    <!-- Card 1 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100">
-        <img
-          src="{% static 'images/tafadzwa_mangena.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Tafadzwa Mangena"
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Tafadzwa Mangena</h2>
-          <h3 class="card-title fs-6">
-            Role in Hackathon: Agile, Team member's page.
-          </h3>
-          <p class="card-text">
-            Energetic and detail-driven, I am a full-stack software developer
-            student at Code Institute, currently working on deepening my
-            expertise in Python testing.
-          </p>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <div class="container text-center">
+    <h1 class="text-center page-titles">
+      Meet the talented team
+    </h1>
+    <p class="page-subtitles">
+      “The strength of the team is each individual member. The strength of each
+      member is the team.” – Phil Jackson
+    </p>
+  </div>
+  <div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100">
+          <img src="{% static 'images/tafadzwa_mangena.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Tafadzwa Mangena" />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Tafadzwa Mangena
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Agile, Team member's page.
+            </h3>
+            <p class="card-text">
+              Energetic and detail-driven, I am a full-stack software developer
+              student at Code Institute, currently working on deepening my
+              expertise in Python testing.
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://github.com/TafadzwaMangena"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/tafadzwa-mangena-8b3467175/"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://github.com/TafadzwaMangena"
-              target="blank"
-              class="btn btn-custom-text m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/tafadzwa-mangena-8b3467175/"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100">
+          <img src="{% static 'images/hannah.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Hannah Olbrich" />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Hannah Olbrich
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Scrum Master, Agile, Contact Page
+            </h3>
+            <p class="card-text">
+              I am currently on Milestone 4 project on the Level 5 Web Development
+              Diploma Course. This is my fourth hackathon and my second one as Scrum Master. I have really enjoyed collaborating with
+              my team on this hackathon. I have excellent attention to detail and am very organised.
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://github.com/hannahro15"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/hannaholbrich/"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100">
+          <img src="{% static 'images/arthur.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Arthur Vilela" />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Arthur Vilela
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Front-End, Documentation
+            </h3>
+            <p class="card-text">
+              Brazilian architect based in Austria. I'm currently starting my 4th
+              portfolio project and this is my first Hackathon. I contributed
+              with HTML, CSS and documentation in this project and I'm looking
+              forward to the next one!
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://github.com/arthur-vilela"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/arthur-vilela-santos/"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100">
+          <img src="{% static 'images/ed_radcliffe.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Ed Radcliffe" />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Ed Radcliffe
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Front-End
+            </h3>
+            <p class="card-text">
+              I am enjoying the challenges of my first hackathon! I have worked on
+              aspects of both the back and front end and have focused on making
+              the site accessible. I am currently studying for PP5 - Data
+              Analytics for The Code Institute.
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://github.com/ewradcliffe"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://linkedin.com/in/edwardradcliffe"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100">
-        <img
-          src="{% static 'images/hannah.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Hannah Olbrich"
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Hannah Olbrich</h2>
-          <h3 class="card-title fs-6">
-            Role in Hackathon: Scrum Master, Agile, Contact Page
-          </h3>
-          <p class="card-text">
-            I am currently on Milestone 4 project on the Level 5 Web Development
-            Diploma Course. This is my 4th hackathon to have participated in and
-            my 2nd one as Scrum Master. I have really enjoyed collaborating with
-            my team on this hackathon. My skills are that I have excellent
-            attention to detail and I am very organised.
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://github.com/hannahro15"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/hannaholbrich/"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
+    <!-- Second row of cards -->
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100 mt-3">
+          <img src="{% static 'images/erin.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Erin Doyle" />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Erin Doyle
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Front-end
+            </h3>
+            <p class="card-text">
+              American showjumper and coding enthusiast, living in the wild and
+              windy mountains of Wicklow, Ireland. When I am not working with
+              horses, I am sharpening my software development skills.
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://www.github.com/erinvdoyle"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/erinvdoyle"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100">
-        <img
-          src="{% static 'images/arthur.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Arthur Vilela"
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Arthur Vilela</h2>
-          <h3 class="card-title fs-6">
-            Role in Hackathon: Front-End, Documentation
-          </h3>
-          <p class="card-text">
-            Brazilian architect based in Austria. I'm currently starting my 4th
-            portifolio project and this is my first Hackathon. I contributed
-            with HTML, CSS and documentation in this project and I'm looking
-            forward for the next one!
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://github.com/arthur-vilela"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/arthur-vilela-santos/"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
+      <!-- Card 6 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100 mt-3">
+          <img src="{% static 'images/lj_img.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Linus J" />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Linus J
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Front-End, Back-End, Django
+            </h3>
+            <p class="card-text">
+              Tech enthusiast with a Full-Stack Developer background, skilled in
+              web development. Enjoys building creative solutions, learning, and
+              collaborating. Looking for opportunities to grow and develop.
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://github.com/j0hanz"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/linus-johansson-5b927117a/"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Card 4 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100">
-        <img
-          src="{% static 'images/ed_radcliffe.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Ed Radcliffe"
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Ed Radcliffe</h2>
-          <h3 class="card-title fs-6">Role in Hackathon: Front-End</h3>
-          <p class="card-text">
-            I am enjoying the challenges of my first hackathon! I have worked on
-            aspects of both the back and front end and have focusses on making
-            the site accessible. I am currently studying for PP5 - data
-            analytics for The Code Institute.
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://github.com/ewradcliffe"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://linkedin.com/in/edwardradcliffe"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
+
+      <!-- Card 7 -->
+      <div class="col">
+        <div class="card d-flex flex-column h-100 mt-3">
+          <img src="{% static 'images/anne_v.webp' %}"
+               class="card-img-top"
+               alt="Profile picture of Anne V." />
+          <div class="card-body flex-grow-1">
+            <h2 class="card-title fs-5">
+              Anne Voretzsch
+            </h2>
+            <h3 class="card-title fs-6">
+              Role in Hackathon: Front-End
+            </h3>
+            <p class="card-text">
+              With a passion for coding and tech, I'm currently doing the
+              Full-Stack Software Diploma at Code Institute to build up my
+              portfolio.
+            </p>
+          </div>
+          <div class="row">
+            <div class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-between">
+              <a href="https://github.com/anchvo"
+                 target="_blank"
+                 class="btn button-animation-small m-2">GitHub</a>
+              <a href="https://www.linkedin.com/in/anne-voretzsch/"
+                 target="_blank"
+                 class="btn button-animation-small m-2">LinkedIn</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-    <!-- Card 5 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100 mt-3">
-        <img
-          src="{% static 'images/erin.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Erin Doyle"
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Erin Doyle</h2>
-          <h3 class="card-title fs-6">Role in Hackathon: Front-end</h3>
-          <p class="card-text">
-            American showjumper and coding enthusiast, living in the wild and
-            windy mountains of Wicklow, Ireland. When I am not working with
-            horses, I am sharpening my software development skills.
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://www.github.com/erinvdoyle"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/erinvdoyle"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Card 6 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100 mt-3">
-        <img
-          src="{% static 'images/lj_img.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Linus J"
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Linus J</h2>
-          <h3 class="card-title fs-6">
-            Role in Hackathon: Front-End, Back-End, Django
-          </h3>
-          <p class="card-text">
-            Tech enthusiast with a Full-Stack Developer background, skilled in
-            web development. Enjoys building creative solutions, learning, and
-            collaborating. Looking for opportunities to grow and develop.
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://github.com/j0hanz"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://github.com/j0hanz"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Card 7 -->
-    <div class="col">
-      <div class="card d-flex flex-column h-100 mt-3">
-        <img
-          src="{% static 'images/anne_v.webp' %}"
-          class="card-img-top"
-          alt="Profile picture of Anne V."
-        />
-        <div class="card-body flex-grow-1">
-          <h2 class="card-title fs-5">Anne Voretzsch</h2>
-          <h3 class="card-title fs-6">Role in Hackathon: Front-End</h3>
-          <p class="card-text">
-            With a passion for coding and tech, I'm currently doing the
-            Full-Stack Software Diploma at Code Institute to build up my
-            portfolio.
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="mx-auto card-footer mt-auto border-0 bg-transparent pb-3 d-flex justify-content-center"
-          >
-            <a
-              href="https://github.com/anchvo"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/anne-voretzsch/"
-              target="blank"
-              class="btn btn-outline-primary m-2"
-              >LinkedIn</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container">{% endblock content %}</div>
+{% endblock content %}

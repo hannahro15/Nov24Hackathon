@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Default settings
-  let selectedVoice = elements.languageSelect.dataset.preferredLanguage || "en";
+  let selectedVoice =
+    elements.languageSelect?.dataset.preferredLanguage || "en";
   let playbackSpeed = 1.0;
   let isPlaying = false;
   let audio = null;
@@ -27,21 +28,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Set default selected language
   function setDefaultLanguage() {
-    elements.languageSelect.value = selectedVoice;
+    if (elements.languageSelect) {
+      elements.languageSelect.value = selectedVoice;
+    }
   }
 
   // Update speed display
   function updateSpeedDisplay() {
-    elements.speedValue.textContent = `${playbackSpeed.toFixed(1)}x`;
+    if (elements.speedValue) {
+      elements.speedValue.textContent = `${playbackSpeed.toFixed(1)}x`;
+    }
   }
 
   // Add event listeners
   function addEventListeners() {
-    elements.languageSelect.addEventListener("change", handleLanguageChange);
-    elements.speedRange.addEventListener("input", handleSpeedChange);
-    elements.sendButton.addEventListener("click", handleSendButtonClick);
-    elements.clearButton.addEventListener("click", handleClearButtonClick);
-    elements.pauseButton.addEventListener("click", handlePauseButtonClick);
+    if (elements.languageSelect) {
+      elements.languageSelect.addEventListener("change", handleLanguageChange);
+    }
+    if (elements.speedRange) {
+      elements.speedRange.addEventListener("input", handleSpeedChange);
+    }
+    if (elements.sendButton) {
+      elements.sendButton.addEventListener("click", handleSendButtonClick);
+    }
+    if (elements.clearButton) {
+      elements.clearButton.addEventListener("click", handleClearButtonClick);
+    }
+    if (elements.pauseButton) {
+      elements.pauseButton.addEventListener("click", handlePauseButtonClick);
+    }
   }
 
   // Handle language selection change
@@ -182,6 +197,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize the application
   init();
+
+  // Handle clicks outside the navbar to collapse it
+  const navbarCollapse = document.getElementById("navbar-base");
+  const navbarToggler = document.querySelector(".navbar-toggler");
+
+  document.addEventListener("click", function (event) {
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      const isClickInsideNavbar =
+        navbarCollapse.contains(event.target) ||
+        navbarToggler.contains(event.target);
+
+      if (!isClickInsideNavbar) {
+        // Collapse the navbar
+        const bsNavbar = new bootstrap.Collapse(navbarCollapse);
+        bsNavbar.hide();
+      }
+    }
+  });
 });
 
 // Change CSS variables on dropdown menu and persist palette during the session
@@ -273,22 +306,24 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Handle form submission
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // Validate form fields
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const textArea = document.getElementById("text-area").value.trim();
-    if (firstName && lastName && email && textArea) {
-      // Change button color on successful form validation
-      submitButton.style.backgroundColor = "green";
-      // Show success modal
-      successModal.show();
-      // Reset form fields after submission
-      contactForm.reset();
-    } else {
-      alert("Please fill in all the required fields.");
-    }
-  });
+  if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      // Validate form fields
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const textArea = document.getElementById("text-area").value.trim();
+      if (firstName && lastName && email && textArea) {
+        // Change button color on successful form validation
+        submitButton.style.backgroundColor = "green";
+        // Show success modal
+        successModal.show();
+        // Reset form fields after submission
+        contactForm.reset();
+      } else {
+        alert("Please fill in all the required fields.");
+      }
+    });
+  }
 });
