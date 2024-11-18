@@ -6,7 +6,7 @@ from .models import LANGUAGE_CHOICES, Profile
 class InputForm(forms.Form):
     text_input = forms.CharField(
         label='Text Input',
-        max_length=1000,
+        max_length=2000,
         widget=forms.Textarea(
             attrs={
                 'placeholder': 'Paste your text here...',
