@@ -391,7 +391,8 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 
 - The errors encountered in the **"Text to Speech"** page are due to how **Django** formats its `form` element, creating what the validator interprets as trailing tags.
   - ![Screenshot of W3C HTML validator showing 8 errors](docs/validator-html-error-full.png)
-  - The tags are 
+-  The opening and closing tags are there and working as expected.
+  -  ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-tags.png)
 
 
 
