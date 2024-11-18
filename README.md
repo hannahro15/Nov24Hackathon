@@ -381,16 +381,31 @@ To ensure the accessibility of the chosen color palettes, testing was conducted 
 Additionally, [Color Oracle](https://colororacle.org/) was used to simulate different types of color blindness, including Protanopia, Deuteranopia, and Tritanopia. This helped identify potential issues in color differentiation and adjust hues for optimal visibility. The tool’s real-time simulation ensures that the palettes are accessible and usable across all forms of color blindness. Combining these testing tools ensures that the color palettes chosen for the project not only comply with accessibility standards but also provide a practical and inclusive user experience.
 
 
-# Bugs
-
-
 # Validator testing
 
 ### HTML W3C Validator
 
-![Screenshot of W3C HTML validator showing no errors](docs/html-validator.png)
-- No errors or warnings shown.
+- Except for the **"Text to Speech"** page, all pages passed the W3C HTML Validation with no errors.
+- ![Screenshot of W3C HTML validator showing no errors](docs/validator-html-no-errors.png)
+  - No errors or warnings shown.
 
+- The errors encountered in the **"Text to Speech"** page are due to how **Django** formats its `form` element, creating what the validator interprets as trailing tags.
+  - ![Screenshot of W3C HTML validator showing 8 errors](docs/validator-html-error-full.png)
+  - The tags are 
+
+
+
+|Page           |Validation Result              |
+|---------------|-------------------------------|
+|Home           | No errors or warnings to show |
+|Text to Speech | 6 Errors                      |
+|Login          | No errors or warnings to show |
+|Logout         | No errors or warnings to show |
+|Profile        | No errors or warnings to show |
+|Sign up        | No errors or warnings to show |
+|Contact        | No errors or warnings to show |
+|FAQ            | No errors or warnings to show |
+|Team           | No errors or warnings to show |
 ### CSS W3C Validator
 
 ![Screenshot of W3C CSS validator showing no errors](docs/validator-css.png)
