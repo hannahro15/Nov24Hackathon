@@ -388,9 +388,30 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 
 ### HTML W3C Validator
 
-![Screenshot of W3C HTML validator showing no errors](docs/html-validator.png)
-- No errors or warnings shown.
+- Except for the "Text to Speech" page, all pages passed the W3C HTML Validation with no errors.
+- ![Screenshot of W3C HTML validator showing no errors](docs/html-validator.png)
+  - No errors or warnings shown.
 
+- Five of the errors encountered in the "Text to Speech" page are due to how Django formats its `form` element, creating what the validator interprets as trailing tags.
+  - ![Screenshot of W3C HTML validator showing 8 errors](docs/validator-html-error-full.png)
+
+- One error informs that the `aria-labelledby` attribute must point to an element in the same document. The element pointed at is located in the same document as shown in the image below.
+  - ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-error-label.png)
+
+- One error informs that ther's a bad value for attribute action on element form. Due to the nature of the hackathon, no url 
+- ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-error-action.png)
+
+|Page           |Validation Result              |
+|---------------|-------------------------------|
+|Home           | No errors or warnings to show |
+|Text to Speech | 8 Errors                      |
+|Login          | No errors or warnings to show |
+|Logout         | No errors or warnings to show |
+|Profile        | No errors or warnings to show |
+|Sign up        | No errors or warnings to show |
+|Contact        | No errors or warnings to show |
+|FAQ            | No errors or warnings to show |
+|Team           | No errors or warnings to show |
 ### CSS W3C Validator
 
 ![Screenshot of W3C CSS validator showing no errors](docs/validator-css.png)
