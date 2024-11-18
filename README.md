@@ -4,20 +4,6 @@ This website is a project as part of the November 24 Code Insitute Hackathon. It
 
 Link to live site here: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
-![Screenshot of the website in different screensizes](docs/view-different-devices.png)
-
-## Table of contents
-1. <a href="#ux-design">UX Design</a> 
-2. <a href="#features">Features</a>
-3. <a href="#usability">Usability</a>
-4. <a href="#technologies-used">Technologies used</a>
-5. <a href="#testing">Testing</a>
-6. <a href="#bugs">Bugs</a>
-7. <a href="#validator-testing">Validator testing</a>
-8. <a href="#deployment">Deployment</a>
-9. <a href="#credits">Credits</a>
-10. <a href="#acknowledgements">Acknowledgements</a>
-
 ## UX Design
 
 ### User Stories
@@ -217,11 +203,11 @@ From the moment users land on the page, they will clearly understand:
 
 #### Desktop
 
-![Screenshot of homepage](docs/home-page.png)
+![Screenshot of homepage](docs/screenshot-desktop-home.jpeg)
 
 #### Mobile
 
-![Screenshot of homepage on a cellphone screen](docs/home-page-mobile.jpg)
+![Screenshot of homepage on a cellphone screen](docs/screenshot-mobile-home.jpeg)
 
 ### Team page
 
@@ -239,24 +225,64 @@ This page provides users with a deeper understanding of the people behind the we
 
 #### Desktop
 
-![Screenshot of the teams's page](docs/game-page.png)
+![Screenshot of the teams's page](docs/screenshot-desktop-team.jpeg)
 
 #### Mobile
 
-![Screenshot of the team's page on a cellphone screen](docs/game-page-mobile.jpg)
+![Screenshot of the team's page on a cellphone screen](docs/screenshot-mobile-team.jpeg)
 
 
-### Features page
+### Text to Speech page
 
 The website offers a simple and intuitive one-page interface designed to provide an accessible and seamless text-to-speech experience. Users can select from three distinct voice options, clearly labeled to highlight differences such as gender or tone, ensuring flexibility and personalization. A single text input field allows users to type or paste their desired text, which is then converted into speech using a robust text-to-speech API. The page features a clean and minimalist design, focusing on functionality and ease of use without unnecessary distractions, making it approachable for users of all skill levels.
 
 #### Desktop
 
-![Screenshot of desktop page](docs/final-score-page.png)
+![Screenshot of desktop page](docs/screenshot-desktop-text-to-speech.jpeg)
 
 #### Mobile
 
-![Screenshot of mobile page](docs/final-score-page-mobile.jpg)
+![Screenshot of mobile page](docs/screenshot-mobile-text-to-speech.jpeg)
+
+### Contact
+
+#### Desktop
+
+![Screenshot of desktop page](docs/screenshot-desktop-contact.jpeg)
+
+#### Mobile
+
+![Screenshot of mobile page](docs/screenshot-mobile-contact.jpeg)
+
+### FAQ
+
+#### Desktop
+
+![Screenshot of desktop page](docs/screenshot-desktop-faq.jpeg)
+
+#### Mobile
+
+![Screenshot of mobile page](docs/screenshot-mobile-faq.jpeg)
+
+### Sign in
+
+#### Desktop
+
+![Screenshot of desktop page](docs/screenshot-desktop-signin.jpeg)
+
+#### Mobile
+
+![Screenshot of mobile page](docs/screenshot-mobile-signin.jpeg)
+
+### Sign up
+
+#### Desktop
+
+![Screenshot of desktop page](docs/screenshot-desktop-sigup.jpeg)
+
+#### Mobile
+
+![Screenshot of mobile page](docs/screenshot-mobile-signup.jpeg)
 
 ## Agile in the Project
 
@@ -358,23 +384,6 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 ### WebAIM
 
 To ensure the accessibility of the chosen color palettes, testing was conducted using tools like [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/bookmarklet). The WebAIM Contrast Checker is an essential resource for verifying color contrast ratios against the Web Content Accessibility Guidelines (WCAG). By inputting text and background colors into the tool, we confirmed that all palettes meet or exceed the minimum required contrast ratios for normal and large text. This process ensures that users with low vision or other visual impairments can read content comfortably without straining their eyes.
-
-### Wave Accessibility screenshots
-
-### Home Page
-![Screenshot](docs/wave-home.png)
-### Text To Speech Page
-![Screenshot](docs/wave-text-to-speech.png)
-### Contact Page
-![Screenshot](docs/wave-contact.png)
-### FAQ Page
-![Screenshot](docs/wave-faq.png)
-### Team Page
-![Screenshot](docs/wave-team-page.png)
-### Sign Up Page
-![Screenshot](docs/wave-sign-up.png)
-### Sign In Page
-![Screenshot](docs/wave-sign-in.png)
 
 ### Color Oracle
 
