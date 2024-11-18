@@ -1,52 +1,70 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
 
-<div id="main-section">
-  <!-- Section that focuses on welcoming the user to the page -->
-  <div id="welcome-section">
-    <div id="welcome-box">
-      <div id="welcome-text">
-        <h1 id="welcome-title">Welcome to Script to Sound</h1>
-        <p id="welcome-message">Your website to convert text to speech</p>
+{% load static %}
+
+{% block content %}
+
+  <div id="main-section">
+    <!-- Section that focuses on welcoming the user to the page -->
+    <div id="welcome-section">
+      <div id="welcome-box">
+        <div id="welcome-text">
+          <h1 id="welcome-title">
+            Welcome to Script to Sound
+          </h1>
+          <p id="welcome-message">
+            Your website to convert text to speech
+          </p>
+        </div>
+        <div class="d-flex justify-content-center pt-5">
+          <form>
+            <button formaction="{% url 'text_to_speech' %}"
+                    class="button-animation">
+              Get started!
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="d-flex justify-content-center pt-5">
-        <form>
-          <button formaction="{% url 'text_to_speech' %}" class="button-animation">
-            Get started!
-          </button>
-        </form>
+    </div>
+
+    <!-- Section that gives additional information about the page -->
+    <div id="steps-section">
+      <div id="steps-container">
+        <div class="steps-tiles justify-content-center"
+             id="steps-feature">
+          <i class="fa-solid fa-comment-dots step-icon"></i>
+          <p class="steps-titles">
+            Choose your language
+          </p>
+          <span class="steps-texts">
+            English is not your main language? No worries, you can change the
+            language to a multitude of other options.
+          </span>
+        </div>
+        <div class="steps-tiles justify-content-center"
+             id="steps-benefit">
+          <i class="fa-solid fa-gauge-high step-icon"></i>
+          <p class="steps-titles">
+            Adjust the speed
+          </p>
+          <span class="steps-texts">
+            You rather have your audio played at slow speed? You can adjust the
+            playback speed as you like in an extra setting.
+          </span>
+        </div>
+        <div class="steps-tiles justify-content-center"
+             id="steps-target-user">
+          <i class="fa-solid fa-palette step-icon"></i>
+          <p class="steps-titles">
+            Select colour palette
+          </p>
+          <span class="steps-texts">
+            To offer the best experience, you can change the website colour
+            palette at any time according to your needs.
+          </span>
+        </div>
       </div>
     </div>
   </div>
-
-  <!-- Section that gives additional information about the page -->
-  <div id="steps-section">
-    <div id="steps-container">
-      <div class="steps-tiles justify-content-center" id="steps-feature">
-        <i class="fa-solid fa-comment-dots step-icon"></i>
-        <p class="steps-titles">Choose your language</p>
-        <p class="steps-texts">
-          English is not your main language? No worries, you can change the
-          language to a multitude of other options.
-        </p>
-      </div>
-      <div class="steps-tiles justify-content-center" id="steps-benefit">
-        <i class="fa-solid fa-gauge-high step-icon"></i>
-        <p class="steps-titles">Adjust the speed</p>
-        <p class="steps-texts">
-          You rather have your audio played at slow speed? You can adjust the
-          playback speed as you like in an extra setting.
-        </p>
-      </div>
-      <div class="steps-tiles justify-content-center" id="steps-target-user">
-        <i class="fa-solid fa-palette step-icon"></i>
-        <p class="steps-titles">Select colour palette</p>
-        <p class="steps-texts">
-          To offer the best experience, you can change the website colour
-          palette at any time according to your needs.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 {% endblock content %}
