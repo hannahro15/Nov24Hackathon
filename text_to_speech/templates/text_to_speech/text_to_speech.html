@@ -3,6 +3,24 @@
 {% load static %}
 
 {% block content %}
+  <div class="container d-flex flex-column align-items-center">
+    {% if messages %}
+      <div id="message-container"
+           class="text-center mb-4">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show"
+               role="alert">
+            {{ message }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close">
+            </button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
   <h1 class="text-center page-titles">
     Text to Speech
   </h1>
@@ -56,7 +74,8 @@
             Speed
           </p>
           <label for="speed-range"
-                 class="sr-only" id="speed-label">
+                 class="sr-only"
+                 id="speed-label">
             Adjust Speed
           </label>
           <input type="range"
