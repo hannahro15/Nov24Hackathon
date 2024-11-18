@@ -67,26 +67,70 @@ Link to live site here: https://script-to-sound-f697c5a0720c.herokuapp.com/
 20. **As a multilingual user**, I want pronunciation guides or phonetic hints for certain languages, so I can better understand the speech output.  
 21. **As a user**, I want language settings to include regional accents or dialects, so the output sounds more natural for my context.  
 
+## Accessibility  
 
-### Accessibility:
+This project prioritizes accessibility, implementing features that ensure inclusivity for users with diverse needs:  
 
+- **High Contrast Design:** A carefully chosen default color palette provides sufficient contrast for readability.  
+- **Accessible Color Schemes:** Alternatives include palettes for color vision deficiencies (e.g., red-green and blue-yellow blindness), grayscale for monochromatic vision, and soft tones for light sensitivity.  
+- **Keyboard Navigation:** Users can navigate the interface entirely through keyboard controls.  
+- **Responsive Design:** The website adjusts seamlessly to various devices, ensuring usability across screen sizes.  
 
-### Feedback Mechanism:
+---
 
-- "sent" messages
-- Hover and click effects on buttons and links
+## Feedback Mechanism  
 
-### Consistency:
+### General Feedback  
 
-The website maintains a consistent design language throughout all screens, using a cohesive color scheme, typography, and layout. This consistency helps users focus on the content and functions without being distracted by changing interfaces.
+- **"Sent" Messages:** Confirms successful actions, such as submitting a form or sending feedback.  
+- **Hover and Click Effects:** Highlights buttons and links when interacted with to indicate functionality.  
+- **Loading Indicators:** Displays spinners during speech generation or form submissions to indicate ongoing processes.  
+- **Active State Indicators:** Clearly shows selected languages and speech speed on the text-to-speech page.  
 
-#### Default Color scheme
+### Error Recovery and Validation  
+
+- **Custom 404 Page:** Directs users to a recovery page with a link back to the home page when encountering broken or non-existent links.  
+- **Invalid Login Feedback:** Displays the error message *"The username and/or password you specified are not correct"* when login details are incorrect.  
+
+---
+
+## Consistency  
+
+### Design Language  
+
+The project employs a cohesive design language, maintaining consistency in:  
+
+- **Color Palette:** A default scheme featuring Deep Teal, Mustard Yellow, Soft Cyan, and Charcoal.  
+- **Typography:** Uniform text styles for readability and professionalism.  
+- **Layout:** Structured navigation across all pages.  
+
+### Branding  
+
+#### Favicon  
+
+The favicon reflects the project's core functionality, combining a document and speaker icon in a minimalist style with high contrast to align with accessibility goals.  
+
+![Favicon](static/favicon/android-chrome-192x192.png)  
+
+## Visual Accessibility  
+
+Multiple accessible palettes were tested and optimized to meet Web Content Accessibility Guidelines (WCAG):  
+
+1. **High Contrast Palette**  
+2. **Red-Green Color Blindness Palette**  
+3. **Blue-Yellow Color Blindness Palette**  
+4. **Grayscale Palette**  
+5. **Soft Tones Palette**  
+
+---
+
+### Default Color scheme
 
 ![Four squares, one of a different colour](docs/colour-scheme.png)
 
 The chosen color palette, featuring Deep Teal (#004C6D), Mustard Yellow (#FFB700), Soft Cyan (#B2EBF2), and Charcoal (#36454F), is specifically designed to prioritize accessibility and inclusivity. The combination provides high contrast and visual clarity, making it suitable for users with color vision deficiencies, including deuteranopia, protanopia, and tritanopia. Deep Teal and Charcoal serve as strong base colors, while Mustard Yellow and Soft Cyan add brightness and distinguishable accents. This palette ensures that interactive elements, text, and backgrounds remain easily recognizable, even for users with limited color perception, supporting a user-friendly and inclusive interface.
 
-#### Accessible Color Palette Choices
+### Accessible Color Palette Choices
 
 The color palettes chosen for this project were carefully crafted to ensure inclusivity and usability for individuals with diverse visual impairments. These palettes address common challenges faced by users with color blindness, low vision, and light sensitivity. Each palette emphasizes high contrast and distinguishable hues to meet Web Content Accessibility Guidelines (WCAG) standards and provide a positive experience for all users.
 
@@ -94,33 +138,27 @@ For users with red-green color blindness (Protanopia and Deuteranopia), Palette 
 
 These palettes were tested for accessibility using tools like the WebAIM Contrast Checker and Color Oracle, ensuring compliance with WCAG standards. By incorporating these accessible color schemes, this project aims to create an inclusive digital environment that prioritizes user experience for all audiences.
 
-##### High Contrast
+#### High Contrast
 
 ![Five squares, one of a different colour](docs/palette-1-high-contrast.png)
 
-##### Red Green Colour Blindness
+#### Red Green Colour Blindness
 
 ![Five squares, one of a different colour](docs/palette-2-red-green-colour-blindness.png)
 
-##### Blue Yellow Colour Blindness
+#### Blue Yellow Colour Blindness
 
 ![Five squares, one of a different colour](docs/palette-3-blue-yellow-colour-blindness.png)
 
-##### Grayscale
+#### Grayscale
 
 ![Five squares, one of a different colour](docs/palette-4-grayscale.png)
 
-##### Soft Tones
+#### Soft Tones
 
 ![Five squares, one of a different colour](docs/palette-5-soft-tones.png)
 
-#### Favicon
-
-The favicon was created with a minimalist look and high contrast to stay consistent with the accessibility purposes of the project. It depicts visually the project's main funcionality of "Text to Speech" with a document and a speaker in dark countour lines.
-
-![Icon ](static/favicon/android-chrome-192x192.png)
-
-
+---
 
 ### Wireframes
 
@@ -220,20 +258,6 @@ The website offers a simple and intuitive one-page interface designed to provide
 
 ![Screenshot of mobile page](docs/final-score-page-mobile.jpg)
 
-## Features left to implement
-
-As part of the project's evolution, the following features are being considered to enhance functionality and accessibility:
-
-1. Playback Controls
-
-   - Add options to pause, stop, and replay the generated audio, providing users with greater flexibility in interacting with the speech output.
-
-2. Accessibility Enhancements
-
-    - Explore the addition of screen reader compatibility and keyboard navigation to improve accessibility for users with disabilities.
-  
-These features reflect our aspirations to further refine and improve the website's usability in the future.
-
 ## Agile in the Project
 
 Agile methodology played a vital role in the development of this project, fostering collaboration, adaptability, and iterative progress. The team embraced Agile principles to break down tasks, prioritize work, and deliver increments of value throughout the hackathon.
@@ -244,16 +268,13 @@ The team utilized GitHub Issues as the core tool for task management and collabo
 
 Below are examples of GitHub Issues used during the project:
 
-<figure>
-  <img src="docs/screenshot-open-issues.png" alt="Screenshot of Issues page on GitHub displaying open issues">
-  <figcaption>Open Issues: screenshot of open issues, demonstrating tasks currently in progress or waiting to be addressed.</figcaption>
-</figure>
+![Screenshot of Issues page on GitHub displaying open issues](docs/screenshot-open-issues.png)
 
-<figure>
-  <img src="docs/screenshot-closed-issues.png
-" alt="Screenshot of Issues page on GitHub displaying closed issues">
-  <figcaption>Solved Issues: Placeholder for a screenshot of resolved issues, showing the features and fixes completed during the hackathon.</figcaption>
-</figure>
+- Screenshot of open issues, showing the features and fixes to be completed during the hackathon.
+
+![Screenshot of Issues page on GitHub displaying open issues](docs/screenshot-closed-issues.png)
+
+- Screenshot of resolved issues, showing the features and fixes completed during the hackathon.
 
 ### Challenges and Solutions
 
@@ -266,33 +287,35 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 
 ---
 
-## Technologies used
+## Technologies Used  
 
-| Technology                               | Use                                                                                          |  
-|------------------------------------------|---------------------------------------------------------------------------------------------|  
-| HTML                                     | Structure the webpage.                                                                      |  
-| CSS                                      | Style and add layout to the project.                                                       |  
-| JavaScript                               | Make the website interactive.                                                              |  
-| Django                                   | A Python-based web framework used to develop the backend, manage server-side logic, and handle routing. |  
-| [Heroku](https://www.heroku.com/)        | Cloud platform used for deploying, managing, and hosting the live version of the website.   |  
+| Technology                               | Use                                                                                                           |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| HTML                                     | Structure the webpage.                                                                                        |
+| CSS                                      | Style and add layout to the project.                                                                          |
+| JavaScript                               | Make the website interactive.                                                                                 |
+| Django                                   | A Python-based web framework used to develop the backend, manage server-side logic, and handle routing.       |
+| [Heroku](https://www.heroku.com/)        | Cloud platform used for deploying, managing, and hosting the live version of the website.                     |
 | [GitHub](https://github.com/)            | Version control platform used to store the project’s repository, collaborate on code, and manage deployments. |  
-| [gTTS](https://pypi.org/project/gTTS/) | Provides the text-to-speech functionality, converting user-input text into spoken audio seamlessly. |
-| [Balsamiq](https://balsamiq.com/)        | Used to create wireframes and design the structure of the website.                          |  
-| [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                   |
-| [The Noun Project](https://thenounproject.com/) | Used to create image for favicon | 
-| [Google Fonts](https://fonts.google.com/) | Research, pair, and add fonts to the project.                                               |  
-| [Optimizilla](https://imagecompressor.com/) | Compress images.                                                                            |  
-| [WEBP Converter](https://cloudconvert.com/webp-converter) | Convert jpg/png images to webp format.                                                     |  
-| [Favicon.io](https://favicon.io/favicon-converter/) | Create favicon files.                                                                      |  
-| [Am I Responsive](https://ui.dev/amiresponsive) | View and screenshot the page on different devices.                                          |  
-| [Canva](https://www.canva.com/) | Creating landing, header and icon images.                                          |  
+| [gTTS](https://pypi.org/project/gTTS/)   | Provides the text-to-speech functionality, converting user-input text into spoken audio seamlessly.           |  
+| [ChatGPT](https://openai.com/chatgpt)    | Used for generating code snippets, improving documentation, and brainstorming project ideas.                  |  
+| [GitHub Copilot](https://github.com/features/copilot) | AI-powered code assistant used to write and optimize code faster.                                |  
+| [Balsamiq](https://balsamiq.com/)        | Used to create wireframes and design the structure of the website.                                            |  
+| [Font Awesome](https://fontawesome.com/) | Used for the GitHub icon.                                                                                     |
+| [The Noun Project](https://thenounproject.com/) | Used to create image for favicon.                                                                      |
+| [Google Fonts](https://fonts.google.com/) | Research, pair, and add fonts to the project.                                                                |
+| [Optimizilla](https://imagecompressor.com/) | Compress images.                                                                                           |
+| [WEBP Converter](https://cloudconvert.com/webp-converter) | Convert jpg/png images to webp format.                                                       |
+| [Favicon.io](https://favicon.io/favicon-converter/) | Create favicon files.                                                                              |
+| [Am I Responsive](https://ui.dev/amiresponsive) | View and screenshot the page on different devices.                                                     |
+| [Canva](https://www.canva.com/)          | Creating landing, header, and icon images.                                                                    |
 
 
 ## Testing
 
 ### Core Functional Features
 
-| Test                                          | Action                                            | Expected Result                                                     | Outcome |
+| Test                                          | Action                                           | Expected Result                                                     | Outcome |
 |-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
 | User can select a desired language            | Open the text-to-speech tool and select a language from the dropdown | The selected language is applied to the text-to-speech functionality | Pass    |
 | User can adjust speech speed                  | Change the speech speed slider                  | Speech plays at the chosen speed                                   | Pass    |
@@ -302,18 +325,18 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 | Team Members page loads correctly             | Navigate to the Team Members page               | Page displays information about all team members                   | Pass    |
 | Contact page form sends a message             | Fill out the contact form and click "Submit"    | Message is sent, and a confirmation notification is displayed      | Pass    |
 | Incorrect login details display error message | Attempt to log in with invalid credentials      | An error message appears prompting the user to check their details | Pass    |
-| Password validation in sign-up form           | Enter a password that does not meet criteria    | Form displays a password validation error                         | Pass    |
+| Password validation in sign-up form           | Enter a password that does not meet criteria    | Form displays a password validation error                          | Pass    |
 
 ---
 
 ### Responsiveness and Compatibility
 
-| Test                                          | Action                                            | Expected Result                                                     | Outcome |
-|-----------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------|---------|
-| Responsiveness on different resolutions       | Use DevTools to check pages on various screen sizes | All pages maintain a consistent, readable layout                  | Pass    |
-| Mobile responsiveness                         | Test layout and functionality on mobile devices | Content adjusts to fit smaller screens without losing usability    | Pass    |
-| Browser compatibility                         | Open the site in Chrome, Firefox, and Edge      | The site functions and displays consistently in all browsers       | Pass    |
-| Touch navigation on mobile devices            | Use touch gestures on mobile                   | Buttons and dropdowns respond correctly to touch input             | Pass    |
+| Test                                          | Action                                            | Expected Result                                                    | Outcome |
+|-----------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------|---------|
+| Responsiveness on different resolutions       | Use DevTools to check pages on various screen sizes | All pages maintain a consistent, readable layout                 | Pass    |
+| Mobile responsiveness                         | Test layout and functionality on mobile devices   | Content adjusts to fit smaller screens without losing usability    | Pass    |
+| Browser compatibility                         | Open the site in Chrome, Firefox, and Edge        | The site functions and displays consistently in all browsers       | Pass    |
+| Touch navigation on mobile devices            | Use touch gestures on mobile                      | Buttons and dropdowns respond correctly to touch input             | Pass    |
 
 ---
 
