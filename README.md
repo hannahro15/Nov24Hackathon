@@ -409,67 +409,75 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 
 #### Home Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-index-mobile.png)
 
 #### Home Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-index-desktop.png)
 
 #### Text to Speech Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-text-to-speech-mobile.png)
 
 #### Text to Speech Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-text-to-speech-desktop.png)
 
 #### Contact Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-contact-mobile.png)
 
 #### Contact Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-contact-desktop.png)
 
 #### FAQ Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-faq-mobile.png)
 
 #### FAQ Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-faq-desktop.png)
 
 #### Teams Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-team-mobile.png)
 
 #### Teams Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-team-desktop.png)
 
 #### Signup Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-signup-mobile.png)
 
 #### Signup Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-signup-desktop.png)
 
 #### Sign in Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-login-mobile.png)
 
 #### Sign in Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-login-desktop.png)
 
 #### Profile Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile]()
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-profile-mobile.png)
 
 #### Profile Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop]()
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-profile-desktop.png)
+
+#### Sign out Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile](docs/screenshot-lighthouse-logout-mobile.png)
+
+#### Sign out Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop](docs/screenshot-lighthouse-logout-desktop.png)
 
 
 # Deployment to Heroku
