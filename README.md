@@ -1,5 +1,9 @@
 # Script to Sound 🔊 
 
+This website is a project as part of the November 24 Code Insitute Hackathon. It is accessibility themed and the project that was have created is a text to speech app.
+
+Link to live site here: https://script-to-sound-f697c5a0720c.herokuapp.com/
+
 ![Screenshot of the website in different screensizes](docs/view-different-devices.png)
 
 ## Table of contents
@@ -17,8 +21,6 @@
 ## UX Design
 
 ### User Stories
-
-### User Stories  
 
 #### **General User Stories**  
 
@@ -368,13 +370,69 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 - Lighthouse in devtools indicated a high accessibility score.
 - Performance scores varied minimally when analysing  the `mobile` or `desktop` versions.
 
-#### Mobile
+#### Home Page - Mobile
 
-![Screenshot of Lighthouse score results for mobile](docs/lighthouse-mobile.png)
+![Screenshot of Lighthouse score results for mobile]()
 
-#### Desktop
+#### Home Page - Desktop
 
-![Screenshot of Lighthouse score results for desktop](docs/lighthouse-desktop.png)
+![Screenshot of Lighthouse score results for desktop]()
+
+#### Text to Speech Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### Text to Speech Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
+
+#### Contact Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### Contact Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
+
+#### FAQ Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### FAQ Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
+
+#### Teams Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### Teams Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
+
+#### Signup Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### Signup Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
+
+#### Sign in Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### Sign in Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
+
+#### Profile Page - Mobile
+
+![Screenshot of Lighthouse score results for mobile]()
+
+#### Profile Page - Desktop
+
+![Screenshot of Lighthouse score results for desktop]()
 
 
 # Deployment to Heroku
@@ -418,7 +476,7 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 We would like to recognize the contributions of our team members, whose efforts made this hackathon project possible. Each person brought unique skills and played a vital role in completing the project within the time constraints.
 
 - Tafadzwa Mangena: Contributed to Agile processes and developed the Team Member’s page.
-- Hannah Olbrich: Served as Scrum Master, coordinated Agile practices, and created the Contact Page.
+- Hannah Olbrich: Served as Scrum Master, coordinated Agile practices, and created the Contact and FAQ pages.
 - Arthur Vilela: Worked on front-end development, testing, and documentation to ensure the project was user-friendly and well-supported.
 - Ed Radcliffe: Played a dual role in front-end and back-end development, contributing to the technical functionality of the project.
 - Erin Doyle: Focused on front-end development, improving the design and user interface.
