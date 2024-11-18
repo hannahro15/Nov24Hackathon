@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Default settings
-  let selectedVoice =
-    elements.languageSelect?.dataset.preferredLanguage || "en";
+  let selectedVoice = (elements.languageSelect && elements.languageSelect.dataset.preferredLanguage) || "en";
   let playbackSpeed = 1.0;
   let isPlaying = false;
   let audio = null;
