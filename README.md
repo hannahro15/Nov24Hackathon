@@ -386,13 +386,16 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 ### HTML W3C Validator
 
 - Except for the **"Text to Speech"** page, all pages passed the W3C HTML Validation with no errors.
-- ![Screenshot of W3C HTML validator showing no errors](docs/validator-html-no-errors.png)
+  
+    ![Screenshot of W3C HTML validator showing no errors](docs/validator-html-no-errors.png)
   - No errors or warnings shown.
 
 - The errors encountered in the **"Text to Speech"** page are due to how **Django** formats its `form` element, creating what the validator interprets as trailing tags.
-  - ![Screenshot of W3C HTML validator showing 8 errors](docs/validator-html-error-full.png)
+
+   ![Screenshot of W3C HTML validator showing 8 errors](docs/validator-html-error-full.png)
 -  The opening and closing tags are there and working as expected.
-  -  ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-tags.png)
+    
+    ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-tags.png)
 
 
 
@@ -414,7 +417,7 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 
 ### JSHint
 
-- No warnings shown.
+- No errors shown.
 
 ![Screenshot of JSHint result showing no warnings](docs/jsHint.png)
 
@@ -579,6 +582,7 @@ Open your browser and navigate to: [http://localhost:8000](http://localhost:8000
 
 # Credits
 - Favicon created by Argentinian designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
+- [W3 Web Accessibility Guide](https://www.w3.org/TR/WCAG22/) provided accessibility guidelines followed to make the decisions on the project.
 
 # Acknowledgements
 
