@@ -61,8 +61,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 # Maps alert message to Bootstrap CSS classes.
 MESSAGE_TAGS = {
-    messages.DEBUG: 'debug',
-    messages.INFO: 'info',
     messages.SUCCESS: 'success',
     messages.WARNING: 'warning',
     messages.ERROR: 'danger',

@@ -126,6 +126,25 @@ img {
 }
 /*--------------------------------------- General Styles -----------*/
 
+#message-container {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 325px;
+  z-index: 1000;
+}
+
+.alert-success,
+.alert-danger,
+.alert-warning {
+  background-color: var(--accent-color-1) !important;
+  color: var(--background-color) !important;
+  border: none !important;
+}
+
+
 body {
   font-family: "Lexend", sans-serif !important;
   line-height: 1.6 !important;
