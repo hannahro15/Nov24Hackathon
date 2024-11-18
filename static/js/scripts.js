@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Default settings
-  let selectedVoice = (elements.languageSelect && elements.languageSelect.dataset.preferredLanguage) || "en";
+  let selectedVoice =
+    (elements.languageSelect &&
+      elements.languageSelect.dataset.preferredLanguage) ||
+    "en";
   let playbackSpeed = 1.0;
   let isPlaying = false;
   let audio = null;
@@ -60,13 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Handle language selection change
   function handleLanguageChange() {
-    selectedVoice = elements.languageSelect.value;
+    if (elements.languageSelect) {
+      selectedVoice = elements.languageSelect.value;
+    }
   }
 
   // Handle speed range input
   function handleSpeedChange() {
-    playbackSpeed = parseFloat(elements.speedRange.value);
-    updateSpeedDisplay();
+    if (elements.speedRange) {
+      playbackSpeed = parseFloat(elements.speedRange.value);
+      updateSpeedDisplay();
+    }
   }
 
   // Handle send/stop button click
@@ -80,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start audio playback
   async function startAudioPlayback() {
-    const text = elements.textInput.value.trim();
+    const text = elements.textInput ? elements.textInput.value.trim() : "";
     if (!validateInput(text)) return;
     disableSendButton(true);
     try {
@@ -111,11 +118,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (audio.paused) {
         // Resume playback if paused
         audio.play();
-        elements.pauseButton.textContent = "Pause";
+        if (elements.pauseButton) {
+          elements.pauseButton.textContent = "Pause";
+        }
       } else {
         // Pause playback if playing
         audio.pause();
-        elements.pauseButton.textContent = "Resume";
+        if (elements.pauseButton) {
+          elements.pauseButton.textContent = "Resume";
+        }
       }
     }
   }
@@ -135,12 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Disable or enable send button
   function disableSendButton(disable) {
-    elements.sendButton.disabled = disable;
-    if (disable) {
-      elements.sendSpinner.classList.remove("d-none");
+    if (elements.sendButton) {
+      elements.sendButton.disabled = disable;
+    }
+    if (elements.sendSpinner) {
+      if (disable) {
+        elements.sendSpinner.classList.remove("d-none");
+      } else {
+        elements.sendSpinner.classList.add("d-none");
+      }
+    }
+    if (elements.sendButtonText && disable) {
       elements.sendButtonText.textContent = "";
-    } else {
-      elements.sendSpinner.classList.add("d-none");
     }
   }
 
@@ -174,24 +191,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Update button to 'Stop' state
   function updateButtonToStop() {
-    elements.sendSpinner.classList.add("d-none");
-    elements.sendButtonText.textContent = "Stop";
-    elements.sendButton.classList.remove("btn-primary");
-    elements.sendButton.classList.add("btn-danger");
-    elements.sendButton.disabled = false;
+    if (elements.sendSpinner) {
+      elements.sendSpinner.classList.add("d-none");
+    }
+    if (elements.sendButtonText) {
+      elements.sendButtonText.textContent = "Stop";
+    }
+    if (elements.sendButton) {
+      elements.sendButton.classList.remove("btn-primary");
+      elements.sendButton.classList.add("btn-danger");
+      elements.sendButton.disabled = false;
+    }
   }
 
   // Reset send button to initial state
   function resetSendButton() {
-    elements.sendButtonText.textContent = "Send";
-    elements.sendButton.classList.remove("btn-danger");
-    elements.sendButton.classList.add("btn-primary");
-    disableSendButton(false);
+    if (elements.sendButtonText) {
+      elements.sendButtonText.textContent = "Send";
+    }
+    if (elements.sendButton) {
+      elements.sendButton.classList.remove("btn-danger");
+      elements.sendButton.classList.add("btn-primary");
+      disableSendButton(false);
+    }
   }
 
   // Handle clear button click
   function handleClearButtonClick() {
-    elements.textInput.value = "";
+    if (elements.textInput) {
+      elements.textInput.value = "";
+    }
   }
 
   // Initialize the application
@@ -245,7 +274,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Announce change for screen readers
       const alertDiv = document.getElementById("palette-alert");
-      alertDiv.textContent = `Palette changed to ${link.textContent}`;
+      if (alertDiv) {
+        alertDiv.textContent = `Palette changed to ${link.textContent}`;
+      }
     });
 
     // Add keyboard support for "Enter" key
@@ -281,15 +312,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdownToggle = document.getElementById("paletteDropdown");
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
+  // Add event listener for clicks outside the dropdown
   document.addEventListener("click", (event) => {
     const isClickInside =
-      dropdownMenu.contains(event.target) ||
-      dropdownToggle.contains(event.target);
+      (dropdownMenu && dropdownMenu.contains(event.target)) ||
+      (dropdownToggle && dropdownToggle.contains(event.target));
 
     // If the click is outside, hide the dropdown
     if (!isClickInside) {
       const dropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
-      if (dropdown && dropdownMenu.classList.contains("show")) {
+      if (dropdown && dropdownMenu && dropdownMenu.classList.contains("show")) {
         dropdown.hide();
       }
     }
@@ -300,24 +332,37 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contactForm");
   const submitButton = document.getElementById("submitButton");
-  const successModal = new bootstrap.Modal(
-    document.getElementById("successModal")
-  );
+  const successModalElement = document.getElementById("successModal");
+  const successModal = successModalElement
+    ? new bootstrap.Modal(successModalElement)
+    : null;
 
   // Handle form submission
   if (contactForm) {
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
       // Validate form fields
-      const firstName = document.getElementById("firstName").value.trim();
-      const lastName = document.getElementById("lastName").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const textArea = document.getElementById("text-area").value.trim();
+      const firstName = document.getElementById("firstName")
+        ? document.getElementById("firstName").value.trim()
+        : "";
+      const lastName = document.getElementById("lastName")
+        ? document.getElementById("lastName").value.trim()
+        : "";
+      const email = document.getElementById("email")
+        ? document.getElementById("email").value.trim()
+        : "";
+      const textArea = document.getElementById("text-area")
+        ? document.getElementById("text-area").value.trim()
+        : "";
       if (firstName && lastName && email && textArea) {
         // Change button color on successful form validation
-        submitButton.style.backgroundColor = "green";
+        if (submitButton) {
+          submitButton.style.backgroundColor = "green";
+        }
         // Show success modal
-        successModal.show();
+        if (successModal) {
+          successModal.show();
+        }
         // Reset form fields after submission
         contactForm.reset();
       } else {
