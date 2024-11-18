@@ -359,12 +359,26 @@ By adhering to Agile practices, the team successfully navigated challenges, stay
 
 To ensure the accessibility of the chosen color palettes, testing was conducted using tools like [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/bookmarklet). The WebAIM Contrast Checker is an essential resource for verifying color contrast ratios against the Web Content Accessibility Guidelines (WCAG). By inputting text and background colors into the tool, we confirmed that all palettes meet or exceed the minimum required contrast ratios for normal and large text. This process ensures that users with low vision or other visual impairments can read content comfortably without straining their eyes.
 
+### Wave Accessibility screenshots
+
+### Home Page
+![Screenshot](docs/wave-home.png)
+### Text To Speech Page
+![Screenshot](docs/wave-text-to-speech.png)
+### Contact Page
+![Screenshot](docs/wave-contact.png)
+### FAQ Page
+![Screenshot](docs/wave-faq.png)
+### Team Page
+![Screenshot](docs/wave-team-page.png)
+### Sign Up Page
+![Screenshot](docs/wave-sign-up.png)
+### Sign In Page
+![Screenshot](docs/wave-sign-in.png)
+
 ### Color Oracle
 
 Additionally, [Color Oracle](https://colororacle.org/) was used to simulate different types of color blindness, including Protanopia, Deuteranopia, and Tritanopia. This helped identify potential issues in color differentiation and adjust hues for optimal visibility. The tool’s real-time simulation ensures that the palettes are accessible and usable across all forms of color blindness. Combining these testing tools ensures that the color palettes chosen for the project not only comply with accessibility standards but also provide a practical and inclusive user experience.
-
-### User testing
-
 
 
 # Bugs
