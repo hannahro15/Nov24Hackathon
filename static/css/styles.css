@@ -792,39 +792,40 @@ input[type="range"]:disabled::-moz-range-thumb {
   flex-wrap: wrap;
 }
 
+/* Adjustments for steps-tiles */
 .steps-tiles {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f8ff;
-  padding: 20px;
+  justify-content: center;
+  background-color: var(--background-color) !important;
+  padding: 1.5rem;
   border-radius: 8px;
-  width: 25%;
-  height: 285px;
+  width: 100%;
+  max-width: 325px;
+  height: 325px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .steps-titles {
   text-transform: uppercase;
-  font-weight: 600;
-  margin: 10px 0;
-  color: var(--accent-color-2);
+  font-weight: 600 !important;
+  margin: 12px;
+  color: var(--primary-text-color) !important;
+  font-size: 1.25rem;
 }
 
 .step-icon {
-  font-size: 5em;
-  color: var(--accent-color-2);
+  font-size: 4.5rem;
+  color: var(--logo-color) !important;
+  margin-bottom: 10px !important;
 }
 
-.step-icon {
-  font-size: 5em;
-  color: var(--accent-color-2);
-}
-
-.step-icon {
-  font-size: 5em;
-  color: var(--accent-color-2);
+.steps-texts {
+  color: var(--primary-text-color) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
 }
 
 /*--------------------------------------- Contact ----------*/
