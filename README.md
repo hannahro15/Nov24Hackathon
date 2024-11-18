@@ -381,30 +381,24 @@ To ensure the accessibility of the chosen color palettes, testing was conducted 
 Additionally, [Color Oracle](https://colororacle.org/) was used to simulate different types of color blindness, including Protanopia, Deuteranopia, and Tritanopia. This helped identify potential issues in color differentiation and adjust hues for optimal visibility. The tool’s real-time simulation ensures that the palettes are accessible and usable across all forms of color blindness. Combining these testing tools ensures that the color palettes chosen for the project not only comply with accessibility standards but also provide a practical and inclusive user experience.
 
 
-# Bugs
-
-
 # Validator testing
 
 ### HTML W3C Validator
 
-- Except for the "Text to Speech" page, all pages passed the W3C HTML Validation with no errors.
-- ![Screenshot of W3C HTML validator showing no errors](docs/html-validator.png)
+- Except for the **"Text to Speech"** page, all pages passed the W3C HTML Validation with no errors.
+- ![Screenshot of W3C HTML validator showing no errors](docs/validator-html-no-errors.png)
   - No errors or warnings shown.
 
-- Five of the errors encountered in the "Text to Speech" page are due to how Django formats its `form` element, creating what the validator interprets as trailing tags.
+- The errors encountered in the **"Text to Speech"** page are due to how **Django** formats its `form` element, creating what the validator interprets as trailing tags.
   - ![Screenshot of W3C HTML validator showing 8 errors](docs/validator-html-error-full.png)
+  - The tags are 
 
-- One error informs that the `aria-labelledby` attribute must point to an element in the same document. The element pointed at is located in the same document as shown in the image below.
-  - ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-error-label.png)
 
-- One error informs that ther's a bad value for attribute action on element form. Due to the nature of the hackathon, no url 
-- ![Screenshot of W3C HTML validator showing highlighted errors](docs/validator-html-error-action.png)
 
 |Page           |Validation Result              |
 |---------------|-------------------------------|
 |Home           | No errors or warnings to show |
-|Text to Speech | 8 Errors                      |
+|Text to Speech | 6 Errors                      |
 |Login          | No errors or warnings to show |
 |Logout         | No errors or warnings to show |
 |Profile        | No errors or warnings to show |
