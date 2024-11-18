@@ -363,13 +363,6 @@ To ensure the accessibility of the chosen color palettes, testing was conducted 
 
 Additionally, [Color Oracle](https://colororacle.org/) was used to simulate different types of color blindness, including Protanopia, Deuteranopia, and Tritanopia. This helped identify potential issues in color differentiation and adjust hues for optimal visibility. The tool’s real-time simulation ensures that the palettes are accessible and usable across all forms of color blindness. Combining these testing tools ensures that the color palettes chosen for the project not only comply with accessibility standards but also provide a practical and inclusive user experience.
 
-### User testing
-
-
-
-# Bugs
-
-
 # Validator testing
 
 ### HTML W3C Validator
@@ -458,38 +451,108 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 ![Screenshot of Lighthouse score results for desktop]()
 
 
-# Deployment to Heroku
+# Deployment
 
- Go to Heroku.com and implement the following steps in this order:
- 1. On the home page, click 'New' and in the dropdown, click on 'Create a new app'.
- 2. Add app name (This name must be unique, and have all lower case letters. Also use minus/dash signs instead of spaces.)
- 3. Select Region (Most likely to be Europe)
- 4. Click the button that says 'Create App' and name the app. Follow instructions on the screen.
- 5. Click on the Deploy tab near the top of the screen.
- 6. Where is says Deployment Method click on Github.
- 7. Below that, search for your repo name and add that.
- 8. Click connect to the app.
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hannahro15/Nov24Hackathon)
 
- Before clicking below on enable automatic deployment do the following:
- 1. Click on the settings tab
- 2. Click on reveal config vars.
- 3. Add in your variables from your env. files as the key-value pairs.
- 4. Go back and click on the Deploy tab. 
- 
- Before the app can be connected, push the following new files below to the repository. Go back in the terminal in your coding environment and add the following:
- 1. git status
- 2. git add requirements.txt
- 3. git commit -m "Add requirements.txt file"
- 4. git add a Procfile(web: gunicorn project_root.wsgi:application)
- 1. git commit -m "Add Procfile"
- 2. git push
+## 🚀 Project Setup
 
- Head back over to Heroku where the Deploy tab is.
- 1. Click Deploy Branch. (Should be a main or master branch)
- 2. Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
- 3. Once you know deployment is successful then click 'Enable Automatic Deploys'
- 4. Click 'View' to launch the new app. 
- 5. Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
+### 1. Clone the Repository
+```bash
+git clone https://github.com/hannahro15/Nov24Hackathon.git
+cd Nov24Hackathon
+```
+
+### 2. Setup Environment Variables
+Create a `.env` file in the root directory with the following content:
+
+**.env**
+```bash
+SECRET_KEY=<your_secret_key>
+DEV=1  # Debug mode enabled, remove this line for production
+DATABASE_URL=<your_database_url>
+```
+
+- **SECRET_KEY**: Replace `<your_secret_key>` with a secure key (e.g., you can generate one using Django).
+- **DATABASE_URL**: Provide the URL for your database (e.g., PostgreSQL, SQLite).
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run Database Migrations
+```bash
+python manage.py migrate
+```
+
+### 5. Start the Development Server
+```bash
+python manage.py runserver
+```
+
+### 🌐 Access the Project
+Open your browser and navigate to: [http://localhost:8000](http://localhost:8000)
+
+### 🛠️ Additional Tips
+- To deactivate debug mode, remove `DEV=1` from your `.env` file.
+- For production, ensure your `.env` file is secure and never commit it to source control.
+
+## Heroku Deployment
+Follow these steps to deploy your project to Heroku:
+
+1. **Create a New App:**
+   - Go to [Heroku.com](https://www.heroku.com/).
+   - On the homepage, click **"New"** and select **"Create a new app"** from the dropdown.
+   - Add an **App Name** (must be unique, all lowercase, and use dashes `-` instead of spaces).
+   - Select **Region** (e.g., Europe).
+   - Click **"Create App"** and follow the on-screen instructions.
+
+2. **Configure Deployment:**
+   - Click on the **Deploy** tab near the top of the screen.
+   - Under **Deployment Method**, select **GitHub**.
+   - Search for and connect to your GitHub repository.
+
+3. **Set Environment Variables:**
+   - Before enabling deployment, click on the **Settings** tab.
+   - Click **Reveal Config Vars**.
+   - Add the following key-value pairs from your `.env` file:
+     - `SECRET_KEY`: Your project's secret key.
+     - `DATABASE_URL`: The URL of your database.
+     - `DEV`: Set to `1` for debug mode during development (optional, should not be used in production).
+
+4. **Prepare Your Repository for Deployment:**
+   - Ensure the following files are added to your repository:
+     - `requirements.txt`: Contains project dependencies.
+     - `Procfile`: Specifies the web process (e.g., `web: gunicorn project_root.wsgi:application`).
+
+   Use the following commands in your terminal to commit these changes:
+   ```bash
+   git status
+   git add requirements.txt
+   git commit -m "Add requirements.txt file"
+   git add Procfile
+   git commit -m "Add Procfile"
+   git push
+   ```
+
+5. Deploy Your App:
+
+- Return to the Deploy tab in Heroku.
+- Click Deploy Branch (typically the main or master branch).
+- Heroku will fetch the code, install dependencies, and build the app.
+- Look for a message confirming "App has been successfully deployed."
+
+6. Enable Automatic Deploys (Optional):
+
+- Once deployment is successful, enable Automatic Deploys for continuous integration with your GitHub repository.
+
+7. Launch Your App:
+
+- Click View to launch your app.
+- Your deployed app will be available at its Heroku-generated URL
+
+> Link to deployed site is: https://script-to-sound-f697c5a0720c.herokuapp.com/
 
 # Credits
 - Favicon created by Argentinian designer [Jessica Gueller](https://thenounproject.com/creator/jessi.guell)
