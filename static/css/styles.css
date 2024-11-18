@@ -239,7 +239,7 @@ img {
 }
 
 .navbar-toggler:focus {
-  border-color: none !important;
+  border-color: transparent !important;
   box-shadow: none !important;
 }
 
@@ -910,7 +910,7 @@ form > div {
 .card-img-top {
   width: 100%;
   height: 250px;
-  min-height: 175px;
+  min-height: 400px;
   object-fit: cover;
 }
 
@@ -928,10 +928,6 @@ form > div {
 #preferred-language-form {
   height: 175px;
 }
-
-/* label {
-  display: none !important;
-} */
 
 /*--------------------------------------- Footer ------------*/
 .footer {
