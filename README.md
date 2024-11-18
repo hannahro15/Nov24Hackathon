@@ -415,7 +415,7 @@ Additionally, [Color Oracle](https://colororacle.org/) was used to simulate diff
 
 - No warnings shown.
 
-![Screenshot of JSHint result showing no warnings](docs/js-hint.png)
+![Screenshot of JSHint result showing no warnings](docs/jsHint.png)
 
 ### Lighthouse
 
